@@ -1,0 +1,26 @@
+$tc: #252525;
+$min-width: 640px;
+$hc: #e4b100;
+$bg: #8ea14e;
+$bgh: #9eb847;
+$bo: #df7e00;
+$boh: #fa9411;
+
+//mixing
+@mixin border-radius($radius) {
+  -webkit-border-radius:  $radius;
+  -moz-border-radius:     $radius;
+  -ms-border-radius:      $radius;
+  border-radius:          $radius;
+}
+@mixin transition($transition...) {
+  -webkit-transition:  $transition;
+  -moz-transition:     $transition;
+  -ms-transition:      $transition;
+  transition:          $transition;
+}
+@mixin clear {
+  content: '';
+  display: table;
+  clear: both;
+}

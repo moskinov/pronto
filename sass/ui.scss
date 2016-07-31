@@ -1,0 +1,97 @@
+@import 'vars';
+
+//button
+.btn {
+  border: 0;
+  outline: none;
+  padding: 12px 10px 10px;
+  cursor: pointer;
+  color: #ffffff;
+  text-transform: uppercase;
+  background-color: transparent;
+
+  &.pink {
+    background-position: center;
+    background-image: url(button.svg);
+    background-size: cover;
+    font: 12px/13px "CirceBold",sans-serif;
+    @include border-radius(5px);
+    @include transition( background-image .3s, color .3s );
+    &:hover {
+      background-image: url(button-hover.svg);
+    }
+    &[disabled] {
+      color: #525252;
+      background-image: url(button-disabled.svg);
+      cursor: default;
+    }
+    &.small {
+      padding: 9px 10px 7px;
+      font: 11px/12px "CirceBold",sans-serif;
+    }
+    &.big {
+      padding: 13px 20px 9px;
+      font: 22px/23px "Cervo-Medium",sans-serif;
+    }
+  }
+
+  &.border {
+    border: 1px solid #696969;
+    color: #3d3d3d;
+    padding: 7px 10px 5px;
+    font: 17px/18px "Cervo-Medium",sans-serif;
+    letter-spacing: 2px;
+    @include transition( border-color .3s, color .3s );
+    &.white {
+      color: #ffffff;
+      border-color: #ffffff;
+      &.active {
+        color: $tc;
+        border-color: #707070;
+        cursor: default;
+        pointer-events: none;
+        background: #ffffff;
+      }
+    }
+    &:hover {
+      color: $hc;
+      border-color: $hc;
+    }
+  }
+
+  &.orange-bg,&.green {
+    font: 17px/18px "Cervo-Regular",sans-serif;
+    letter-spacing: 2px;
+    padding: 8px 15px 6px;
+  }
+
+  &.green {
+    background-color: $bg;
+    @include transition( background-color .3s );
+    &:hover {
+      background-color: $bgh;
+    }
+  }
+
+  &.orange-bg {
+    background-position: center;
+    background-image: url(button-orange.svg);
+    background-size: cover;
+    @include transition( background-image .3s );
+    &:hover {
+      background-image: url(button-orange-hover.svg);
+    }
+  }
+
+  &.orange {
+    font: 17px/18px "Cervo-Regular",sans-serif;
+    letter-spacing: 2px;
+    padding: 15px 10px 13px;
+    background-color: $bo;
+    @include transition( background-color .3s );
+    &:hover {
+      background-color: $boh;
+    }
+  }
+
+}
