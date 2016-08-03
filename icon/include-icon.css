@@ -18,6 +18,12 @@
     line-height: 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-size: 33px;
+    text-decoration: none;
+    -webkit-transition: color 0.3s;
+    -moz-transition:    color 0.3s;
+    -ms-transition:     color 0.3s;
+    transition:         color 0.3s;
 }
 .soc-icon-s_1:before {
     content: "\e900";
@@ -43,4 +49,3 @@
 .soc-icon-s_8:before {
     content: "\e907";
 }
-

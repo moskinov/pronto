@@ -21,6 +21,17 @@
     font-style: normal;
 }
 @font-face {
+    font-family: "CirceExtraBold";
+    src: url("CirceExtraBold.eot");
+    src: url("CirceExtraBold.eot?#iefix") format("embedded-opentype"),
+    url('CirceExtraBold.woff2') format('woff2'),
+    url("CirceExtraBold.woff") format("woff"),
+    url("CirceExtraBold.ttf") format("truetype"),
+    url("CirceExtraBold.svg#CirceExtraBold") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
     font-family: "Cervo-Medium";
     src: url("Cervo-Medium.eot");
     src: url("Cervo-Medium.eot?#iefix") format("embedded-opentype"),
@@ -63,5 +74,15 @@
     url('dirty_headline_cyrillic-webfont.svg#dirty_headline_cyrillicRg') format('svg');
     font-weight: normal;
     font-style: normal;
-
+}
+@font-face {
+    font-family: 'BronnRust-BoldFill';
+    src: url('BronnRust-BoldFill.eot');
+    src: url('BronnRust-BoldFill.eot?#iefix') format('embedded-opentype'),
+    url('BronnRust-BoldFill.woff2') format('woff2'),
+    url('BronnRust-BoldFill.woff') format('woff'),
+    url('BronnRust-BoldFill.ttf') format('truetype'),
+    url('BronnRust-BoldFill.svg#BronnRust-BoldFill') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }

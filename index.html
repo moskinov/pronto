@@ -12,23 +12,66 @@
     <link rel="stylesheet" href="font/include-font.css">
     <link rel="stylesheet" href="icon/include-icon.css">
 
-    <!--style-->
+    <!--style global-->
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/ui.css">
-    <link rel="stylesheet" href="css/main.css">
 
     <!--lib-->
     <script src="lib/jquery/jquery.min.js"></script>
     <script src="lib/jquery/parallax.min.js"></script>
+    <script src="lib/bootstrap/bootstrap.min.js"></script>
+    <script src="lib/bootstrap/bootstrap-select.min.js"></script>
+
 
     <!--slider-->
     <script src="lib/jquery/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="lib/jquery/owl.carousel.css">
 
+    <!--js global-->
+    <script src="js/manager.js"></script>
+    <script src="js/init.js"></script>
+
+
+
+    <!--js for page-->
+    <script src="js/pages/main.js"></script>
+    <!--style page-->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!--style adaptive include last-->
+    <link rel="stylesheet" href="css/media.css">
+
 </head>
 <body>
-    <div class="wrapper">
-        <div class="header">
+    <!--fixed row-->
+    <div data-row-fixed class="fixed">
+        <div class="btn-group">
+            <button class="btn border" onclick="MainManager.showModal('registration')">регистрация</button>
+            <button class="btn border" onclick="MainManager.showModal('authorization')">войти</button>
+        </div>
+        <div class="basket-box">
+            <button class="btn border" onclick="MainManager.basket(0)">В корзину</button>
+            <span class="data">11 товаров — 10 570 руб.</span>
+        </div>
+    </div>
+
+    <!--Parallax for main page-->
+    <ul id="parallax-top" class="parallax top">
+        <li class="layer _1" data-depth="0.1">
+            <div class="wrapper">
+                <div class="background"></div>
+            </div>
+        </li>
+        <li class="layer _2" data-depth="0.15">
+            <div class="wrapper">
+                <div class="background"></div>
+            </div>
+        </li>
+    </ul>
+
+    <div class="wrapper index">
+
+        <div class="header row">
 
             <div class="left-col">
                 <a href="/" class="logo"></a>
@@ -36,27 +79,173 @@
             </div>
             
             <div class="right-col">
-                <div class="main-nav">
-
-                    <ul>
-                        <li><a href="/menu.html">МЕНЮ</a></li>
-                        <li><a href="/delivery.html">ДОСТАВКА</a></li>
-                        <li><a href="/stock.html">АКЦИИ</a></li>
-                        <li><a href="/banquet.html">БАНКЕТЫ</a></li>
-                        <li><a href="/restaurant.html">РЕСТОРАНЫ</a></li>
+                <div class="main-nav row">
+                    <div class="right-col">
+                        <div class="phone">+7 495/499 <span>505-57-57</span></div>
+                        <div class="counter">1000</div>
+                        <div class="hint">За сегодня мы приготовили уже 1000 пицц!</div>
+                    </div>
+                    <ul class="nav">
+                        <li><a href="/menu.html">МЕНЮ</a></li> <li class="sep"></li>
+                        <li><a href="/delivery.html">ДОСТАВКА</a></li> <li class="sep"></li>
+                        <li><a href="/stock.html">АКЦИИ</a></li> <li class="sep"></li>
+                        <li><a href="/banquet.html">БАНКЕТЫ</a></li> <li class="sep"></li>
+                        <li><a href="/restaurant.html">РЕСТОРАНЫ</a></li> <li class="sep"></li>
                         <li><a href="/about.html">ПРОНТО</a></li>
                     </ul>
+                </div>
 
-                    <div class="right-col">
-                        <div class="counter">56</div>
-                        <div class="phone">+7 495/499 <span>505-57-57</span></div>
+                <div class="_txt-center row">
+                    <div class="btn-group">
+                        <button class="btn border" onclick="MainManager.showModal('registration')">регистрация</button>
+                        <button class="btn border" onclick="MainManager.showModal('authorization')">войти</button>
+                    </div>
+                    <div class="social">
+                        <a href="#" class="soc-icon-s_1"></a>
+                        <a href="#" class="soc-icon-s_2"></a>
+                        <a href="#" class="soc-icon-s_3"></a>
+                        <a href="#" class="soc-icon-s_4"></a>
+                    </div>
+                    <div class="basket-box">
+                        <button class="btn border" onclick="MainManager.basket(0)">В корзину</button>
+                        <span class="data">11 товаров — 10 570 руб.</span>
+                    </div>
+                </div>
+            </div>
+
+            <ul class="menu nav">
+                <li><a class="active" href="/pizza.html">ПИЦЦА</a></li> <li class="sep"></li>
+                <li><a href="/paste.html">ПАСТА</a></li> <li class="sep"></li>
+                <li><a href="/sushi.html">СУШИ-БАР</a></li> <li class="sep"></li>
+                <li><a href="/snacks.html">ЗАКУСКИ/САЛАТЫ</a></li> <li class="sep"></li>
+                <li><a href="/hot.html">ГОРЯЧЕЕ</a></li> <li class="sep"></li>
+                <li><a href="/drink.html">БАР/НАПИТКИ</a></li> <li class="sep"></li>
+                <li><a href="/dessert.html">ДЕСЕРТЫ</a></li> <li class="sep"></li>
+                <li><a href="/children.html">детское меню</a></li> <li class="sep"></li>
+                <li><a href="/stock.html">АКЦИИ</a></li>
+            </ul>
+
+        </div>
+
+        <!--Slider for main page-->
+        <div data-main-slider class="owl-carousel owl-theme main-slider">
+            <div><img src="img/slide_1.png" alt=""></div>
+            <div><img src="img/slide_2.png" alt=""></div>
+            <div><img src="img/slide_1.png" alt=""></div>
+            <div><img src="img/slide_2.png" alt=""></div>
+        </div>
+
+    </div>
+
+    <div class="content">
+
+        <!--Parallax for main page-->
+        <ul id="parallax-bottom" class="parallax bottom">
+            <li class="layer _1" data-depth="0.02"><div class="background"></div></li>
+            <li class="layer _2" data-depth="0.15"><div class="wrapper"><div class="background"></div></div></li>
+        </ul>
+
+        <div class="wrapper index">
+
+            <div class="btn-group number-group">
+                <button data-btn-number type="button" class="btn border btn-number" disabled="disabled" data-type="minus" data-field="quant[1]"></button>
+                <input data-input-number type="text" name="quant[1]" class="btn border input-number" value="1">
+                <button data-btn-number type="button" class="btn border btn-number" data-type="plus" data-field="quant[1]"></button>
+            </div>
+
+            <select data-btn-select class="selectpicker">
+                <option>32 см</option>
+                <option>40 см</option>
+                <option>48 см</option>
+            </select>
+
+            <h1 class="intro pizza">
+                <span>итальянская</span>
+                <div class="title">Пицца</div>
+                <span>на тонком тесте</span>
+            </h1>
+
+            <div class="grid">
+                <div class="row row_3 product pizza">
+
+                    <div class="col col_3">
+                        <a href="#" class="product-link">
+                            <img src="img/pizza/p_1.png" alt="">
+                            <span class="title icon-cheeses">четыре сыра</span>
+                        </a>
                     </div>
 
+                    <div class="col col_3">
+                        <a href="#" class="product-link">
+                            <img src="img/pizza/p_2.png" alt="">
+                            <span class="title icon-margaret">маргарита</span>
+                        </a>
+                    </div>
+
+                    <div class="col col_3">
+                        <a href="#" class="product-link">
+                            <img src="img/pizza/p_3.png" alt="">
+                            <span class="title icon-prontissimo">пронтиссимо</span>
+                        </a>
+                    </div>
+
+                    <div class="col col_3">
+                        <a href="#" class="product-link">
+                            <img src="img/pizza/p_4.png" alt="">
+                            <span class="title icon-devil">дьявола</span>
+                        </a>
+                    </div>
+
+                    <div class="col col_3">
+                        <a href="#" class="product-link">
+                            <img src="img/pizza/p_5.png" alt="">
+                            <span class="title icon-salami">салями</span>
+                        </a>
+                    </div>
+
+                    <div class="col col_3">
+                        <a href="#" class="product-link">
+                            <img src="img/pizza/p_6.png" alt="">
+                            <span class="title icon-caesar">цезарь&nbsp;&nbsp;&nbsp;закрытая</span>
+                        </a>
+                    </div>
 
                 </div>
             </div>
 
         </div>
+
+        <div style="height: 2000px">
+
+
+
+        </div>
+
     </div>
+
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+
+
+    <!-- Modal global-->
+    <div class="modal fade" id="modal" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <button class="close-icon" data-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-content"></div>
+        </div>
+    </div>
+
+    <!-- Modal basket -->
+    <div class="modal fade" id="basket">
+        <div class="modal-dialog basket-dialog small">
+            <div class="modal-content">
+                <button class="close-icon" data-dismiss="modal" aria-label="Close"></button>
+                <h1>Ваша корзина пуста</h1>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>

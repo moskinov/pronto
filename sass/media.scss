@@ -1,0 +1,35 @@
+@media screen and (max-width: 1160px) {
+  .header .right-col .counter {
+    margin-right: 20px;
+  }
+  .header .left-col {
+    margin: 27px 30px 0 0;
+  }
+  .header .main-nav .right-col {
+    margin-left: 20px;
+  }
+}
+@media screen and (max-width: 939px) {
+  .header .left-col {
+    margin: 62px 30px 0 0;
+  }
+  .header .main-nav ul {
+    clear: both;
+    padding-top: 10px;
+  }
+  .header .right-col .btn-group {
+    float: left;
+  }
+  .header .right-col .social {
+    float: right;
+  }
+  .basket-box {
+    display: block;
+    clear: both;
+    text-align: left;
+    padding-top: 4px;
+  }
+  .header ul.nav.menu li a {
+    font: 17px/26px "Cervo-Medium",sans-serif;
+  }
+}
