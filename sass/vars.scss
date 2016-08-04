@@ -1,12 +1,13 @@
 $tc: #252525;
 $min-width: 640px;
 $hc: #e4b100;
-$bg: #8ea14e;
+$bgb: #8ea14e;
 $bgh: #9eb847;
 $bo: #df7e00;
 $boh: #fa9411;
 $bg: #fffcf3;
 $br: #a2a2a2;
+$tcg: #cbcbcb;
 
 //mixing
 
@@ -15,6 +16,12 @@ $br: #a2a2a2;
   -moz-border-radius:     $radius;
   -ms-border-radius:      $radius;
   border-radius:          $radius;
+}
+@mixin box-shadow($shadow) {
+  -webkit-box-shadow:  $shadow;
+  -moz-box-shadow:     $shadow;
+  -ms-box-shadow:      $shadow;
+  box-shadow:          $shadow;
 }
 @mixin transition($transition...) {
   -webkit-transition:  $transition;

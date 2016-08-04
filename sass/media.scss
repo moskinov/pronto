@@ -23,13 +23,13 @@
   .header .right-col .social {
     float: right;
   }
-  .basket-box {
+  .header .basket-box {
     display: block;
     clear: both;
     text-align: left;
     padding-top: 4px;
   }
-  .header ul.nav.menu li a {
+  .header ul.nav.menu li a,.footer ul.nav.menu li a {
     font: 17px/26px "Cervo-Medium",sans-serif;
   }
 }

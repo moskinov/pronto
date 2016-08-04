@@ -2,7 +2,57 @@ function MainManager_f() {
 
   this.init = function () {
 
-    //fix basket row
+    //загружает шаблон с контролами для товара и после вызываем их функции (только для верстки,что бы не плодить код)
+    $('[data-include-counter]').loadTemplate("./template/view-counter.html",'', {
+      complete: function(){
+
+        //инит селекта
+        $('[data-btn-select]').selectpicker();
+
+        $('[data-dropdown-menu]').click(function(event){
+          event.stopPropagation();
+        });
+
+
+        //количество товара +/-
+
+        var btnCount = $('[data-btn-number]');
+
+        btnCount.click(function(e){
+
+          e.preventDefault();
+          var type = $(this).attr('data-type');
+          var input = $(this).parent().find('[data-input-number]');
+          var currentVal = parseFloat(input.val());
+          var max = parseFloat(input.attr('max'));
+          var min = parseFloat(input.attr('min'));
+
+          if (!currentVal || currentVal == "" || currentVal == "NaN") currentVal = 0;
+          if (max == "" || max == "NaN") max = '';
+          if (min == "" || min == "NaN") min = 0;
+
+          if (type == 'plus') {
+            if (max && (max == currentVal || currentVal > max)) {
+              input.val(max);
+            } else {
+              input.val(currentVal + 1);
+            }
+          } else if(type == 'minus') {
+            if (min && (min == currentVal || currentVal < min)) {
+              input.val(min);
+            } else if (currentVal > 0) {
+              input.val(currentVal - 1);
+            }
+          }
+
+          input.trigger('change');
+
+        });
+
+      }
+    });
+
+    //фиксирует шапку
     $(window).scroll(function(){
 
       var row = $('[data-row-fixed]');
@@ -17,114 +67,24 @@ function MainManager_f() {
       }
     });
 
-    //select
-
-    $('[data-btn-select]').selectpicker({
-      style: 'btn-info',
-      size: 4
-    });
-
-
-    //counter
-    var btnCount = $('[data-btn-number]');
-    var inputCount = $('[data-input-number]');
-
-    btnCount.click(function(e){
-
-        e.preventDefault();
-
-        var fieldName = $(this).attr('data-field');
-        var type = $(this).attr('data-type');
-        var input = $("input[name='"+fieldName+"']");
-        var currentVal = parseInt(input.val());
-
-        if (!isNaN(currentVal)) {
-
-          if(type == 'minus') {
-
-            var minValue = parseInt(input.attr('min'));
-
-            if(!minValue) minValue = 1;
-
-            if(currentVal > minValue) {
-
-              input.val(currentVal - 1).change();
-
-            }
-
-            if(parseInt(input.val()) == minValue) {
-
-              $(this).attr('disabled', true);
-            }
-
-          } else if(type == 'plus') {
-
-            var maxValue = parseInt(input.attr('max'));
-
-            if(!maxValue) maxValue = 9999999999999;
-
-            if(currentVal < maxValue) {
-
-              input.val(currentVal + 1).change();
-            }
-
-            if(parseInt(input.val()) == maxValue) {
-
-              $(this).attr('disabled', true);
-            }
-
-          }
-        } else {
-          input.val(0);
-        }
-      });
-
-    inputCount
-        .focusin(function(){
-          $(this).data('oldValue', $(this).val());
-        })
-        .change(function() {
-
-          var minValue = parseInt($(this).attr('min'));
-          var maxValue = parseInt($(this).attr('max'));
-
-          if(!minValue) minValue = 1;
-          if(!maxValue) maxValue = 9999999999999;
-
-          var valueCurrent = parseInt($(this).val());
-          var name = $(this).attr('name');
-
-          if(valueCurrent >= minValue) {
-
-            $(".btn-number[data-type='minus'][data-field='"+name+"']").removeAttr('disabled');
-
-          } else {
-
-            $(this).val($(this).data('oldValue'));
-          }
-
-          if(valueCurrent <= maxValue) {
-
-            $(".btn-number[data-type='plus'][data-field='"+name+"']").removeAttr('disabled');
-
-          } else {
-
-            $(this).val($(this).data('oldValue'));
-          }
-        })
-        .keydown(function (e) {
-              if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 190]) !== -1 ||
-                  (e.keyCode == 65 && e.ctrlKey === true) ||
-                  (e.keyCode >= 35 && e.keyCode <= 39)) {
-                return;
-              }
-              if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
-                e.preventDefault();
-              }
-        });
-
   };
 
+  //выравнивает блоки с описанием товара по высоте
+  this.initHeight = function(){
+
+    var box = $('[data-height]');
+    var big = -1;
+
+    box.each(function() {
+      big = big > $(this).height() ? big : $(this).height();
+    });
+
+    box.each(function() {
+      $(this).css('min-height',big);
+    });
+  };
+
+  //вызов модалок
   this.showModal = function (template){
 
     var modal = $('#modal');
@@ -134,6 +94,7 @@ function MainManager_f() {
     modal.modal('show');
   };
 
+  //переход в корзину - если "col" 0, то показывает окно, иначе переход на страницу корзины
   this.basket = function (col) {
 
     if(col != 0) {
