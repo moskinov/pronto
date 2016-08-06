@@ -8,7 +8,9 @@ $boh: #fa9411;
 $bg: #fffcf3;
 $br: #a2a2a2;
 $tcg: #cbcbcb;
-
+$font: 18px/22px 'Circe','Helvetica',Arial,sans-serif;
+$bri: #b3b3b3;
+$er: #ff0000;
 //mixing
 
 @mixin border-radius($radius) {
@@ -47,4 +49,8 @@ $tcg: #cbcbcb;
   right: 0;
   top: 0;
   bottom: 0;
+}
+@mixin placeholder {
+  color: #cccccc;
+  font: $font;
 }

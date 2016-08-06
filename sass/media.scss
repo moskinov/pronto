@@ -29,7 +29,69 @@
     text-align: left;
     padding-top: 4px;
   }
-  .header ul.nav.menu li a,.footer ul.nav.menu li a {
+  .header ul.nav.menu li a,
+  .footer ul.nav.menu li a {
     font: 17px/26px "Cervo-Medium",sans-serif;
   }
+  .footer {
+    .money {
+      float: none;
+      margin-top: 0;
+    }
+    .social {
+      margin-top: 6px;
+      height: 28px;
+      a {
+        font-size: 28px;
+      }
+    }
+    .row .col:last-child {
+      margin-left: 0;
+      width: 26.5%;
+      .black {
+        padding-right: 0;
+        padding-left: 0;
+        width: 100%;
+      }
+    }
+  }
+
+
+
+
+}
+@media screen and (max-width: 890px) {
+
+  .product {
+    .row-col {
+      margin-bottom: 0;
+      padding: 0 20%;
+      .col {
+        float: none;
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 44px;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .delivery {
+    .row {
+      .col {
+        width: 46%;
+        margin-bottom: 40px;
+        float: none;
+        display: inline-block;
+        vertical-align: top;
+        &:nth-child(3) {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+
 }

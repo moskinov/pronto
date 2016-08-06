@@ -2,7 +2,7 @@ function MainManager_f() {
 
   this.init = function () {
 
-    //загружает шаблон с контролами для товара и после вызываем их функции (только для верстки,что бы не плодить код)
+    //загружает шаблон с контролами для товара и после вызываем их функции
     $('[data-include-counter]').loadTemplate("./template/view-counter.html",'', {
       complete: function(){
 
@@ -10,7 +10,11 @@ function MainManager_f() {
         $('[data-btn-select]').selectpicker();
 
         $('[data-dropdown-menu]').click(function(event){
-          event.stopPropagation();
+
+          if(event.target.className != 'close-icon') {
+            event.stopPropagation();
+          }
+
         });
 
 
@@ -47,6 +51,20 @@ function MainManager_f() {
 
           input.trigger('change');
 
+        });
+
+        //кастомный скроллбар
+        $('[data-scroll]').mCustomScrollbar({
+          autoHideScrollbar: false,
+          scrollInertia: 400,
+          advanced: {
+            updateOnContentResize:true
+          },
+          callbacks:{
+            onInit: function(){
+
+            }
+          }
         });
 
       }
