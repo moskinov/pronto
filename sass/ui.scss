@@ -28,7 +28,7 @@
     }
     &.small {
       padding: 9px 10px 7px;
-      font: 11px/12px "CirceBold",sans-serif;
+      font: 12px/12px "CirceBold",sans-serif;
     }
     &.big {
       padding: 13px 20px 9px;
@@ -332,7 +332,9 @@ select.selectpicker {
     }
   }
 }
-
+.modal-open {
+  overflow: hidden;
+}
 .modal-open .modal {
   overflow-x: hidden;
   overflow-y: auto;

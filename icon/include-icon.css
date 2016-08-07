@@ -8,6 +8,16 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'icon-svg-1';
+    src:  url('icon-svg-1.eot?x5hq0w');
+    src:  url('icon-svg-1.eot?x5hq0w#iefix') format('embedded-opentype'),
+    url('icon-svg-1.ttf?x5hq0w') format('truetype'),
+    url('icon-svg-1.woff?x5hq0w') format('woff'),
+    url('icon-svg-1.svg?x5hq0w#icon-svg-1') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 [class^="soc-icon-"], [class*=" soc-icon-"] {
     font-family: 'soc-icon' !important;
     speak: none;

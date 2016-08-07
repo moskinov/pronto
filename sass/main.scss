@@ -33,31 +33,61 @@
     }
   }
 }
+.main-style {
+  .intro {
+    font: 63px/63px "BERNIERDistressed-Regular",sans-serif;
+    position: relative;
+    padding-top: 10px;
+    margin: 0 0 50px;
+    span {
+      color: #ffffff;
+      position: absolute;
+      font: 11px/14px "BronnRust-BoldFill",sans-serif;
+      left: 50%;
+      right: 50%;
+      margin: 0 -58px;
+      top: auto;
+      bottom: -16px;
+      &:first-child {
+        margin: 0 -46px;
+        top: -3px;
+        bottom: auto;
+      }
+      &:before,&:after {
+        content: '';
+        width: 3px;
+        height: 3px;
+        position: absolute;
+        top: 5px;
+        @include border-radius(100%);
+        background: #ffffff;
+      }
+      &:before {
+        left: -10px;
+      }
+      &:after {
+        right: -10px;
+      }
+    }
+
+    &:after {
+      content: '';
+      width: 52px;
+      height: 10px;
+      position: absolute;
+      top: -20px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkZyYW1lcyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSIyNnB4IiBoZWlnaHQ9IjQuNXB4IiB2aWV3Qm94PSIwIDAgMjYgNC41IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNiA0LjU7IiB4bWw6c3BhY2U9InByZXNlcnZlIj48c3R5bGUgdHlwZT0idGV4dC9jc3MiPi5zdDB7ZmlsbDojRkZGRkZGO308L3N0eWxlPjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik05LjQsMi41YzAsMC0wLjcsMC4yLTEuOCwwLjRjLTAuOSwwLTEuNy0wLjEtMi4zLTAuMmMtMC42LTAuMS0wLjYsMC0wLjYsMGMtMC4xLDAtMC41LDAtMC43LDBjLTAuNCwwLTEuNCwwLTEuNSwwYy0wLjgsMC0xLjEsMC4yLTEuMSwwLjhjMCwwLDAuOCwwLjIsMC44LDAuOGMwLDAuMi0wLjEsMC4yLTAuNCwwLjJDMC45LDQuNSwwLDMuOSwwLDMuNEMwLDMuMiwwLjIsMywwLjcsMi42bDAuNi0wLjVjMC4zLTAuMywwLjUtMC40LDAuNS0wLjNDMi40LDEuOCwzLjMsMiw0LjYsMmgwLjdDNS42LDIsNS44LDIsNiwyYzAuNSwwLDEuNS0wLjEsMi0wLjFoMC41QzguOCwxLjksOC45LDIsOSwyQzkuMywyLjIsOS40LDIuNCw5LjQsMi41eiBNMTEuNSwyLjFjMCwwLjIsMC4xLDAuMywwLjEsMC4zYzAsMC4zLTAuMiwwLjQtMC40LDAuNGMtMC40LDAtMC43LTAuMi0wLjktMC44VjEuOWMwLTAuMiwwLjEtMC4zLDAuMy0wLjNoMC4xYzAsMCwwLDAsMC4xLDBDMTEsMS42LDExLjUsMiwxMS41LDIuMUwxMS41LDIuMXogTTE0LjMsMi4yYy0wLjIsMC41LTAuNSwwLjktMC44LDEuMmwtMC4yLDAuMmMtMC4yLTAuMy0wLjMtMC40LTAuNC0wLjRDMTIuNCwzLDEyLjIsMi42LDEyLjIsMmMwLTAuMywwLjEtMC43LDAuMi0xLjJDMTIuNiwwLjMsMTIuOCwwLDEzLDBjMC4zLDAsMC40LDAsMC42LDAuMWMwLjIsMC4yLDAuOSwwLjksMC45LDFDMTQuNCwxLjUsMTQuNCwxLjgsMTQuMywyLjJ6IE0xMy4zLDAuOEwxMy4zLDAuOGMwLTAuMS0wLjEtMC4xLTAuMS0wLjFjLTAuMSwwLTAuNCwwLjItMC40LDAuNHYwLjhjMCwwLjIsMC4xLDAuNCwwLjEsMC41bDAsMC4xYzAuNiwwLDAuNi0xLDAuNi0xLjJDMTMuNCwxLjIsMTMuMywwLjgsMTMuMywwLjh6IE0xMy44LDEuOEwxMy42LDJsLTAuMSwwLjJoMC4ybDAuMi0wLjRMMTMuOCwxLjh6IE0xNS42LDIuMWwwLjEsMC4xYzAsMC4xLDAsMC4xLDAsMC4yYzAsMC4zLTAuMywwLjYtMC40LDAuNmwtMC4xLDBjMCwwLTAuMSwwLjEtMC4zLDAuMWMwLDAtMC40LTAuMS0wLjQtMC40YzAtMC4zLDAuNC0xLDAuOC0xYzAuMiwwLDAuNCwwLjIsMC40LDAuNEwxNS42LDIuMXogTTI1LjEsNC40Yy0xLDAtMS0wLjQtMS4xLTAuNGwwLjEtMC4yVjMuN2MwLDAsMC0wLjEsMC4xLTAuMWMwLjEsMCwwLjEsMCwwLjEsMC4xYzAsMCwwLDAsMCwwbDAuMSwwYzAsMCwwLjIsMCwwLjUtMC4yYzAuMi0wLjEtMC44LTAuOC0xLjYtMWMtMC44LDAuMi0yLDAuMS0zLDAuMmwtMC41LDBjLTAuNiwwLTEuMi0wLjEtMS42LTAuMWwtMC4zLDBoLTAuNmMwLDAtMC40LTAuMS0wLjktMC40YzAuOS0wLjcsMS4xLTAuNCwxLjctMC40YzAuNCwwLDAuNywwLjEsMS42LDAuMUgyMGMwLjEsMCwwLjIsMCwwLjMsMGgwLjJjMCwwLDEtMC4xLDIuOC0wLjNjMS40LDAuMSwyLjMsMC43LDIuNywxLjhDMjYsMy44LDI1LjMsNC40LDI1LjEsNC40eiBNMjQuNywyLjVsLTAuMiwwLjFsMCwwLjFMMjQuNywyLjV6Ii8+PC9zdmc+);
+      background-size: cover;
+    }
+  }
+}
 
 .parallax {
-  position: absolute !important;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  z-index: 0;
-
-  .layer {
-    display: block;
-    height: 100%;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    .wrapper {
-      height: 100%;
-      position: relative;
-    }
-    .background {
-      position: absolute;
-    }
-
-  }
 
   .layer._2 .background {
     width: 1148px;
@@ -65,7 +95,7 @@
   }
 
   &.top {
-    height: 1350px;
+    height: 1370px;
     z-index: 2;
 
     .layer._1 .background {
@@ -78,16 +108,13 @@
 
     .layer._2 .background {
       background: url("../img/parallax-2.png") no-repeat left bottom;
-      bottom: 0;
+      bottom: 30px;
       left: -1110px;
     }
 
   }
 
   &.bottom {
-    top: 0;
-    bottom: 0;
-
     .layer._1 .background {
       background: url("../img/parallax-1.png") no-repeat center top;
       height: 304px;
@@ -98,7 +125,7 @@
     .layer._2 .background {
       background: url("../img/parallax-2.png") no-repeat right bottom;
       bottom: -380px;
-      right: -880px;
+      right: -940px;
     }
   }
 }

@@ -7,9 +7,7 @@ $(document).ready(function(){
     navText: ['','']
   });
 
-  var scene = document.getElementById('parallax-top');
-  var parallaxTop = new Parallax(scene);
-
+  //parallax
   var scene2 = document.getElementById('parallax-bottom');
   var parallaxBottom = new Parallax(scene2);
 

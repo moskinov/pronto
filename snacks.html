@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Pronto</title>
+    <meta name="viewport" content="width=device-width">
+
+    <!--reset-->
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <!--font-->
+    <link rel="stylesheet" href="font/include-font.css">
+    <link rel="stylesheet" href="icon/include-icon.css">
+
+    <!--style global-->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/ui.css">
+
+    <!--lib js-->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/jquery/parallax.min.js"></script>
+    <script src="lib/bootstrap/bootstrap.min.js"></script>
+    <script src="lib/bootstrap/bootstrap-select.min.js"></script>
+    <script src="lib/jquery/jquery.mCustomScrollbar.js"></script>
+    <script src="lib/jquery/owl.carousel.min.js"></script>
+
+    <!--Только для разработки-->
+    <script src="js/jquery.loadTemplate-0.4.3.js"></script>
+
+
+    <link rel="stylesheet" href="lib/jquery/owl.carousel.css">
+    <link rel="stylesheet" href="lib/jquery/jquery.mCustomScrollbar.css">
+
+    <!--js global-->
+    <script src="js/manager.js"></script>
+    <script src="js/init.js"></script>
+
+    <!--style page-->
+    <link rel="stylesheet" href="css/snacks.css">
+
+    <!--style adaptive include last-->
+    <link rel="stylesheet" href="css/media.css">
+
+</head>
+<body>
+
+    <!--fixed row-->
+    <div data-row-fixed class="fixed">
+        <div class="btn-group">
+            <button class="btn border" onclick="MainManager.showModal('registration')">регистрация</button>
+            <button class="btn border" onclick="MainManager.showModal('authorization')">войти</button>
+        </div>
+        <div class="basket-box">
+            <button class="btn border" onclick="MainManager.basket(0)">В корзину</button>
+            <span class="data">11 товаров — 10 570 руб.</span>
+        </div>
+    </div>
+
+
+    <div class="wrapper index">
+
+        <div data-header></div>
+
+    </div>
+
+    <div class="content">
+
+        <ul id="parallax" class="parallax snacks">
+            <li class="layer" data-depth="0.02">
+                <div class="wrapper">
+                    <div class="background _3"></div>
+                </div>
+            </li>
+            <li class="layer" data-depth="0.06">
+                <div class="wrapper">
+                    <div class="background _1"></div>
+                    <div class="background _2"></div>
+                    <div class="background _5"></div>
+                </div>
+            </li>
+            <li class="layer" data-depth="0.08">
+                <div class="wrapper">
+                    <div class="background _4"></div>
+                </div>
+            </li>
+            <li class="layer" data-depth="0.1">
+                <div class="wrapper">
+                    <div class="background _6"></div>
+                </div>
+            </li>
+        </ul>
+
+        <div class="wrapper index product snacks-style">
+
+            <div class="intro">
+                салаты & закуски
+            </div>
+
+            <div class="sort">
+                <a href="#" class="active">все</a>
+                <a href="#">салаты</a>
+                <a href="#">холодные закуски</a>
+                <a href="#">горячие закуски</a>
+            </div>
+
+            <!--row for 3 columns-->
+            <div class="row row-col">
+                <div class="col col_3">
+                    <a href="#" class="product-link">
+                        <img src="img/snacks/sn_1.png" alt="">
+                        <span data-height-title class="title icon-sheet">цезарь<br>с курицей</span>
+                    </a>
+                    <div class="text-intro" data-height>
+                        Сочные листья салата Айсберг и Романо,
+                        заправленные соусом Цезарь, помидоры
+                        Черри, кусочки жареного куриного филе,
+                        сыр Реджанито и румяные гренки
+                    </div>
+
+                    <div data-include-counter-2></div>
+
+                </div>
+                <div class="col col_3">
+                    <a href="#" class="product-link">
+                        <img src="img/snacks/sn_2.png" alt="">
+                        <span data-height-title class="title icon-sheet-2">цезарь<br>с креветками</span>
+                    </a>
+                    <div class="text-intro" data-height>
+                        Сочные листья салата Айсберг и Романо,
+                        заправленные соусом Цезарь, помидоры
+                        Черри, жареные тигровые креветки,
+                        сыр Реджанито и румяные гренки
+                    </div>
+
+                    <div data-include-counter-2></div>
+
+                </div>
+                <div class="col col_3">
+                    <a href="#" class="product-link">
+                        <img src="img/snacks/sn_3.png" alt="">
+                        <span data-height-title class="title icon-greek">греческий</span>
+                    </a>
+                    <div class="text-intro" data-height>
+                        Микс салатов Айсберг, Фризе и Лолло
+                        Россо, свежие огурцы, спелые помидоры,
+                        болгарский сладкий перец, маслины, редис,
+                        красный лук и сыр Фета, заправленные
+                        салатной заправкой
+                    </div>
+
+                    <div data-include-counter-2></div>
+
+                </div>
+            </div>
+
+            <!--row for 3 columns-->
+            <div class="row row-col">
+                <div class="col col_3">
+                    <a href="#" class="product-link">
+                        <img src="img/snacks/sn_4.png" alt="">
+                        <span data-height-title class="title icon-avocado "><span>авокадо</span><br>и креветки</span>
+                    </a>
+                    <div class="text-intro" data-height>
+                        Авокадо, жареные салатные и тигровые
+                        креветки, шампиньоны, свежий огурец,
+                        помидоры Черри, зеленый лук, соус майонез
+                        с васаби
+                    </div>
+
+                    <div data-include-counter-2></div>
+
+                </div>
+                <div class="col col_3">
+                    <a href="#" class="product-link">
+                        <img src="img/snacks/sn_5.png" alt="">
+                        <span data-height-title class="title icon-arugula ">руккола<br>с креветками</span>
+                    </a>
+                    <div class="text-intro" data-height>
+                        Салат Руккола, жареные креветки
+                        тигровые, помидоры Черри, сыр
+                        Реджанито, итальянская заправка,
+                        бальзамический соус
+                    </div>
+
+                    <div data-include-counter-2></div>
+
+                </div>
+                <div class="col col_3">
+                    <a href="#" class="product-link">
+                        <img src="img/snacks/sn_6.png" alt="">
+                        <span data-height-title class="title icon-olivie ">оливье</span>
+                    </a>
+                    <div class="text-intro" data-height>
+                        Отварные картофель и морковь,
+                        соленые огурцы, зеленый горошек,
+                        ветчина, зеленый лук, майонез, петрушка
+                    </div>
+
+                    <div data-include-counter-2></div>
+
+                </div>
+            </div>
+
+            <!--row for 3 columns-->
+            <div class="row row-col">
+                <div class="col col_3">
+                    <a href="#" class="product-link">
+                        <img src="img/snacks/sn_7.png" alt="">
+                        <span data-height-title class="title icon-mozzarella ">моцарелла<br>с томатами</span>
+                    </a>
+                    <div class="text-intro" data-height>
+                        Сыр Моцарелла, спелые помидоры,
+                        свежий базилик, соус Песто
+                    </div>
+
+                    <div data-include-counter-2></div>
+
+                </div>
+                <div class="col col_3">
+                    <a href="#" class="product-link">
+                        <img src="img/snacks/sn_8.png" alt="">
+                        <span data-height-title class="title icon-salmon ">семга<br>с лимонным соком</span>
+                    </a>
+                    <div class="text-intro" data-height>
+                        Нежное филе семги, зеленый лук,
+                        петрушка и укроп, перец Чили красный,
+                        соус: сок лимона, соевый соус, масло,
+                        лук красный
+                    </div>
+
+                    <div data-include-counter-2></div>
+
+                </div>
+                <div class="col col_3">
+                    <a href="#" class="product-link">
+                        <img src="img/snacks/sn_9.png" alt="">
+                        <span data-height-title class="title icon-cheese ">сырная<br>тарелка</span>
+                    </a>
+                    <div class="text-intro" data-height>
+                        Ассорти из сыров: Скаморца, Рокфорти,
+                        Реджанито, Эдам
+                        + грецкие орехи и мед
+                    </div>
+
+                    <div data-include-counter-2></div>
+
+                </div>
+            </div>
+
+            <!--row for 3 columns-->
+            <div class="row row-col">
+                <div class="col col_3">
+                    <a href="#" class="product-link">
+                        <img src="img/snacks/sn_10.png" alt="">
+                        <span data-height-title class="title icon-herring ">сельдь<br>исландская</span>
+                    </a>
+                    <div class="text-intro" data-height>
+                        Нежное филе сельди, красный лук,
+                        гренка из черного хлеба, лимон, зелень,
+                        соус: сметана с карри
+                    </div>
+
+                    <div data-include-counter-2></div>
+
+                </div>
+                <div class="col col_3">
+                    <a href="#" class="product-link">
+                        <img src="img/snacks/sn_11.png" alt="">
+                        <span data-height-title class="title icon-roll ">ролл<br>цезарь</span>
+                    </a>
+                    <div class="text-intro" data-height>
+                        Обжаренное филе куриной грудки,
+                        тортилья, салат романо с добавлением
+                        соуса Цезарь, помидоры, сыр Реджанито,
+                        зелень. Подается с картофелем Фри
+                        и сырным соусом
+                    </div>
+
+                    <div data-include-counter-2></div>
+
+                </div>
+                <div class="col col_3">
+                    <a href="#" class="product-link">
+                        <img src="img/snacks/sn_12.png" alt="">
+                        <span data-height-title class="title icon-cheeseburger ">чизбургер</span>
+                    </a>
+                    <div class="text-intro" data-height>
+                        Говяжья котлета на гриле, картофельная
+                        булка, листья салата, хрустящий бекон,
+                        помидоры, красный лук, соленые
+                        огурцы, кетчуп и сырный соус.
+                        Подается с картофелем Фри
+                    </div>
+
+                    <div data-include-counter-2></div>
+
+                </div>
+            </div>
+
+            <!--row for 3 columns-->
+            <div class="row row-col">
+                <div class="col col_3">
+                    <a href="#" class="product-link">
+                        <img src="img/snacks/sn_13.png" alt="">
+                        <span data-height-title class="title icon-hamburger ">гамбургер</span>
+                    </a>
+                    <div class="text-intro" data-height>
+                        Говяжья котлета на гриле, картофельная
+                        булка, листья салата, помидоры, красный
+                        лук, соленые огурцы, кетчуп. Подается
+                        с картофелем Фри
+                    </div>
+
+                    <div data-include-counter-2></div>
+
+                </div>
+                <div class="col col_3">
+                    <a href="#" class="product-link">
+                        <img src="img/snacks/sn_14.png" alt="">
+                        <span data-height-title class="title icon-ribs "><span>ребра ВВQ</span><br>запеченные</span>
+                    </a>
+                    <div class="text-intro" data-height>
+                        Нежные свиные ребра, глазированные
+                        соусом BBQ, салат Коул Слоу. Подаются
+                        с запеченнымкартофелем и соусом BBQ
+                    </div>
+
+                    <div data-include-counter-2></div>
+
+                </div>
+                <div class="col col_3">
+                    <a href="#" class="product-link">
+                        <img src="img/snacks/sn_15.png" alt="">
+                        <span data-height-title class="title icon-wings ">крылышки<br>ВВQ</span> <!-- тут были проблемы со шрифтом в итоге ВВ русские Q латиница-->
+                    </a>
+                    <div class="text-intro" data-height>
+                        Сочные листья салата Айсберг и Романо,
+                        заправленные соусом Цезарь, помидоры
+                        Черри, жареные тигровые креветки,
+                        сыр Реджанито и румяные гренки
+                    </div>
+
+                    <div data-include-counter-2></div>
+
+                </div>
+            </div>
+
+            <!--row for 3 columns-->
+            <div class="row row-col">
+                <div class="col col_3">
+                    <a href="#" class="product-link">
+                        <img src="img/snacks/sn_16.png" alt="">
+                        <span data-height-title class="title icon-fish ">Fish<i></i>чипс</span>
+                    </a>
+                    <div class="text-intro" data-height>
+                        Филе белой рыбы в хрустящей панировке,
+                        лимон. Подается с запеченным картофелем
+                    </div>
+
+                    <div data-include-counter-2></div>
+
+                </div>
+                <div class="col col_3">
+                    <a href="#" class="product-link">
+                        <img src="img/snacks/sn_17.png" alt="">
+                        <span data-height-title class="title icon-shrimp "><span>креветки</span><br>с чесноком</span>
+                    </a>
+                    <div class="text-intro" data-height>
+                        Жаренные с добавлением чеснока
+                        тигровые креветки, лимон, зелень.
+                        Подаются с чесночным соусом
+                    </div>
+
+                    <div data-include-counter-2></div>
+
+                </div>
+                <div class="col col_3"> </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div data-footer></div>
+
+
+    <!-- Modal global-->
+    <div class="modal fade" id="modal" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <button class="close-icon" data-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-content"></div>
+        </div>
+    </div>
+
+    <!-- Modal basket -->
+    <div class="modal fade" id="basket">
+        <div class="modal-dialog basket-dialog small">
+            <div class="modal-content">
+                <button class="close-icon" data-dismiss="modal" aria-label="Close"></button>
+                <h1>Ваша корзина пуста</h1>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
