@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Pronto</title>
+    <meta name="viewport" content="width=device-width">
+
+    <!--reset-->
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <!--font-->
+    <link rel="stylesheet" href="font/include-font.css">
+    <link rel="stylesheet" href="icon/include-icon.css">
+
+    <!--style global-->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/ui.css">
+
+    <!--lib js-->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/jquery/parallax.min.js"></script>
+    <script src="lib/bootstrap/bootstrap.min.js"></script>
+    <script src="lib/bootstrap/bootstrap-select.min.js"></script>
+    <script src="lib/jquery/jquery.mCustomScrollbar.js"></script>
+    <script src="lib/jquery/owl.carousel.min.js"></script>
+
+    <!--Только для разработки-->
+    <script src="js/jquery.loadTemplate-0.4.3.js"></script>
+
+
+    <link rel="stylesheet" href="lib/jquery/owl.carousel.css">
+    <link rel="stylesheet" href="lib/jquery/jquery.mCustomScrollbar.css">
+
+    <!--js global-->
+    <script src="js/manager.js"></script>
+    <script src="js/init.js"></script>
+
+    <!--style adaptive include last-->
+    <link rel="stylesheet" href="css/media.css">
+
+</head>
+<body>
+
+    <!--fixed row-->
+    <div data-row-fixed class="fixed">
+        <div class="btn-group">
+            <button class="btn border" onclick="MainManager.showModal('registration')">регистрация</button>
+            <button class="btn border" onclick="MainManager.showModal('authorization')">войти</button>
+        </div>
+        <div class="basket-box">
+            <button class="btn border" onclick="MainManager.basket(0)">В корзину</button>
+            <span class="data">11 товаров — 10 570 руб.</span>
+        </div>
+    </div>
+
+
+    <div class="wrapper index">
+
+        <div data-header></div>
+
+    </div>
+
+    <div class="content">
+
+
+        <div class="wrapper  product snacks-style card">
+
+            <div class="breadcrumb">
+                <a href="#">pronto</a>
+                <a href="#">салаты/закуски</a>
+            </div>
+
+            <div class="row">
+                <div class="col col_2 product-img">
+
+                    <img src="img/snacks/sn_4.png" alt="">
+
+                </div>
+                <div class="col col_2 _p5">
+                    <span class="title icon-sheet-2">цезарь<br>с креветками</span>
+                    <div class="text-intro">
+                        Авокадо, жареные салатные и тигровые
+                        креветки, шампиньоны, свежий огурец,
+                        помидоры Черри, зеленый лук, соус майонез
+                        с васаби
+                    </div>
+                    <div data-include-counter-2></div>
+                </div>
+            </div>
+
+            <div data-include-slider></div>
+
+        </div>
+
+    </div>
+
+
+    <div data-footer></div>
+
+
+    <!-- Modal global-->
+    <div class="modal fade" id="modal" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <button class="close-icon" data-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-content"></div>
+        </div>
+    </div>
+
+    <!-- Modal basket -->
+    <div class="modal fade" id="basket">
+        <div class="modal-dialog basket-dialog small">
+            <div class="modal-content">
+                <button class="close-icon" data-dismiss="modal" aria-label="Close"></button>
+                <h1>Ваша корзина пуста</h1>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

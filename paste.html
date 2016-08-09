@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Pronto</title>
+    <meta name="viewport" content="width=device-width">
+
+    <!--reset-->
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <!--font-->
+    <link rel="stylesheet" href="font/include-font.css">
+    <link rel="stylesheet" href="icon/include-icon.css">
+
+    <!--style global-->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/ui.css">
+
+    <!--lib js-->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/jquery/parallax.min.js"></script>
+    <script src="lib/bootstrap/bootstrap.min.js"></script>
+    <script src="lib/bootstrap/bootstrap-select.min.js"></script>
+    <script src="lib/jquery/jquery.mCustomScrollbar.js"></script>
+    <script src="lib/jquery/owl.carousel.min.js"></script>
+
+    <!--Только для разработки-->
+    <script src="js/jquery.loadTemplate-0.4.3.js"></script>
+
+
+    <link rel="stylesheet" href="lib/jquery/owl.carousel.css">
+    <link rel="stylesheet" href="lib/jquery/jquery.mCustomScrollbar.css">
+
+    <!--js global-->
+    <script src="js/manager.js"></script>
+    <script src="js/init.js"></script>
+
+    <!--style page-->
+    <link rel="stylesheet" href="css/parallax.css">
+
+    <!--style adaptive include last-->
+    <link rel="stylesheet" href="css/media.css">
+
+</head>
+<body>
+
+    <!--fixed row-->
+    <div data-row-fixed class="fixed">
+        <div class="btn-group">
+            <button class="btn border" onclick="MainManager.showModal('registration')">регистрация</button>
+            <button class="btn border" onclick="MainManager.showModal('authorization')">войти</button>
+        </div>
+        <div class="basket-box">
+            <button class="btn border" onclick="MainManager.basket(0)">В корзину</button>
+            <span class="data">11 товаров — 10 570 руб.</span>
+        </div>
+    </div>
+
+
+    <div class="wrapper index">
+
+        <div data-header></div>
+
+    </div>
+
+    <div class="content">
+
+        <ul id="parallax" class="parallax">
+            <li class="layer" data-depth="0.04">
+                <div class="wrapper">
+                    <div class="background _3"></div>
+                </div>
+            </li>
+            <li class="layer" data-depth="0.06">
+                <div class="wrapper">
+                    <div class="background _1"></div>
+                </div>
+            </li>
+            <li class="layer" data-depth="0.1">
+                <div class="wrapper">
+                    <div class="background _6"></div>
+                </div>
+            </li>
+        </ul>
+
+        <div class="wrapper index product paste-style">
+
+            <div class="intro">
+                Паста
+            </div>
+
+            <div class="sort">
+                <a href="#" class="active">все</a>
+                <a href="#">с морепродуктами</a>
+            </div>
+
+            <!--row for 3 columns-->
+            <div class="row row-col">
+                <div class="col col_3">
+                    <a href="#" class="product-link">
+                        <img src="img/paste/1.png" alt="">
+                        <span  class="title icon-basta">паста<br>баста</span>
+                    </a>
+                    <div class="text-intro" data-height>
+                        Фетучини в сливочном соусе, грибная
+                        смесь, белое вино, сыр Пармезан, зелень
+                        петрушки, чеснок, тимьян
+                    </div>
+
+                    <div data-include-counter-2></div>
+
+                </div>
+                <div class="col col_3">
+                    <a href="#" class="product-link">
+                        <img src="img/paste/2.png" alt="">
+                        <span  class="title icon-carbo">спагетти<br>карбонара</span>
+                    </a>
+                    <div class="text-intro" data-height>
+                        Спагетти, бекон, репчатый лук,
+                        сливочный соус, сыр Пармезан, петрушка
+                    </div>
+
+                    <div data-include-counter-2></div>
+
+                </div>
+                <div class="col col_3">
+                    <a href="#" class="product-link">
+                        <img src="img/paste/3.png" alt="">
+                        <span  class="title icon-bol">спагетти<br>болонез</span>
+                    </a>
+                    <div class="text-intro" data-height>
+                        Спагетти, мясной соус Болонез,
+                        соус из помидоров, сыр Пармезан,
+                        петрушка
+                    </div>
+
+                    <div data-include-counter-2></div>
+
+                </div>
+            </div>
+
+            <!--row for 3 columns-->
+            <div class="row row-col">
+                <div class="col col_3">
+                    <a href="#" class="product-link">
+                        <img src="img/paste/4.png" alt="">
+                        <span  class="title icon-more">спагетти<br>с морепродуктами</span>
+                    </a>
+                    <div class="text-intro" data-height>
+                        Спагетти, обжаренные тигровые креветки,
+                        чеснок, анчоусы, томаты Пилати, базилик,
+                        петрушка
+                    </div>
+
+                    <div data-include-counter-2></div>
+
+                </div>
+
+                <div class="col col_3">
+                    <a href="#" class="product-link">
+                        <img src="img/paste/5.png" alt="">
+                        <span  class="title icon-salmon">тальятелле<br>сальмоне</span>
+                    </a>
+                    <div class="text-intro" data-height>
+                        Филе форели и хека, тигровая креветка,
+                        анчоус, лук Порей, оливки, перец Чили,
+                        салат Руккола, сливочный соус, сыр Эдам
+                        и Чеддер, базилик, тимьян, лимон
+                    </div>
+
+                    <div data-include-counter-2></div>
+
+                </div>
+                <div class="col col_3">
+                    <a href="#" class="product-link">
+                        <img src="img/paste/6.png" alt="">
+                        <span  class="title icon-chik">спагетти<br>цезарь с курицей</span>
+                    </a>
+                    <div class="text-intro" data-height>
+                        Спагетти, обжаренное филе куриной
+                        грудки, соус Цезарь, сыр Пармезан,
+                        петрушка
+                    </div>
+
+                    <div data-include-counter-2></div>
+
+                </div>
+            </div>
+
+
+            <!--row for 3 columns-->
+            <div class="row row-col">
+                <div class="col col_3">
+                    <a href="#" class="product-link">
+                        <img src="img/paste/7.png" alt="">
+                        <span  class="title icon-karne">мясная лазанья<br>ди карне</span>
+                    </a>
+                    <div class="text-intro" data-height>
+                        Запеченная лазанья с сливочным
+                        и мясным соусом, соус из помидор,
+                        помидоры Черри, петрушка
+                    </div>
+
+                    <div data-include-counter-2></div>
+
+                </div>
+                <div class="col col_3"> </div>
+                <div class="col col_3"> </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div data-footer></div>
+
+
+    <!-- Modal global-->
+    <div class="modal fade" id="modal" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <button class="close-icon" data-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-content"></div>
+        </div>
+    </div>
+
+    <!-- Modal basket -->
+    <div class="modal fade" id="basket">
+        <div class="modal-dialog basket-dialog small">
+            <div class="modal-content">
+                <button class="close-icon" data-dismiss="modal" aria-label="Close"></button>
+                <h1>Ваша корзина пуста</h1>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

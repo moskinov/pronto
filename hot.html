@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Pronto</title>
+    <meta name="viewport" content="width=device-width">
+
+    <!--reset-->
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <!--font-->
+    <link rel="stylesheet" href="font/include-font.css">
+    <link rel="stylesheet" href="icon/include-icon.css">
+
+    <!--style global-->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/ui.css">
+
+    <!--lib js-->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/jquery/parallax.min.js"></script>
+    <script src="lib/bootstrap/bootstrap.min.js"></script>
+    <script src="lib/bootstrap/bootstrap-select.min.js"></script>
+    <script src="lib/jquery/jquery.mCustomScrollbar.js"></script>
+    <script src="lib/jquery/owl.carousel.min.js"></script>
+
+    <!--Только для разработки-->
+    <script src="js/jquery.loadTemplate-0.4.3.js"></script>
+
+
+    <link rel="stylesheet" href="lib/jquery/owl.carousel.css">
+    <link rel="stylesheet" href="lib/jquery/jquery.mCustomScrollbar.css">
+
+    <!--js global-->
+    <script src="js/manager.js"></script>
+    <script src="js/init.js"></script>
+
+    <!--style adaptive include last-->
+    <link rel="stylesheet" href="css/media.css">
+
+</head>
+<body>
+
+    <!--fixed row-->
+    <div data-row-fixed class="fixed">
+        <div class="btn-group">
+            <button class="btn border" onclick="MainManager.showModal('registration')">регистрация</button>
+            <button class="btn border" onclick="MainManager.showModal('authorization')">войти</button>
+        </div>
+        <div class="basket-box">
+            <button class="btn border" onclick="MainManager.basket(0)">В корзину</button>
+            <span class="data">11 товаров — 10 570 руб.</span>
+        </div>
+    </div>
+
+
+    <div class="wrapper index">
+
+        <div data-header></div>
+
+    </div>
+
+    <div class="content">
+
+        <div class="wrapper index product hot-style">
+
+            <div class="intro">
+                Горячие блюда
+            </div>
+
+            <div class="sort">
+                <a href="#" class="active">все</a>
+                <a href="#">мясо</a>
+                <a href="#">курица</a>
+                <a href="#">рыба</a>
+            </div>
+
+            <!--row for 3 columns-->
+            <div class="row row-col">
+                <div class="col col_3">
+                    <a href="#" class="product-link">
+                        <img src="img/hot/1.png" alt="">
+                        <span  class="title icon-pork">свиная корейка<br><span>поркетта</span></span>
+                    </a>
+                    <div class="text-intro" data-height>
+                        Обжаренная на гриле свиная корейка,
+                        румяные цукини, красный лук,
+                        картофель, соус BBQ, петрушка
+                    </div>
+
+                    <div data-include-counter-2></div>
+
+                </div>
+
+                <div class="col col_3">
+                    <a href="#" class="product-link">
+                        <img src="img/hot/2.png" alt="">
+                        <span  class="title icon-vakka">свинина<br><span>порка вакка</span></span>
+                    </a>
+                    <div class="text-intro" data-height>
+                        Нежная вырезка свинины, сливочно-
+                        грибной соус, шампиньоны свежие.
+                        репчатый лук, украшается свежими
+                        томатами, огурцами и зеленью
+                    </div>
+
+                    <div data-include-counter-2></div>
+
+                </div>
+
+                <div class="col col_3">
+                    <a href="#" class="product-link">
+                        <img src="img/hot/3.png" alt="">
+                        <span  class="title icon-skamor"><span>свинина</span> под сыром<br>скаморца</span>
+                    </a>
+                    <div class="text-intro" data-height>
+                        Отборная свиная корейка с беконом,
+                        сыр Скаморца, чеснок, петрушка, зелень,
+                        с запеченым картофелем, болгарским
+                        перцем, маслинами, розмарином,
+                        темьяном
+                    </div>
+
+                    <div data-include-counter-2></div>
+
+                </div>
+
+            </div>
+
+            <!--row for 3 columns-->
+            <div class="row row-col">
+                <div class="col col_3">
+                    <a href="#" class="product-link">
+                        <img src="img/hot/4.png" alt="">
+                        <span  class="title icon-franch"><span>мясо</span> под сыром<br>карне франчезе</span>
+                    </a>
+                    <div class="text-intro" data-height>
+                        Запеченная свиная вырезка, слайсы
+                        картофеля, помидоры, лук Порей,
+                        сыр Эдам, майонез, помидоры Черри,
+                        петрушка
+                    </div>
+
+                    <div data-include-counter-2></div>
+
+                </div>
+
+                <div class="col col_3">
+                    <a href="#" class="product-link">
+                        <img src="img/hot/5.png" alt="">
+                        <span  class="title icon-sochchik"><span>сочная курочка</span><br>с овощами</span>
+                    </a>
+                    <div class="text-intro" data-height>
+                        Обжаренное филе куриной грудки,
+                        сливочный соус, морковь, цукини,
+                        картофель, тимьян
+                    </div>
+
+                    <div data-include-counter-2></div>
+
+                </div>
+
+                <div class="col col_3">
+                    <a href="#" class="product-link">
+                        <img src="img/hot/6.png" alt="">
+                        <span  class="title icon-befstrog">бефстроганов</span>
+                    </a>
+                    <div class="text-intro" data-height>
+                        Говядина, репчатый лук, грибной соус,
+                        картофельное пюре, соленый огурец,
+                        шампиньоны, помидоры Черри,
+                        зеленый лук, петрушка
+                    </div>
+
+                    <div data-include-counter-2></div>
+
+                </div>
+
+            </div>
+
+            <!--row for 3 columns-->
+            <div class="row row-col">
+                <div class="col col_3">
+                    <a href="#" class="product-link">
+                        <img src="img/hot/7.png" alt="">
+                        <span  class="title icon-stak"><span>стейк</span><br>перечный</span>
+                    </a>
+                    <div class="text-intro" data-height>
+                        Cтейк говядины, четыре перца,
+                        морковь, фасоль стручковая,
+                        соусом Бальзамик, кунжут, лимон,
+                        петрушка
+                    </div>
+
+                    <div data-include-counter-2></div>
+
+                </div>
+
+                <div class="col col_3">
+                    <a href="#" class="product-link">
+                        <img src="img/hot/8.png" alt="">
+                        <span  class="title icon-staksem">стейк семги<br>или гриль на пару</span>
+                    </a>
+                    <div class="text-intro" data-height>
+                        Стейк семги, рыбный бульон, соус песто,
+                        соус Бешамель, сок лимона, тимьян,
+                        микс салатов Романо, Фризе и Лоло
+                        Россо, каперсы, лимон, зелень укропа
+                    </div>
+
+                    <div data-include-counter-2></div>
+
+                </div>
+
+                <div class="col col_3">
+                    <a href="#" class="product-link">
+                        <img src="img/hot/9.png" alt="">
+                        <span  class="title icon-ribasir">рыба<br>под сыром</span>
+                    </a>
+                    <div class="text-intro" data-height>
+                        Филе белой рыбы, слайсы картофеля,
+                        помидор свежий, лук порей под
+                        корочкой из майонеза и сыра Эдам,
+                        оливки, укроп
+                    </div>
+
+                    <div data-include-counter-2></div>
+
+                </div>
+
+            </div>
+
+            <!--row for 3 columns-->
+            <div class="row row-col">
+                <div class="col col_3">
+                    <a href="#" class="product-link">
+                        <img src="img/hot/10.png" alt="">
+                        <span  class="title icon-jarmor">жареные<br>морепродукты</span>
+                    </a>
+                    <div class="text-intro" data-height>
+                        Филе кальмара, тигровые креветки,
+                        мини осьминоги, филе белой рыбы,
+                        помидоры Черри, перец Чили, обжаренные
+                        на масле с чесноком, лимон, петрушка
+                    </div>
+
+                    <div data-include-counter-2></div>
+
+                </div>
+
+                <div class="col col_3"> </div>
+
+                <div class="col col_3"> </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div data-footer></div>
+
+
+    <!-- Modal global-->
+    <div class="modal fade" id="modal" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <button class="close-icon" data-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-content"></div>
+        </div>
+    </div>
+
+    <!-- Modal basket -->
+    <div class="modal fade" id="basket">
+        <div class="modal-dialog basket-dialog small">
+            <div class="modal-content">
+                <button class="close-icon" data-dismiss="modal" aria-label="Close"></button>
+                <h1>Ваша корзина пуста</h1>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
