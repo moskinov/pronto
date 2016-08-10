@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Pronto</title>
+    <meta name="viewport" content="width=device-width">
+
+    <!--reset-->
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <!--font-->
+    <link rel="stylesheet" href="font/include-font.css">
+    <link rel="stylesheet" href="icon/include-icon.css">
+
+    <!--style global-->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/ui.css">
+
+    <!--lib js-->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/jquery/parallax.min.js"></script>
+    <script src="lib/bootstrap/bootstrap.min.js"></script>
+    <script src="lib/bootstrap/bootstrap-select.min.js"></script>
+    <script src="lib/jquery/jquery.mCustomScrollbar.js"></script>
+    <script src="lib/jquery/owl.carousel.min.js"></script>
+
+    <!--Только для разработки-->
+    <script src="js/jquery.loadTemplate-0.4.3.js"></script>
+
+
+    <link rel="stylesheet" href="lib/jquery/owl.carousel.css">
+    <link rel="stylesheet" href="lib/jquery/jquery.mCustomScrollbar.css">
+
+    <!--style page-->
+    <link rel="stylesheet" href="css/about.css">
+
+    <!--js global-->
+    <script src="js/manager.js"></script>
+    <script src="js/init.js"></script>
+
+    <!--style adaptive include last-->
+    <link rel="stylesheet" href="css/media.css">
+
+</head>
+<body>
+
+    <!--fixed row-->
+    <div data-row-fixed class="fixed">
+        <div class="btn-group">
+            <button class="btn border" onclick="MainManager.showModal('registration')">регистрация</button>
+            <button class="btn border" onclick="MainManager.showModal('authorization')">войти</button>
+        </div>
+        <div class="basket-box">
+            <button class="btn border" onclick="MainManager.basket(0)">В корзину</button>
+            <span class="data">11 товаров — 10 570 руб.</span>
+        </div>
+    </div>
+
+
+    <div class="wrapper index">
+
+        <div data-header></div>
+
+    </div>
+
+    <div class="content">
+
+        <div class="wrapper index about">
+
+            <h1>пронто</h1>
+
+            <div class="sort m-b50">
+                <a href="about.html">о компании</a>
+                <a href="partners.html" class="active">партнерам</a>
+                <a href="discount.html">дисконтные карты</a>
+                <a href="reviews.html">отзывы</a>
+                <a href="vacancies.html">вакансии</a>
+                <a href="contacts.html">контакты</a>
+            </div>
+            <div class="_p8">
+                <p class="m-b40 _txt-center">
+                    Темпы развития компании PRONTO PIZZA говорят сами за себя – в Москве и Московской области
+                    ежегодно открывается не менее 10 новых ресторанов компании. <br>
+                    Для организации новых ресторанов в Москве и Московской области, а также крупных городах России,
+                    мы всегда готовы рассмотреть ваши предложения по долгосрочной аренде недвижимости.
+                </p>
+                <div class="p-color big">
+                    Обязательные требования компании Pronto Pizza к помещениям:
+                </div>
+                <ul>
+                    <li>высокий уровень пешеходных и автомобильных потоков (не менее 4 полос движения);</li>
+                    <li>первая линия домов;</li>
+                    <li>первый этаж (возможно частичное размещение в цоколе, обязательно с окнами и отдельным входом);</li>
+                    <li>возможен 2-3 этаж, в случае размещения в Торговом центре;</li>
+                    <li>витринные окна;</li>
+                    <li>площадь от 150 кв.м. до 300 кв.м. для организации одного ресторана;</li>
+                    <li>наличие коммуникаций (водоснабжение, теплоснабжение, электроснабжение, канализация, каналы связи);</li>
+                    <li>возможность размещения рекламной вывески на фасаде.</li>
+                </ul>
+                <div class="p-color big">
+                    Желательные требования:
+                </div>
+                <ul>
+                    <li>мощность от 80 кВт в зависимости от площади помещения;</li>
+                    <li>наличие парковки;</li>
+                    <li>возможность организации летнего кафе (желательно);</li>
+                    <li>льготный период на время проведения ремонта.</li>
+                </ul>
+            </div>
+
+            
+            <div class="info _txt-center">
+                Компания «Pronto Pizza» является надежным партнером,
+                всегда исполняющим все обязательства перед арендодателями
+                и вкладывающим серьезные инвестиции в ремонт помещения
+            </div>
+
+
+            <div class="_txt-center">
+                <h4>Заключая договор аренды с нашей компанией,
+                    собственники получают:</h4>
+                <div class="row company">
+                    <div class="col col_3">
+                        увеличение
+                        рыночной стоимости
+                        недвижимости
+                    </div>
+                    <div class="col col_3">
+                        стабильный доход
+                        на протяжении всего срока действия
+                        договора аренды
+                    </div>
+                    <div class="col col_3">
+                        гарантированные выплаты
+                        арендных платежей
+                    </div>
+                </div>
+            </div>
+
+            <table class="base m-b40">
+                <tr>
+                    <td>
+                        <p>
+                            Ваши предложения по развитию сети
+                            и аренде помещений
+                            направляйте по адресу:
+                        </p>
+                        <a href="#">aa.naletov@gmail.com</a>
+                    </td>
+                    <td>
+                        <p>
+                            Ваши предложения в отдел закупок
+                            направляйте по адресам:
+                        </p>
+                        <div class="grid">
+                            <p>Food (продукты):</p>
+                            <a href="#">shlyapoval@yandex.ru</a>
+                        </div>
+                        <div class="grid">
+                            <p>Beverages (бар):</p>
+                            <a href="#">kir_bar@mail.ru</a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>
+                            Ваши предложения по вопросам
+                            оборудования, телефонизации и интернета
+                            направляйте по адресу:
+                        </p>
+                        <a href="#">shev@pronto24.ru</a>
+                    </td>
+                    <td>
+                        <p>
+                            Ваши предложения по рекламе,
+                            маркетингу и полиграфии
+                            направляйте по адресу:
+                        </p>
+                        <a href="#">pronto24site@gmail.com</a>
+                    </td>
+                </tr>
+            </table>
+
+
+        </div>
+
+    </div>
+
+
+    <div data-footer></div>
+
+
+    <!-- Modal global-->
+    <div class="modal fade" id="modal" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <button class="close-icon" data-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-content"></div>
+        </div>
+    </div>
+
+    <!-- Modal basket -->
+    <div class="modal fade" id="basket">
+        <div class="modal-dialog basket-dialog small">
+            <div class="modal-content">
+                <button class="close-icon" data-dismiss="modal" aria-label="Close"></button>
+                <h1>Ваша корзина пуста</h1>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
