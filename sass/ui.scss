@@ -1,5 +1,4 @@
 @import 'vars';
-
 //button
 .btn {
   border: 0;
@@ -33,6 +32,7 @@
     &.big {
       padding: 13px 20px 9px;
       font: 22px/23px "Cervo-Medium",sans-serif;
+      letter-spacing: 1px;
     }
   }
 
@@ -361,6 +361,17 @@ select.selectpicker {
   h2 {
     text-align: center;
     margin-bottom: 30px;
+    &.small-text {
+      font-size: 20px;
+      line-height: 24px;
+      margin-bottom: 25px;
+      a {
+        color: $bgb;
+        &:hover {
+          color: $hc;
+        }
+      }
+    }
   }
   .btn {
     margin-top: 24px;
@@ -381,6 +392,9 @@ select.selectpicker {
         margin-right: 0;
       }
     }
+  }
+  .small-text {
+
   }
 }
 .close-icon {
@@ -475,18 +489,129 @@ textarea {
   }
 }
 textarea {
-  height: 200px;
+  height: 110px;
+  resize: none;
+  display: block;
 }
 input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0  1000px #fff inset;
 }
-.error {
-  input,
-  textarea {
-    border-color: $er;
- }
-  .hint,.form-cell {
-    color: $er;
+input.file-input {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+.file-input + label {
+  border: 1px solid #696969;
+  color: #3d3d3d;
+  padding: 7px 10px 5px;
+  font: 17px/18px "Cervo-Medium",sans-serif;
+  letter-spacing: 2px;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: transparent;
+  display: inline-block;
+  vertical-align: top;
+  @include  transition(all 0.3s);
+  &:hover {
+    color: $hc;
+    border-color: $hc;
+  }
+}
+.ul-file {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  li {
+    padding-left: 20px;
+    margin-top: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    &:after {
+      display: none;
+    }
+    &:first-child {
+      margin-top: 20px;
+    }
+    .close-icon {
+      left: 0;
+      width: 12px;
+      height: 12px;
+      top: 3px;
+      &:before,&:after {
+        background: #e00873;
+      }
+    }
+  }
+}
+.content-form {
+  input,textarea {
+    background: transparent;
+    color: #ffffff;
+  }
+  .textarea-box {
+    padding-left: 168px;
+    position: relative;
+    .form-label {
+      position: absolute;
+      left: 0;
+      top: 16px;
+    }
+    textarea {
+      height: 178px;
+    }
+  }
+  .input-data.phone .hint {
+    left: auto;
+    right: 0;
+  }
+  .bootstrap-select {
+    .dropdown-toggle {
+      padding: 0 34px 0 0;
+      .filter-option {
+        max-height: 46px;
+        font: 18px/22px "Circe", "Helvetica", Arial, sans-serif;
+        line-height: 20px;
+        height: 46px;
+        width: 100%;
+        padding: 13px 16px 11px 34px;
+      }
+      .bs-caret {
+        width: 34px;
+        height: 46px;
+        border-left: 0;
+        margin: 0;
+      }
+    }
+    .dropdown-menu {
+      right: 0;
+      li {
+        padding-left: 0;
+        font-size: 18px;
+        &:after {
+          display: none;
+        }
+        a {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  .file-input + label {
+    font: 14px/14px "Circe", "Helvetica", Arial, sans-serif;
+    padding: 0;
+    border:0;
+    text-decoration: underline;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-top: 10px;
+    &:hover {
+      color: $hc;
+    }
   }
 }
 
@@ -606,6 +731,14 @@ input:-webkit-autofill {
     }
   }
 }
+.textarea-box {
+  padding-bottom: 20px;
+}
+.form-label {
+  font: 14px/14px "Circe", "Helvetica", Arial, sans-serif;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
 .input-data {
   position: relative;
   .hint {
@@ -635,3 +768,34 @@ input:-webkit-autofill {
     }
   }
 }
+.error {
+  input,
+  textarea {
+    border-color: $er;
+  }
+  .hint,.form-cell {
+    color: $er;
+  }
+}
+//paginate
+.paginate {
+  text-align: center;
+  margin-top: 30px;
+  a {
+    font: 40px/40px "Cervo-Regular",sans-serif;
+    display: inline-block;
+    padding: 0 6px;
+    color: #ffffff;
+    text-decoration: none;
+    @include  transition(color 0.3s);
+    &:hover {
+      color: #ffd299;
+    }
+    &.active {
+      color: $bo;
+      cursor: default;
+      pointer-events: none;
+    }
+  }
+}
+

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Pronto</title>
+    <meta name="viewport" content="width=device-width">
+
+    <!--reset-->
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <!--font-->
+    <link rel="stylesheet" href="font/include-font.css">
+    <link rel="stylesheet" href="icon/include-icon.css">
+
+    <!--style global-->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/ui.css">
+
+    <!--lib js-->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/jquery/parallax.min.js"></script>
+    <script src="lib/bootstrap/bootstrap.min.js"></script>
+    <script src="lib/bootstrap/bootstrap-select.min.js"></script>
+    <script src="lib/jquery/jquery.mCustomScrollbar.js"></script>
+    <script src="lib/jquery/owl.carousel.min.js"></script>
+
+    <!--Только для разработки-->
+    <script src="js/jquery.loadTemplate-0.4.3.js"></script>
+
+
+    <link rel="stylesheet" href="lib/jquery/owl.carousel.css">
+    <link rel="stylesheet" href="lib/jquery/jquery.mCustomScrollbar.css">
+
+    <!--style page-->
+    <link rel="stylesheet" href="css/about.css">
+
+    <!--js global-->
+    <script src="js/manager.js"></script>
+    <script src="js/init.js"></script>
+
+    <!--style adaptive include last-->
+    <link rel="stylesheet" href="css/media.css">
+
+</head>
+<body>
+
+    <!--fixed row-->
+    <div data-row-fixed class="fixed">
+        <div class="btn-group">
+            <button class="btn border" onclick="MainManager.showModal('registration')">регистрация</button>
+            <button class="btn border" onclick="MainManager.showModal('authorization')">войти</button>
+        </div>
+        <div class="basket-box">
+            <button class="btn border" onclick="MainManager.basket(0)">В корзину</button>
+            <span class="data">11 товаров — 10 570 руб.</span>
+        </div>
+    </div>
+
+
+    <div class="wrapper index">
+
+        <div data-header></div>
+
+    </div>
+
+    <div class="content page"> <!--если есть пагинатор то даем класс .page-->
+
+        <div class="wrapper index about">
+
+            <h1>пронто</h1>
+
+            <div class="sort m-b30">
+                <a href="about.html">о компании</a>
+                <a href="partners.html">партнерам</a>
+                <a href="discount.html">дисконтные карты</a>
+                <a href="reviews.html" class="active">отзывы</a>
+                <a href="vacancies.html">вакансии</a>
+                <a href="contacts.html">контакты</a>
+            </div>
+
+            <div class="_txt-center m-b30">
+                <button class="btn pink big reviews-btn" onclick="MainManager.showModal('reviews')">написать отзыв</button>
+            </div>
+
+            <div class="list-reviews">
+                На прошедших праздниках была в кафе в Железнодорожном.
+                Приветливо встречали и обслуживали. Приятная атмосфера. Люблю итальянскую кухню и не разочаровалась,
+                заказав Паста Баста. Рекомендую! Спасибо, буду заходить чаще.
+                <div class="name">Юлия</div>
+            </div>
+            <div class="list-reviews">
+                Очень порадовало, что в кафе есть детская комната! Спасибо Пронто, теперь мы знаем, куда можно сходить с нашим
+                непоседой! И ему не скучно и нам хорошо!) Отдельное спасибо аниматору Александре! Пока родители отдыхают,
+                она развлекает наших деток!)
+                <div class="name">Елена</div>
+            </div>
+            <div class="list-reviews">
+                Здравствуйте, хочется поблагодарить персонал ресторана за доброжелательное отношение и гостеприимство.
+                Отдельное спасибо аниматору, которая снова появилась в Пронто и безупречно справляется с организацией досуга
+                для детей. Мы всей семьей проводим выходные в вашем заведении, дети просто в восторге от игровой комнаты и
+                прекрасной пиратки!)))
+                <div class="name">Людмила</div>
+            </div>
+
+            <div class="paginate">
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div data-footer></div>
+
+
+    <!-- Modal global-->
+    <div class="modal fade" id="modal" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <button class="close-icon" data-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-content"></div>
+        </div>
+    </div>
+
+    <!-- Modal basket -->
+    <div class="modal fade" id="basket">
+        <div class="modal-dialog basket-dialog small">
+            <div class="modal-content">
+                <button class="close-icon" data-dismiss="modal" aria-label="Close"></button>
+                <h1>Ваша корзина пуста</h1>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

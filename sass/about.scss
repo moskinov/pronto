@@ -1,19 +1,11 @@
 @import "vars";
 .content {
-  overflow: hidden;
-  &:before {
-    z-index: 4;
-  }
+  background-image: url("../img/about-2.png"),url("../img/back.png");
+  background-repeat: no-repeat,repeat;
+  background-position: 20% -124px;
 }
-.index.about:after {
-  position: absolute;
-  width: 559px;
-  height: 413px;
-  top: -166px;
-  left: 20%;
-  content: '';
-  background: url("../img/about-2.png");
-  z-index: -1;
+.reviews-btn {
+  min-width: 190px;
 }
 .row.group {
   margin-bottom: 36px;
@@ -87,7 +79,7 @@ ol {
     margin-bottom: 20px;
   }
 }
-.info {
+.info-text {
   border: 1px dotted $hc;
   border-width: 1px 0 1px 0;
   font-size: 22px;
@@ -134,11 +126,11 @@ ol {
     }
   }
 }
-
 table.base {
   text-align: center;
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed;
   tr {
     td {
       vertical-align: top;
@@ -175,6 +167,18 @@ table.base {
       }
     }
   }
+  &.small {
+    text-align: left;
+    font-size: 16px;
+    tr {
+      td {
+        padding-top: 18px;
+        padding-bottom: 18px;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+    }
+  }
 
 }
 .img-card {
@@ -183,5 +187,55 @@ table.base {
     display: inline-block;
     vertical-align: top;
     margin: 0 10px 10px 0;
+  }
+}
+.list-reviews {
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255,255,255, .2);
+  .name {
+    margin-top: 5px;
+    color: $bo;
+  }
+}
+.sub-h {
+  font-size: 21px;
+  a {
+    color: $hc;
+  }
+}
+.content-form {
+  border-top: 1px dotted $tcg;
+  padding-top: 30px;
+  h2 {
+    font-size: 40px;
+    text-align: center;
+  }
+}
+.main-phone {
+  text-align: center;
+  border-bottom: 1px dotted $hc;
+  padding-bottom: 20px;
+  margin-bottom: 45px;
+  p {
+    font-size: 24px;
+    margin-bottom: 35px;
+  }
+}
+.main-data {
+  div {
+    margin-bottom: 20px;
+    &.p-color {
+      text-transform: uppercase;
+      font-weight: normal;
+      font-family: "Circe";
+      margin-bottom: 0;
+    }
+    a {
+      color: $blue;
+      &:hover {
+        color: $hc;
+      }
+    }
   }
 }

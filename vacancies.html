@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Pronto</title>
+    <meta name="viewport" content="width=device-width">
+
+    <!--reset-->
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <!--font-->
+    <link rel="stylesheet" href="font/include-font.css">
+    <link rel="stylesheet" href="icon/include-icon.css">
+
+    <!--style global-->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/ui.css">
+
+    <!--lib js-->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/jquery/parallax.min.js"></script>
+    <script src="lib/bootstrap/bootstrap.min.js"></script>
+    <script src="lib/bootstrap/bootstrap-select.min.js"></script>
+    <script src="lib/jquery/jquery.mCustomScrollbar.js"></script>
+    <script src="lib/jquery/owl.carousel.min.js"></script>
+
+    <!--Только для разработки-->
+    <script src="js/jquery.loadTemplate-0.4.3.js"></script>
+
+
+    <link rel="stylesheet" href="lib/jquery/owl.carousel.css">
+    <link rel="stylesheet" href="lib/jquery/jquery.mCustomScrollbar.css">
+
+    <!--style page-->
+    <link rel="stylesheet" href="css/about.css">
+
+    <!--js global-->
+    <script src="js/manager.js"></script>
+    <script src="js/init.js"></script>
+
+    <!--style adaptive include last-->
+    <link rel="stylesheet" href="css/media.css">
+
+</head>
+<body>
+
+    <!--fixed row-->
+    <div data-row-fixed class="fixed">
+        <div class="btn-group">
+            <button class="btn border" onclick="MainManager.showModal('registration')">регистрация</button>
+            <button class="btn border" onclick="MainManager.showModal('authorization')">войти</button>
+        </div>
+        <div class="basket-box">
+            <button class="btn border" onclick="MainManager.basket(0)">В корзину</button>
+            <span class="data">11 товаров — 10 570 руб.</span>
+        </div>
+    </div>
+
+
+    <div class="wrapper index">
+
+        <div data-header></div>
+
+    </div>
+
+    <div class="content">
+
+        <div class="wrapper index about">
+
+            <h1>пронто</h1>
+
+            <div class="sort m-b30">
+                <a href="about.html">о компании</a>
+                <a href="partners.html">партнерам</a>
+                <a href="discount.html">дисконтные карты</a>
+                <a href="reviews.html">отзывы</a>
+                <a href="vacancies.html" class="active">вакансии</a>
+                <a href="contacts.html">контакты</a>
+            </div>
+
+            <div class="sort sub m-b40">
+                <a href="#" class="active">Москва</a>
+                <a href="#">зеленоград</a>
+                <a href="#">московская область</a>
+                <a href="#">россия</a>
+            </div>
+
+            <table class="base small m-b25">
+                <tr>
+                    <td>Директор ресторана</td>
+                    <td>м. Чертановская
+                        м. Коломенская</td>
+                </tr>
+                <tr>
+                    <td>DJ</td>
+                    <td>м. Водный стадион СРОЧНО!</td>
+                </tr>
+                <tr>
+                    <td>Администратор зала</td>
+                    <td>м. Отрадное</td>
+                </tr>
+                <tr>
+                    <td>Официант</td>
+                    <td>м. Новокосино СРОЧНО!
+                        м.  Семеновская СРОЧНО!</td>
+                </tr>
+                <tr>
+                    <td>Официант ночной или на сутки</td>
+                    <td>м. Бульвар Дмитрия Донского</td>
+                </tr>
+                <tr>
+                    <td>Бармен</td>
+                    <td>м. Выхино</td>
+                </tr>
+                <tr>
+                    <td>Помощник бармена</td>
+                    <td>м. Бульвар Дмитрия Донского</td>
+                </tr>
+            </table>
+
+            <div class="p-color big">
+                Мы предлагаем вам:
+            </div>
+            <ul>
+                <li>конкурентоспособную заработную плату;</li>
+                <li>удобный график работы;</li>
+                <li>обучение;</li>
+                <li>бесплатное питание;</li>
+                <li>соблюдение всех норм трудового законодательства;</li>
+                <li>реальные перспективы карьерного роста;</li>
+                <li>дружный и молодой коллектив;</li>
+                <li>возможность выбора работы по Москве и Московской области.</li>
+            </ul>
+            <div class="p-color big">
+                Требования к соискателям:
+            </div>
+            <ul class="m-b40">
+                <li>гражданство РФ;</li>
+                <li>медицинская книжка;</li>
+                <li>коммуникабельность, энергичность, вежливость, честность, инициативность,</li>
+                <li>умение работать в команде;</li>
+                <li>желание работать, расти и развиваться вместе с нами.</li>
+            </ul>
+
+            <div class="sub-h m-b30">Посмотреть адреса ресторанов и их расположение на карте вы можете в разделе <a href="#">Рестораны</a></div>
+
+            <div class="content-form">
+                <h2 class="m-b30">Написать нам</h2>
+                <div class="row">
+                    <div class="col col_2">
+                        <div class="form-grid">
+                            <div class="form-row">
+                                <div class="form-cell">имя</div>
+                                <div class="form-cell">
+                                    <div class="input-data">
+                                        <input type="text">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-cell">телефон</div>
+                                <div class="form-cell _txt-right">
+                                    <div class="input-data phone">
+                                        <span>+7</span>
+                                        <input type="text" tabindex="1">
+                                        <input type="text" tabindex="2">
+                                        <input type="text" tabindex="3">
+                                        <input type="text" tabindex="4">
+                                        <!--div class="hint">Например +7 926 000 00 00</div-->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-cell">вакансия</div>
+                                <div class="form-cell">
+                                    <div class="input-data phone">
+                                        <select data-btn-select class="selectpicker">
+                                            <option>Официант</option>
+                                            <option>Администратор зала</option>
+                                            <option>Официант ночной или на сутки</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <input type="file" class="file-input" id="vacancies-file" data-input-file onchange="MainManager.getFileName(this)">
+                        <label for="vacancies-file">прикрепить резюме</label>
+                        <ul class="ul-file" data-list-vacancies-file></ul>
+
+                    </div>
+                    <div class="col col_2">
+                        <div class="textarea-box">
+                            <div class="input-data">
+                                <textarea></textarea>
+                                <!--div class="hint">Вы ввели какую то хрень</div-->
+                            </div>
+                            <div class="form-label">ваш комментарий</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="_txt-center m-t10">
+                    <button class="btn pink big">Отправить</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div data-footer></div>
+
+
+    <!-- Modal global-->
+    <div class="modal fade" id="modal" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <button class="close-icon" data-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-content"></div>
+        </div>
+    </div>
+
+    <!-- Modal basket -->
+    <div class="modal fade" id="basket">
+        <div class="modal-dialog basket-dialog small">
+            <div class="modal-content">
+                <button class="close-icon" data-dismiss="modal" aria-label="Close"></button>
+                <h1>Ваша корзина пуста</h1>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

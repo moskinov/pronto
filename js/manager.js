@@ -13,11 +13,10 @@ function MainManager_f() {
     var count2 = $('[data-include-counter-2]');
 
     if(count1.length !=0) {
-      //загружает шаблон с контролами для товара и после вызываем их функции
+
       count1.loadTemplate("./template/view-counter.html",'', {
         complete: function(){
 
-          //инит селекта
           $('[data-btn-select]').selectpicker();
 
           $('[data-dropdown-menu]').click(function(event){
@@ -30,7 +29,6 @@ function MainManager_f() {
 
           MainManager.initCounter();
 
-          //кастомный скроллбар
           $('[data-scroll]').mCustomScrollbar({
             autoHideScrollbar: false,
             scrollInertia: 400,
@@ -56,23 +54,15 @@ function MainManager_f() {
       });
     }
 
-
-    //загружает шаблон шапки и футера
     $('[data-header]').loadTemplate("./template/view-header.html",'', '');
     $('[data-footer]').loadTemplate("./template/view-footer.html",'', '');
-
-    //загружает шаблон слайдера с товарами
     $('[data-include-slider]').loadTemplate("./template/view-slider.html",'', {
       complete: function(){
 
-
         var owl = $('[data-product-slider]');
-
         owl.on('initialized.owl.carousel resize.owl.carousel refreshed.owl.carousel', function(event) {console.log(event)
-
           var top = $(event.target).find('img').height();
           $(event.target).find('.owl-nav div').css('top',top/2-7);
-
         });
 
         owl.owlCarousel({
@@ -102,7 +92,6 @@ function MainManager_f() {
       }
     });
 
-    //фиксирует шапку
     $(window).scroll(function(){
 
       var row = $('[data-row-fixed]');
@@ -119,7 +108,6 @@ function MainManager_f() {
 
   };
 
-  //количество товара +/-
   this.initCounter = function(){
 
     var btnCount = $('[data-btn-number]');
@@ -156,7 +144,6 @@ function MainManager_f() {
     });
   };
 
-  //выравнивает блоки с описанием товара по высоте
   this.initHeight = function(){
 
     var box = $('[data-height]');
@@ -171,7 +158,6 @@ function MainManager_f() {
     });
   };
 
-  //вызов модалок
   this.showModal = function (template){
 
     var modal = $('#modal');
@@ -179,9 +165,9 @@ function MainManager_f() {
     modal.removeData('bs.modal');
     modal.modal({remote: './template/' + template +'.html'});
     modal.modal('show');
+
   };
 
-  //переход в корзину - если "col" 0, то показывает окно, иначе переход на страницу корзины
   this.basket = function (col) {
 
     if(col != 0) {
@@ -193,5 +179,18 @@ function MainManager_f() {
       $('#basket').modal('show');
     }
   };
+
+  this.getFileName = function (el) {
+    var name = $(el).val().replace(/C:\\fakepath\\/i, '');
+    $('[data-list-'+$(el).attr('id')+']').append('<li>' +
+        '<span class="close-icon" onclick="MainManager.clear(this)"></span>'+ name +'</li>');
+
+  }
+  this.clear = function (el) {
+    var el = $(el);
+    el.parent().remove();
+    $('[data-input-file]').val('');
+
+  }
 
 }
