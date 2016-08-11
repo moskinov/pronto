@@ -23,11 +23,6 @@
     <script src="lib/bootstrap/bootstrap-select.min.js"></script>
     <script src="lib/jquery/jquery.mCustomScrollbar.js"></script>
     <script src="lib/jquery/owl.carousel.min.js"></script>
-
-    <!--Только для разработки-->
-    <script src="js/jquery.loadTemplate-0.4.3.js"></script>
-
-
     <link rel="stylesheet" href="lib/jquery/owl.carousel.css">
     <link rel="stylesheet" href="lib/jquery/jquery.mCustomScrollbar.css">
 
@@ -74,7 +69,61 @@
 
     <div class="wrapper index">
 
-        <div data-header></div>
+        <div class="header row">
+
+            <div class="left-col">
+                <a href="/" class="logo"></a>
+                <button class="btn orange-bg">заказать звонок</button>
+            </div>
+
+            <div class="right-col">
+                <div class="main-nav row">
+                    <div class="right-col">
+                        <div class="phone">+7 495/499 <span>505-57-57</span></div>
+                        <div class="counter">1000</div>
+                        <div class="hint">За сегодня мы приготовили уже 1000 пицц!</div>
+                    </div>
+                    <ul class="nav">
+                        <li><a href="menu.html">МЕНЮ</a></li> <li class="sep"></li>
+                        <li><a href="delivery.html">ДОСТАВКА</a></li> <li class="sep"></li>
+                        <li><a href="stock.html">АКЦИИ</a></li> <li class="sep"></li>
+                        <li><a href="banquet.html">БАНКЕТЫ</a></li> <li class="sep"></li>
+                        <li><a href="restaurant.html">РЕСТОРАНЫ</a></li> <li class="sep"></li>
+                        <li><a href="about.html">ПРОНТО</a></li>
+                    </ul>
+                </div>
+
+                <div class="_txt-center row">
+                    <div class="btn-group">
+                        <button class="btn border" onclick="MainManager.showModal('registration')">регистрация</button>
+                        <button class="btn border" onclick="MainManager.showModal('authorization')">войти</button>
+                    </div>
+                    <div class="social">
+                        <a href="#" class="soc-icon-s_1"></a>
+                        <a href="#" class="soc-icon-s_2"></a>
+                        <a href="#" class="soc-icon-s_3"></a>
+                        <a href="#" class="soc-icon-s_4"></a>
+                    </div>
+                    <div class="basket-box">
+                        <button class="btn border" onclick="MainManager.basket(0)">В корзину</button>
+                        <span class="data">11 товаров — 10 570 руб.</span>
+                    </div>
+                </div>
+            </div>
+
+            <ul class="menu nav">
+                <li><a class="active" href="/pizza.html">ПИЦЦА</a></li> <li class="sep"></li>
+                <li><a href="paste.html">ПАСТА</a></li> <li class="sep"></li>
+                <li><a href="sushi.html">СУШИ-БАР</a></li> <li class="sep"></li>
+                <li><a href="snacks.html">ЗАКУСКИ/САЛАТЫ</a></li> <li class="sep"></li>
+                <li><a href="hot.html">ГОРЯЧЕЕ</a></li> <li class="sep"></li>
+                <li><a href="drink.html">БАР/НАПИТКИ</a></li> <li class="sep"></li>
+                <li><a href="dessert.html">ДЕСЕРТЫ</a></li> <li class="sep"></li>
+                <li><a href="children.html">детское меню</a></li> <li class="sep"></li>
+                <li><a href="stock.html">АКЦИИ</a></li>
+            </ul>
+
+        </div>
 
         <!--Slider for main page-->
         <div data-main-slider class="owl-carousel owl-theme main-slider">
@@ -111,7 +160,138 @@
                         </a>
                         <div class="text-intro" data-height>Сыры Моцарелла, Сливочный, Чеддер, Эдам, пицца-соус, орегано</div>
 
-                        <div data-include-counter></div>
+
+                        <div class="controls row">
+                            <div class="btn-group number-group">
+                                <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                <input data-input-number type="text" name="" class="btn border input-number" value="1" min="1" readonly>
+                                <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                            </div>
+                            <div class="rub">280 руб.</div>
+                            <select data-btn-select class="selectpicker">
+                                <option>32 см</option>
+                                <option>40 см</option>
+                                <option>48 см</option>
+                            </select>
+                        </div>
+
+                        <div class="set dropup btn-group row">
+                            <button class="btn border set-btn" data-toggle="dropdown">
+                                Добавить ингредиенты
+                            </button>
+                            <button class="btn pink set-btn">
+                                в корзину
+                            </button>
+                            <div class="dropdown-menu" data-dropdown-menu>
+                                <button class="close-icon"></button>
+                                <div class="scroll" data-scroll>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="">Зелень</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="70р">Грибы</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="170р">Помидоры</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="70р">маслины</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="80р">Ананасы</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="70р">Лук красный</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="70р">маслины</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="170р">Помидоры</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="80р">Ананасы</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="70р">маслины</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="80р">Ананасы</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="70р">Лук красный</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="70р">маслины</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
                     </div>
                     <div class="col col_3">
@@ -121,7 +301,138 @@
                         </a>
                         <div class="text-intro" data-height>Помидоры, сыр Моцарелла, пицца-соус, базилик</div>
 
-                        <div data-include-counter></div>
+
+                        <div class="controls row">
+                            <div class="btn-group number-group">
+                                <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                <input data-input-number type="text" name="" class="btn border input-number" value="1" min="1" readonly>
+                                <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                            </div>
+                            <div class="rub">280 руб.</div>
+                            <select data-btn-select class="selectpicker">
+                                <option>32 см</option>
+                                <option>40 см</option>
+                                <option>48 см</option>
+                            </select>
+                        </div>
+
+                        <div class="set dropup btn-group row">
+                            <button class="btn border set-btn" data-toggle="dropdown">
+                                Добавить ингредиенты
+                            </button>
+                            <button class="btn pink set-btn">
+                                в корзину
+                            </button>
+                            <div class="dropdown-menu" data-dropdown-menu>
+                                <button class="close-icon"></button>
+                                <div class="scroll" data-scroll>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="">Зелень</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="70р">Грибы</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="170р">Помидоры</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="70р">маслины</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="80р">Ананасы</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="70р">Лук красный</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="70р">маслины</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="170р">Помидоры</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="80р">Ананасы</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="70р">маслины</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="80р">Ананасы</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="70р">Лук красный</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="70р">маслины</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
                     </div>
                     <div class="col col_3">
@@ -131,7 +442,138 @@
                         </a>
                         <div class="text-intro" data-height>Филе красной рыбы, салатные креветки, помидоры черри, сыр Моцарелла, пицца-соус, оливки, орегано</div>
 
-                        <div data-include-counter></div>
+
+                        <div class="controls row">
+                            <div class="btn-group number-group">
+                                <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                <input data-input-number type="text" name="" class="btn border input-number" value="1" min="1" readonly>
+                                <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                            </div>
+                            <div class="rub">280 руб.</div>
+                            <select data-btn-select class="selectpicker">
+                                <option>32 см</option>
+                                <option>40 см</option>
+                                <option>48 см</option>
+                            </select>
+                        </div>
+
+                        <div class="set dropup btn-group row">
+                            <button class="btn border set-btn" data-toggle="dropdown">
+                                Добавить ингредиенты
+                            </button>
+                            <button class="btn pink set-btn">
+                                в корзину
+                            </button>
+                            <div class="dropdown-menu" data-dropdown-menu>
+                                <button class="close-icon"></button>
+                                <div class="scroll" data-scroll>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="">Зелень</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="70р">Грибы</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="170р">Помидоры</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="70р">маслины</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="80р">Ананасы</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="70р">Лук красный</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="70р">маслины</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="170р">Помидоры</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="80р">Ананасы</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="70р">маслины</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="80р">Ананасы</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="70р">Лук красный</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="70р">маслины</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
                     </div>
                 </div>
@@ -145,7 +587,138 @@
                         </a>
                         <div class="text-intro" data-height>Колбаса Пепперони, болгарский перец, маслины, перец Чили, сыр Моцарелла, пицца-соус, соус Табаско, орегано</div>
 
-                        <div data-include-counter></div>
+
+                        <div class="controls row">
+                            <div class="btn-group number-group">
+                                <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                <input data-input-number type="text" name="" class="btn border input-number" value="1" min="1" readonly>
+                                <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                            </div>
+                            <div class="rub">280 руб.</div>
+                            <select data-btn-select class="selectpicker">
+                                <option>32 см</option>
+                                <option>40 см</option>
+                                <option>48 см</option>
+                            </select>
+                        </div>
+
+                        <div class="set dropup btn-group row">
+                            <button class="btn border set-btn" data-toggle="dropdown">
+                                Добавить ингредиенты
+                            </button>
+                            <button class="btn pink set-btn">
+                                в корзину
+                            </button>
+                            <div class="dropdown-menu" data-dropdown-menu>
+                                <button class="close-icon"></button>
+                                <div class="scroll" data-scroll>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="">Зелень</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="70р">Грибы</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="170р">Помидоры</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="70р">маслины</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="80р">Ананасы</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="70р">Лук красный</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="70р">маслины</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="170р">Помидоры</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="80р">Ананасы</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="70р">маслины</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="80р">Ананасы</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="70р">Лук красный</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="70р">маслины</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
                     </div>
 
@@ -156,7 +729,138 @@
                         </a>
                         <div class="text-intro" data-height>Пицца-соус, колбаса Салями, сыр Моцарелла</div>
 
-                        <div data-include-counter></div>
+
+                        <div class="controls row">
+                            <div class="btn-group number-group">
+                                <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                <input data-input-number type="text" name="" class="btn border input-number" value="1" min="1" readonly>
+                                <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                            </div>
+                            <div class="rub">280 руб.</div>
+                            <select data-btn-select class="selectpicker">
+                                <option>32 см</option>
+                                <option>40 см</option>
+                                <option>48 см</option>
+                            </select>
+                        </div>
+
+                        <div class="set dropup btn-group row">
+                            <button class="btn border set-btn" data-toggle="dropdown">
+                                Добавить ингредиенты
+                            </button>
+                            <button class="btn pink set-btn">
+                                в корзину
+                            </button>
+                            <div class="dropdown-menu" data-dropdown-menu>
+                                <button class="close-icon"></button>
+                                <div class="scroll" data-scroll>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="">Зелень</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="70р">Грибы</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="170р">Помидоры</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="70р">маслины</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="80р">Ананасы</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="70р">Лук красный</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="70р">маслины</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="170р">Помидоры</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="80р">Ананасы</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="70р">маслины</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="80р">Ананасы</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="70р">Лук красный</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="70р">маслины</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
                     </div>
 
@@ -167,7 +871,138 @@
                         </a>
                         <div class="text-intro" data-height>Обжаренное куриное филе, сыр Моцарелла, соус Цезарь, листья салата Романо, сыр Реджанито</div>
 
-                        <div data-include-counter></div>
+
+                        <div class="controls row">
+                            <div class="btn-group number-group">
+                                <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                <input data-input-number type="text" name="" class="btn border input-number" value="1" min="1" readonly>
+                                <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                            </div>
+                            <div class="rub">280 руб.</div>
+                            <select data-btn-select class="selectpicker">
+                                <option>32 см</option>
+                                <option>40 см</option>
+                                <option>48 см</option>
+                            </select>
+                        </div>
+
+                        <div class="set dropup btn-group row">
+                            <button class="btn border set-btn" data-toggle="dropdown">
+                                Добавить ингредиенты
+                            </button>
+                            <button class="btn pink set-btn">
+                                в корзину
+                            </button>
+                            <div class="dropdown-menu" data-dropdown-menu>
+                                <button class="close-icon"></button>
+                                <div class="scroll" data-scroll>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="">Зелень</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="70р">Грибы</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="170р">Помидоры</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="70р">маслины</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="80р">Ананасы</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="70р">Лук красный</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="70р">маслины</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="170р">Помидоры</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="80р">Ананасы</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="70р">маслины</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="80р">Ананасы</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="70р">Лук красный</div>
+                                    </div>
+                                    <div class="set-list">
+                                        <div class="btn-group number-group">
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="minus"></button>
+                                            <input data-input-number type="text" name="" class="btn border input-number" value="0" min="0" readonly>
+                                            <button data-btn-number type="button" class="btn border btn-number" data-type="plus"></button>
+                                        </div>
+                                        <div class="set-title" data-title="70р">маслины</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
                     </div>
                 </div>
@@ -248,8 +1083,59 @@
         </div>
     </div>
 
-    <div data-footer></div>
+    <div class="footer">
+        <div class="wrapper">
 
+
+            <div class="row-col row">
+                <div class="col col_4">
+                    <a href="/" class="logo"></a>
+                </div>
+                <div class="col col_2">
+                    <div class="money">
+                        <a href="https://money.yandex.ru/" target="_blank" class="mon-icon-s_1"></a>
+                        <a href="https://www.webmoney.ru/" target="_blank" class="mon-icon-s_2"></a>
+                        <a href="http://www.visa.com.ru/" target="_blank" class="mon-icon-s_3"></a>
+                        <a href="https://www.mastercard.ru/" target="_blank" class="mon-icon-s_4"></a>
+                        <a href="https://qiwi.com/" target="_blank" class="mon-icon-s_5"></a>
+                    </div>
+                    <div class="social">
+                        <a href="#" class="soc-icon-s_5"></a>
+                        <a href="#" class="soc-icon-s_6"></a>
+                        <a href="#" class="soc-icon-s_7"></a>
+                        <a href="#" class="soc-icon-s_8"></a>
+                    </div>
+                </div>
+                <div class="col col_4">
+                    <div class="phone">+7 495/499 <span>505-57-57</span></div>
+                    <button class="btn black">заказать звонок</button>
+                </div>
+            </div>
+
+
+            <ul class="menu nav">
+                <li><a href="pizza.html">ПИЦЦА</a></li> <li class="sep"></li>
+                <li><a href="paste.html">ПАСТА</a></li> <li class="sep"></li>
+                <li><a href="sushi.html">СУШИ-БАР</a></li> <li class="sep"></li>
+                <li><a href="snacks.html">ЗАКУСКИ/САЛАТЫ</a></li> <li class="sep"></li>
+                <li><a href="hot.html">ГОРЯЧЕЕ</a></li> <li class="sep"></li>
+                <li><a href="drink.html">БАР/НАПИТКИ</a></li> <li class="sep"></li>
+                <li><a href="dessert.html">ДЕСЕРТЫ</a></li> <li class="sep"></li>
+                <li><a href="children.html">детское меню</a></li> <li class="sep"></li>
+                <li><a href="stock.html">АКЦИИ</a></li>
+            </ul>
+
+            <div class="copy row">
+                <span>
+                    <a href="#" class="active">десктопная версия</a> | <a href="#">мобильная версия</a>
+                </span>
+                <span>
+                    © 1999–2016 ООО «Бистро Пронто»
+                </span>
+            </div>
+
+        </div>
+    </div>
     <!-- Modal global-->
     <div class="modal fade" id="modal" role="dialog" aria-hidden="true">
         <div class="modal-dialog">

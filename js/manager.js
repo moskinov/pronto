@@ -2,93 +2,62 @@ function MainManager_f() {
 
   this.init = function () {
 
-    //parallax
-
     var scene = document.getElementById('parallax');
     if(scene != null) {
       var parallax = new Parallax(scene);
     }
 
-    var count1 = $('[data-include-counter]');
-    var count2 = $('[data-include-counter-2]');
+    MainManager.initCounter();
+    MainManager.initHeight();
 
-    if(count1.length !=0) {
+    $('[data-btn-select]').selectpicker();
 
-      count1.loadTemplate("./template/view-counter.html",'', {
-        complete: function(){
+    $('[data-dropdown-menu]').click(function(event){
 
-          $('[data-btn-select]').selectpicker();
+      if(event.target.className != 'close-icon') {
+        event.stopPropagation();
+      }
 
-          $('[data-dropdown-menu]').click(function(event){
+    });
 
-            if(event.target.className != 'close-icon') {
-              event.stopPropagation();
-            }
-
-          });
-
-          MainManager.initCounter();
-
-          $('[data-scroll]').mCustomScrollbar({
-            autoHideScrollbar: false,
-            scrollInertia: 400,
-            advanced: {
-              updateOnContentResize:true
-            },
-            callbacks:{
-              onInit: function(){
-
-              }
-            }
-          });
+    $('[data-scroll]').mCustomScrollbar({
+      autoHideScrollbar: false,
+      scrollInertia: 400,
+      advanced: {
+        updateOnContentResize:true
+      },
+      callbacks:{
+        onInit: function(){
 
         }
-      });
-    }
+      }
+    });
 
-    if(count2.length !=0) {
-      count2.loadTemplate("./template/view-counter_2.html",'', {
-        complete: function(){
-          MainManager.initCounter();
+    var owl = $('[data-product-slider]');
+    owl.on('initialized.owl.carousel resize.owl.carousel refreshed.owl.carousel', function(event) {console.log(event)
+      var top = $(event.target).find('img').height();
+      $(event.target).find('.owl-nav div').css('top',top/2-7);
+    });
+
+    owl.owlCarousel({
+      nav: true,
+      items:6,
+      dots:false,
+      navRewind: false,
+      navText: ['',''],
+      responsive:{
+        0:{
+          items:2
+        },
+        640:{
+          items:3
+        },
+        700:{
+          items:4
+        },
+        930:{
+          items:6
         }
-      });
-    }
-
-    $('[data-header]').loadTemplate("./template/view-header.html",'', '');
-    $('[data-footer]').loadTemplate("./template/view-footer.html",'', '');
-    $('[data-include-slider]').loadTemplate("./template/view-slider.html",'', {
-      complete: function(){
-
-        var owl = $('[data-product-slider]');
-        owl.on('initialized.owl.carousel resize.owl.carousel refreshed.owl.carousel', function(event) {console.log(event)
-          var top = $(event.target).find('img').height();
-          $(event.target).find('.owl-nav div').css('top',top/2-7);
-        });
-
-        owl.owlCarousel({
-          nav: true,
-          items:6,
-          dots:false,
-          navRewind: false,
-          navText: ['',''],
-          responsive:{
-            0:{
-              items:2
-            },
-            640:{
-              items:3
-            },
-            700:{
-              items:4
-            },
-            930:{
-              items:6
-            }
-          }
-        });
-
-        MainManager.initCounter();
-        MainManager.initHeight();
       }
     });
 
@@ -185,7 +154,8 @@ function MainManager_f() {
     $('[data-list-'+$(el).attr('id')+']').append('<li>' +
         '<span class="close-icon" onclick="MainManager.clear(this)"></span>'+ name +'</li>');
 
-  }
+  };
+
   this.clear = function (el) {
     var el = $(el);
     el.parent().remove();
