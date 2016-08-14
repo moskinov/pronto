@@ -57,6 +57,9 @@
       color: $hc;
       border-color: $hc;
     }
+    &.link {
+      border-color: transparent !important;
+    }
   }
 
   &.orange-bg,&.green,&.black {
@@ -109,6 +112,32 @@
     &:hover {
       color: #ffffff;
       border-color: #ffffff;
+    }
+  }
+  &.ok {
+    width: 28px;
+    height: 28px;
+    background: #e00873;
+    padding: 0;
+    position: relative;
+    &:after {
+      content: '';
+      width: 11px;
+      height: 4px;
+      position: absolute;
+      top: 9px;
+      left: 8px;
+      border: 2px solid #ffffff;
+      border-top: none;
+      border-right: none;
+      background: transparent;
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+    }
+    &:hover {
+      background: #ff2778;
     }
   }
 }
@@ -552,6 +581,15 @@ input.file-input {
   input,textarea {
     background: transparent;
     color: #ffffff;
+    &:focus {
+      border-color: #ffffff;
+    }
+  }
+  .checkbox-label.radio {
+    margin-bottom: 20px;
+    .checkbox-label-text {
+      font-size: 18px;
+    }
   }
   .textarea-box {
     padding-left: 168px;
@@ -722,11 +760,26 @@ input.file-input {
       display: table-cell;
       vertical-align: middle;
       padding-bottom: 20px;
-      &:first-child {
+      &:first-child,&:nth-child(3) {
         font: 14px/14px "Circe", "Helvetica", Arial, sans-serif;
         text-transform: uppercase;
         width: 100px;
         padding-right: 5px;
+      }
+    }
+  }
+  &.two {
+    .form-row {
+      .form-cell {
+        input {
+          text-align: center;
+        }
+        &:first-child,&:nth-child(3) {
+          padding-right: 5%;
+        }
+        &:nth-child(3) {
+          padding-left: 5%;
+        }
       }
     }
   }

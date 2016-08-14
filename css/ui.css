@@ -52,6 +52,8 @@
     .btn.border:hover {
       color: #e4b100;
       border-color: #e4b100; }
+    .btn.border.link {
+      border-color: transparent !important; }
   .btn.orange-bg, .btn.green, .btn.black {
     font: 17px/18px "Cervo-Regular",sans-serif;
     letter-spacing: 2px;
@@ -90,6 +92,29 @@
     .btn.more:hover {
       color: #ffffff;
       border-color: #ffffff; }
+  .btn.ok {
+    width: 28px;
+    height: 28px;
+    background: #e00873;
+    padding: 0;
+    position: relative; }
+    .btn.ok:after {
+      content: '';
+      width: 11px;
+      height: 4px;
+      position: absolute;
+      top: 9px;
+      left: 8px;
+      border: 2px solid #ffffff;
+      border-top: none;
+      border-right: none;
+      background: transparent;
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      transform: rotate(-45deg); }
+    .btn.ok:hover {
+      background: #ff2778; }
 
 .btn-group {
   position: relative;
@@ -495,6 +520,12 @@ input.file-input {
 .content-form input, .content-form textarea {
   background: transparent;
   color: #ffffff; }
+  .content-form input:focus, .content-form textarea:focus {
+    border-color: #ffffff; }
+.content-form .checkbox-label.radio {
+  margin-bottom: 20px; }
+  .content-form .checkbox-label.radio .checkbox-label-text {
+    font-size: 18px; }
 .content-form .textarea-box {
   padding-left: 168px;
   position: relative; }
@@ -634,11 +665,17 @@ input.file-input {
       display: table-cell;
       vertical-align: middle;
       padding-bottom: 20px; }
-      .form-grid .form-row .form-cell:first-child {
+      .form-grid .form-row .form-cell:first-child, .form-grid .form-row .form-cell:nth-child(3) {
         font: 14px/14px "Circe", "Helvetica", Arial, sans-serif;
         text-transform: uppercase;
         width: 100px;
         padding-right: 5px; }
+  .form-grid.two .form-row .form-cell input {
+    text-align: center; }
+  .form-grid.two .form-row .form-cell:first-child, .form-grid.two .form-row .form-cell:nth-child(3) {
+    padding-right: 5%; }
+  .form-grid.two .form-row .form-cell:nth-child(3) {
+    padding-left: 5%; }
 
 .textarea-box {
   padding-bottom: 20px; }

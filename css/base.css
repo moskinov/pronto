@@ -23,11 +23,18 @@ a {
 h2 {
   font: 30px/30px "Cervo-Regular",sans-serif;
   margin: 0; }
+  h2.big {
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 30px;
+    text-align: center; }
+  h2.orange {
+    color: #df7e00; }
 
 .wrapper {
   margin: 0 auto;
   min-width: 640px;
-  max-width: 1400px;
+  max-width: 1200px;
   padding: 0 30px; }
   .wrapper.index {
     z-index: 3;
@@ -175,6 +182,11 @@ h2 {
         transform: translate(0, -50%); }
   .header .right-col .btn-group {
     float: right; }
+    .header .right-col .btn-group a.link {
+      max-width: 200px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis; }
   .header .right-col .social {
     float: left; }
     .header .right-col .social a {
@@ -390,6 +402,26 @@ ul.nav {
     margin: 0 0 20px; }
   .content.page {
     padding-bottom: 30px; }
+  .content .btn.border {
+    border: 1px solid #ffffff;
+    color: #ffffff; }
+    .content .btn.border:hover {
+      color: #e4b100;
+      border-color: #e4b100; }
+    .content .btn.border.active {
+      color: #252525;
+      background-color: #ffffff !important;
+      border-color: #696969;
+      pointer-events: none; }
+  .content .addr-list {
+    margin-bottom: 10px; }
+    .content .addr-list h2 {
+      display: inline-block;
+      margin: 0 10px 10px 0 !important;
+      vertical-align: middle; }
+    .content .addr-list .btn.border {
+      vertical-align: middle;
+      margin: 0 6px 10px 0; }
 
 .p-color {
   color: #e4b100;
