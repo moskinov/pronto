@@ -448,6 +448,8 @@ ul.nav {
       display: block;
       width: 300px;
       height: 142px; }
+  .stock p {
+    margin: 0; }
 
 .delivery .title {
   text-align: center;
