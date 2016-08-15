@@ -57,6 +57,12 @@ h2 {
 ._p8 {
   padding: 0 8%; }
 
+.fl-r {
+  float: right; }
+
+.nowrap {
+  white-space: nowrap; }
+
 .m-b10 {
   margin-bottom: 10px !important; }
 
@@ -387,7 +393,7 @@ ul.nav {
     top: auto;
     bottom: 0;
     background-position: left bottom;
-    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9ItCh0LvQvtC5XzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMTMuN3B4IiBoZWlnaHQ9IjUuNHB4IiB2aWV3Qm94PSIwIDAgMTMuNyA1LjQiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDEzLjcgNS40OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4uc3Qwe2ZpbGw6I0ZGRkNGMzt9PC9zdHlsZT48cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTMuNyw1LjRIMEw2LjgsMEwxMy43LDUuNHoiLz48L3N2Zz4=); }
+    background-image: url(data:image/svg+xml;base64,77u/PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSLQodC70L7QuV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjEzLjdweCIgaGVpZ2h0PSI1LjRweCIgdmlld0JveD0iMCAwIDEzLjcgNS40IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAxMy43IDUuNDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+LnN0MHtmaWxsOiNGRkZGRkY7fTwvc3R5bGU+PHBhdGggY2xhc3M9InN0MCIgZD0iTTEzLjcsNS40SDBMNi44LDBMMTMuNyw1LjR6Ii8+PC9zdmc+); }
   .content h1 {
     text-align: center;
     color: #e4b100; }
@@ -413,15 +419,16 @@ ul.nav {
       background-color: #ffffff !important;
       border-color: #696969;
       pointer-events: none; }
-  .content .addr-list {
-    margin-bottom: 10px; }
-    .content .addr-list h2 {
-      display: inline-block;
-      margin: 0 10px 10px 0 !important;
-      vertical-align: middle; }
-    .content .addr-list .btn.border {
-      vertical-align: middle;
-      margin: 0 6px 10px 0; }
+
+.addr-list {
+  margin-bottom: 10px; }
+  .addr-list h2 {
+    display: inline-block;
+    margin: 0 10px 10px 0 !important;
+    vertical-align: middle; }
+  .addr-list .btn.border {
+    vertical-align: middle;
+    margin: 0 6px 10px 0; }
 
 .p-color {
   color: #e4b100;

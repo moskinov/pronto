@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Pronto</title>
+    <meta name="viewport" content="width=device-width">
+
+    <!--reset-->
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <!--font-->
+    <link rel="stylesheet" href="font/include-font.css">
+    <link rel="stylesheet" href="icon/include-icon.css">
+
+    <!--style global-->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/ui.css">
+
+    <link rel="stylesheet" href="css/cabinet.css">
+
+    <!--lib js-->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/jquery/parallax.min.js"></script>
+    <script src="lib/bootstrap/bootstrap.min.js"></script>
+    <script src="lib/bootstrap/bootstrap-select.min.js"></script>
+    <script src="lib/jquery/jquery.mCustomScrollbar.js"></script>
+    <script src="lib/jquery/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="lib/jquery/owl.carousel.css">
+    <link rel="stylesheet" href="lib/jquery/jquery.mCustomScrollbar.css">
+
+    <!--js global-->
+    <script src="js/manager.js"></script>
+    <script src="js/init.js"></script>
+
+    <!--style adaptive include last-->
+    <link rel="stylesheet" href="css/media.css">
+
+</head>
+<body>
+
+    <!--fixed row-->
+    <div data-row-fixed class="fixed">
+        <div class="btn-group">
+            <a href="#" class="btn border link">андреев николай</a>
+        </div>
+        <div class="basket-box">
+            <button class="btn border" onclick="MainManager.basket(0)">В корзину</button>
+            <span class="data">11 товаров — 10 570 руб.</span>
+        </div>
+    </div>
+
+
+    <div class="wrapper index">
+
+        <div class="header row">
+
+            <div class="left-col">
+                <a href="/" class="logo"></a>
+                <button class="btn orange-bg">заказать звонок</button>
+            </div>
+
+            <div class="right-col">
+                <div class="main-nav row">
+                    <div class="right-col">
+                        <div class="phone">+7 495/499 <span>505-57-57</span></div>
+                        <div class="counter">1000</div>
+                        <div class="hint">За сегодня мы приготовили уже 1000 пицц!</div>
+                    </div>
+                    <ul class="nav">
+                        <li><a href="menu.html">МЕНЮ</a></li> <li class="sep"></li>
+                        <li><a href="delivery.html">ДОСТАВКА</a></li> <li class="sep"></li>
+                        <li><a href="stock.html">АКЦИИ</a></li> <li class="sep"></li>
+                        <li><a href="banquet.html">БАНКЕТЫ</a></li> <li class="sep"></li>
+                        <li><a href="restaurant.html">РЕСТОРАНЫ</a></li> <li class="sep"></li>
+                        <li><a href="about.html">ПРОНТО</a></li>
+                    </ul>
+                </div>
+
+                <div class="_txt-center row">
+                    <div class="btn-group">
+                        <a href="#" class="btn border link">андреев николай</a>
+                    </div>
+                    <div class="social">
+                        <a href="#" class="soc-icon-s_1"></a>
+                        <a href="#" class="soc-icon-s_2"></a>
+                        <a href="#" class="soc-icon-s_3"></a>
+                        <a href="#" class="soc-icon-s_4"></a>
+                    </div>
+                    <div class="basket-box">
+                        <button class="btn border" onclick="MainManager.basket(0)">В корзину</button>
+                        <span class="data">11 товаров — 10 570 руб.</span>
+                    </div>
+                </div>
+            </div>
+
+            <ul class="menu nav">
+                <li><a class="active" href="/pizza.html">ПИЦЦА</a></li> <li class="sep"></li>
+                <li><a href="paste.html">ПАСТА</a></li> <li class="sep"></li>
+                <li><a href="sushi.html">СУШИ-БАР</a></li> <li class="sep"></li>
+                <li><a href="snacks.html">ЗАКУСКИ/САЛАТЫ</a></li> <li class="sep"></li>
+                <li><a href="hot.html">ГОРЯЧЕЕ</a></li> <li class="sep"></li>
+                <li><a href="drink.html">БАР/НАПИТКИ</a></li> <li class="sep"></li>
+                <li><a href="dessert.html">ДЕСЕРТЫ</a></li> <li class="sep"></li>
+                <li><a href="children.html">детское меню</a></li> <li class="sep"></li>
+                <li><a href="stock.html">АКЦИИ</a></li>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <div class="content-white">
+        <div class="wrapper cabinet">
+
+            <div class="row">
+                <button class="btn border fl-r">выход</button>
+                <h2 class="big">Личный кабинет</h2>
+            </div>
+
+            <div class="cabinet-row">
+
+                <h2 class="small">Личные данные</h2>
+
+                <div class="row">
+
+                    <div class="col col_2">
+                        <div class="form-grid">
+                            <div class="form-row">
+                                <div class="form-cell">имя*</div>
+                                <div class="form-cell">
+                                    <div class="input-data">
+                                        <input type="text">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-cell">фамилия*</div>
+                                <div class="form-cell">
+                                    <div class="input-data">
+                                        <input type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col col_2">
+                        <div class="form-grid">
+                            <div class="form-row">
+                                <div class="form-cell">день рождения*</div>
+                                <div class="form-cell">
+                                    <div class="input-data">
+                                        <input type="text">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-cell">e-mail</div>
+                                <div class="form-cell">
+                                    <div class="input-data">
+                                        <input type="text">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="fl-r">
+                        <button class="btn green" onclick="MainManager.showAlert('personal')">сохранить</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="cabinet-row">
+
+                <h2 class="small">Изменение номера телефона</h2>
+
+                <div class="row">
+
+                    <div class="col col_2">
+                        <div class="form-grid">
+                            <div class="form-row">
+                                <div class="form-cell">текущий</div>
+                                <div class="form-cell _txt-right">
+                                    <div class="input-data phone">
+                                        <span>+7</span>
+                                        <input type="text">
+                                        <input type="text">
+                                        <input type="text">
+                                        <input type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col col_2">
+                        <div class="form-grid">
+                            <div class="form-row">
+                                <div class="form-cell nowrap">новый номер*</div>
+                                <div class="form-cell _txt-right">
+                                    <div class="input-data phone">
+                                        <span>+7</span>
+                                        <input type="text">
+                                        <input type="text">
+                                        <input type="text">
+                                        <input type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fl-r">
+                        <button class="btn green" onclick="MainManager.showModal('phone')">Отправить</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="cabinet-row">
+
+                <div class="row">
+                    <div class="col col_2">
+                        <div class="addr-list" data-addr-list>
+                            <h2 class="m-b20 small">
+                                Адрес доставки
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="col col_2"></div>
+                </div>
+
+                <div class="row" data-addr-input>
+                    <div class="col col_2">
+                        <div class="form-grid">
+                            <div class="form-row">
+                                <div class="form-cell">город*</div>
+                                <div class="form-cell">
+                                    <div class="input-data">
+                                        <input type="text" value="Москва">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-cell">ст. метро</div>
+                                <div class="form-cell">
+                                    <div class="input-data">
+                                        <input type="text" value="Бауманская">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-cell">улица*</div>
+                                <div class="form-cell">
+                                    <div class="input-data">
+                                        <input type="text" value="Комсомольская" data-addr-street>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col col_2">
+                        <div class="form-grid two">
+                            <div class="form-row">
+                                <div class="form-cell">дом*</div>
+                                <div class="form-cell">
+                                    <div class="input-data">
+                                        <input type="text" value="5" data-addr-house>
+                                    </div>
+                                </div>
+                                <div class="form-cell">корпус</div>
+                                <div class="form-cell">
+                                    <div class="input-data">
+                                        <input type="text" value="3">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-cell">строение</div>
+                                <div class="form-cell">
+                                    <div class="input-data">
+                                        <input type="text" value="2">
+                                    </div>
+                                </div>
+                                <div class="form-cell">подъезд*</div>
+                                <div class="form-cell">
+                                    <div class="input-data">
+                                        <input type="text" value="7">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-cell">этаж</div>
+                                <div class="form-cell">
+                                    <div class="input-data">
+                                        <input type="text" value="18">
+                                    </div>
+                                </div>
+                                <div class="form-cell">квартира*</div>
+                                <div class="form-cell">
+                                    <div class="input-data">
+                                        <input type="text" value="112">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fl-r">
+                        <button class="btn border" onclick="MainManager.addrAdd()">+ добавить адрес</button>
+                        <button class="btn green" onclick="MainManager.showAlert('addr')">Сохранить</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="cabinet-row">
+                <h2 class="small">История заказов</h2>
+                <table class="order-list">
+                    <thead>
+                    <tr>
+                        <td>номер</td>
+                        <td>Дата</td>
+                        <td>Заказ</td>
+                        <td>сумма</td>
+                        <td>статус</td>
+                        <td>удалить</td>
+                        <td>повторить</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>3564</td>
+                        <td>16.06.16</td>
+                        <td>
+                            Салями (40 см) + грибы (х2), помидоры Черри,
+                            болгарский перец <br>
+                            Салат Цезарь <br>
+                            Популярный суши сет
+                        </td>
+                        <td>2560 руб.</td>
+                        <td>Выполняется</td>
+                        <td>
+                            <button class="btn orange close-icon"></button>
+                        </td>
+                        <td>
+                            <button class="btn orange ok"></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3567</td>
+                        <td>19.02.16</td>
+                        <td>
+                            Четыре сыра (40 см)
+                        </td>
+                        <td>560 руб.</td>
+                        <td>Выполнен</td>
+                        <td>
+                            <button class="btn orange close-icon"></button>
+                        </td>
+                        <td>
+                            <button class="btn orange ok"></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2567</td>
+                        <td>19.02.16</td>
+                        <td>
+                            Гавайская (40 см) <br>
+                            Пивной сет <br>
+                            Тирамису <br>
+                        </td>
+                        <td>1560 руб.</td>
+                        <td>Выполнен</td>
+                        <td>
+                            <button class="btn orange close-icon"></button>
+                        </td>
+                        <td>
+                            <button class="btn orange ok"></button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <div class="paginate small">
+                    <a href="#" class="active">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                </div>
+
+            </div>
+
+            <div class="cabinet-row">
+
+                <h2 class="small">Дисконтная карта</h2>
+
+                <div class="row">
+
+                    <div class="col col_2">
+                        <div class="activate-box true" data-activate-input="1">
+                            <div class="form-grid">
+                                <div class="form-row">
+                                    <div class="form-cell">номер*</div>
+                                    <div class="form-cell">
+                                        <div class="input-data activate">
+                                            <input type="text" value="4568 7689 3456 2110">
+                                            <button class="btn orange big" onclick="MainManager.staticActivate(1)">активировать</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div data-activate-box="1" class="activate-box">
+                        <button class="btn border fl-r m-b10" onclick="MainManager.staticActivate(1)">изменить</button>
+                        <p>4568 7689 3456 2110</p>
+                        <p class="color">Ваша карта предоставляет вам скидку 5%</p>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <div class="cabinet-row">
+
+                <h2 class="small">Подписка</h2>
+
+                <div class="row">
+
+                    <div class="col col_2">
+                        <div class="activate-box true" data-activate-input="2">
+                            <div class="form-grid">
+                                <div class="form-row">
+                                    <div class="form-cell">e-mail*</div>
+                                    <div class="form-cell">
+                                        <div class="input-data activate">
+                                            <input type="text" value="nikola@mail.ru">
+                                            <button class="btn orange big" onclick="MainManager.staticActivate(2)">подписаться</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div data-activate-box="2" class="activate-box">
+                        <button class="btn border fl-r m-b10" onclick="MainManager.staticActivate(2)">отменить подписку</button>
+                        <p>nikola@mail.ru</p>
+                        <p class="color">Вы подписаны на еженедельную рассылку новостей и акций компании «Пронто»</p>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <div class="cabinet-row">
+
+                <h2 class="small">Изменение пароля</h2>
+
+                <div class="row">
+
+                    <div class="col col_2">
+                        <div class="form-grid">
+                            <div class="form-row">
+                                <div class="form-cell">старый пароль</div>
+                                <div class="form-cell">
+                                    <div class="input-data">
+                                        <input type="password">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col col_2">
+                        <div class="form-grid">
+                            <div class="form-row">
+                                <div class="form-cell">новый пароль*</div>
+                                <div class="form-cell">
+                                    <div class="input-data">
+                                        <input type="password">
+                                        <div class="hint">Минимум 6 символов</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fl-r">
+                        <button class="btn green" onclick="MainManager.showAlert('password')">сохранить</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="wrapper">
+
+
+            <div class="row-col row">
+                <div class="col col_4">
+                    <a href="/" class="logo"></a>
+                </div>
+                <div class="col col_2">
+                    <div class="money">
+                        <a href="https://money.yandex.ru/" target="_blank" class="mon-icon-s_1"></a>
+                        <a href="https://www.webmoney.ru/" target="_blank" class="mon-icon-s_2"></a>
+                        <a href="http://www.visa.com.ru/" target="_blank" class="mon-icon-s_3"></a>
+                        <a href="https://www.mastercard.ru/" target="_blank" class="mon-icon-s_4"></a>
+                        <a href="https://qiwi.com/" target="_blank" class="mon-icon-s_5"></a>
+                    </div>
+                    <div class="social">
+                        <a href="#" class="soc-icon-s_5"></a>
+                        <a href="#" class="soc-icon-s_6"></a>
+                        <a href="#" class="soc-icon-s_7"></a>
+                        <a href="#" class="soc-icon-s_8"></a>
+                    </div>
+                </div>
+                <div class="col col_4">
+                    <div class="phone">+7 495/499 <span>505-57-57</span></div>
+                    <button class="btn black">заказать звонок</button>
+                </div>
+            </div>
+
+
+            <ul class="menu nav">
+                <li><a href="pizza.html">ПИЦЦА</a></li> <li class="sep"></li>
+                <li><a href="paste.html">ПАСТА</a></li> <li class="sep"></li>
+                <li><a href="sushi.html">СУШИ-БАР</a></li> <li class="sep"></li>
+                <li><a href="snacks.html">ЗАКУСКИ/САЛАТЫ</a></li> <li class="sep"></li>
+                <li><a href="hot.html">ГОРЯЧЕЕ</a></li> <li class="sep"></li>
+                <li><a href="drink.html">БАР/НАПИТКИ</a></li> <li class="sep"></li>
+                <li><a href="dessert.html">ДЕСЕРТЫ</a></li> <li class="sep"></li>
+                <li><a href="children.html">детское меню</a></li> <li class="sep"></li>
+                <li><a href="stock.html">АКЦИИ</a></li>
+            </ul>
+
+            <div class="copy row">
+                <span>
+                    <a href="#" class="active">десктопная версия</a> | <a href="#">мобильная версия</a>
+                </span>
+                <span>
+                    © 1999–2016 ООО «Бистро Пронто»
+                </span>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Modal global-->
+    <div class="modal fade" id="modal" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <button class="close-icon" data-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-content"></div>
+        </div>
+    </div>
+
+    <!-- Modal basket -->
+    <div class="modal fade" id="basket">
+        <div class="modal-dialog basket-dialog small">
+            <div class="modal-content">
+                <button class="close-icon" data-dismiss="modal" aria-label="Close"></button>
+                <h1>Ваша корзина пуста</h1>
+            </div>
+        </div>
+    </div>
+
+    <div data-alert class="alert info">
+        <div class="wrapper" data-alert-text></div>
+    </div>
+
+</body>
+</html>

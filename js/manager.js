@@ -130,9 +130,13 @@ function MainManager_f() {
   this.showModal = function (template){
 
     var modal = $('#modal');
+    modal.removeData('bs.modal').removeClass('phone authorization registration reviews');
+    modal.modal({
+      backdrop: 'static',
+      remote: './template/' + template +'.html'
+    });
 
-    modal.removeData('bs.modal');
-    modal.modal({remote: './template/' + template +'.html'});
+    modal.addClass(template);
     modal.modal('show');
 
   };
@@ -162,5 +166,53 @@ function MainManager_f() {
     $('[data-input-file]').val('');
 
   }
+
+  this.showAlert = function (type) {
+    var text;
+    var boxAlert = $('[data-alert]');
+    var boxAlertText = $('[data-alert-text]');
+
+    if(type == "personal") {
+
+      text = 'Личные данные сохранены'
+
+    } else if(type == "addr"){
+
+      text = 'Изменения успешно внесены'
+
+    } else if(type == "password") {
+
+      text = 'Пароль успешно изменен'
+
+    } else {
+
+      text = 'Данные сохранены'
+
+    }
+
+    boxAlertText.html(text);
+    boxAlert.addClass('show');
+
+    setTimeout(function(){
+      boxAlert.removeClass('show');
+      boxAlertText.html('');
+    },1500)
+
+
+  };
+
+  this.addrAdd = function () {
+    var s = $('[data-addr-street]').val();
+    var h = $('[data-addr-house]').val();
+
+    if(s != '' && h != '') {
+      $('[data-addr-list]').append('<button class="btn border">'+s+','+h+'</button>')
+    }
+  };
+
+  this.staticActivate = function (n) {
+    $('[data-activate-input="'+n+'"]').toggleClass('true');
+    $('[data-activate-box="'+n+'"]').toggleClass('true');
+  };
 
 }
