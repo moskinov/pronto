@@ -226,6 +226,11 @@ ul.nav {
   li {
     display: inline-block;
     line-height: 26px;
+    padding-left: 0;
+    font-size: 11px;
+    &:after {
+      display: none;
+    }
     a {
       font: 11px/14px "CirceBold",sans-serif;
       text-decoration: none;
@@ -351,6 +356,7 @@ ul.nav {
 }
 
 .fixed {
+  will-change: transform;
   position: fixed;
   top: 0;
   left: 0;
@@ -707,6 +713,12 @@ h1, .product .intro {
         color: $bo;
       }
     }
+  }
+}
+
+.dessert-style {
+  .intro {
+    color: #b71918;
   }
 }
 
@@ -1661,6 +1673,148 @@ h1, .product .intro {
           right: 0;
           font-size: 20px;
           color: $bo;
+        }
+      }
+    }
+  }
+  &.dessert-style {
+    .title {
+      min-height: 72px;
+      &:before,&:after {
+        color: #b71918;
+      }
+      &.icon-krep {
+        &:before,&:after {
+          top: 25px;
+          content: "\e906";
+          font-size: 22px;
+          left: -60px;
+        }
+        &:after {
+          content: "\e905";
+          left: auto;
+          right: -60px;
+
+        }
+      }
+      &.icon-ven {
+        &:before,&:after {
+          top: 25px;
+          content: "\e930";
+          font-size: 22px;
+          left: -30px;
+        }
+        &:before {
+
+        }
+        &:after {
+          left: auto;
+          right: -30px;
+          @include transform( rotate(180deg) );
+
+        }
+      }
+      &.icon-chizk {
+        margin-top: 5px;
+        &:after {
+          content: "\e918";
+          font-size: 52px;
+          top: -36px;
+          left: 0;
+          right: 0;
+          @include transform( rotate(90deg) );
+        }
+      }
+      &.icon-amore {
+        &:before,&:after {
+          content: '. . .';
+          font-size: 28px;
+          top: 24px;
+          line-height: 1px;
+          font-weight: bold;
+          left: -40px;
+          letter-spacing: -4px;
+        }
+        &:after {
+          left: auto;
+          right: -40px;
+        }
+      }
+      &.icon-profi {
+        &:before,&:after {
+          content: "\e92f";
+          font-size: 10px;
+          top: -10px;
+          left: 0;
+          right: 0;
+        }
+        &:after {
+          top: 35px;
+        }
+      }
+      &.icon-split {
+        &:before,&:after {
+          top: 14px;
+          content: "\e91f";
+          font-size: 11px;
+          right: -50px;
+          @include transform(rotate(90deg));
+        }
+        &:after {
+          @include transform(rotate(-90deg));
+          right: auto;
+          left: -50px;
+        }
+      }
+      &.icon-tiram {
+        &:before,&:after {
+          content: "\e90c";
+          top: 10px;
+          left: -60px;
+          font-size: 14px;
+        }
+        &:after {
+          content: "\e90d";
+          right: -60px;
+          left: auto;
+        }
+      }
+      &.icon-assort {
+        &:before,&:after {
+          content: "\e92d";
+          top: 21px;
+          left: -40px;
+          font-size: 30px;
+        }
+        &:after {
+          right: -30px;
+          left: auto;
+          @include transform(rotate(180deg));
+        }
+      }
+      &.icon-dolche {
+        &:before,&:after {
+          top: 36px;
+          content: "\e917";
+          font-size: 34px;
+          left: -2px;
+          @include transform( rotate(90deg) );
+        }
+        &:after {
+          right: -2px;
+          left: auto;
+        }
+      }
+      &.icon-shar {
+        &:before,&:after {
+          top: 23px;
+          content: "\e92e";
+          font-size: 20px;
+          left: -36px;
+        }
+        &:after {
+          right: -36px;
+          left: auto;
         }
       }
     }

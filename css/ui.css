@@ -788,6 +788,7 @@ input.file-input {
         text-decoration: none; }
 
 .alert {
+  will-change: transform;
   position: fixed;
   left: 0;
   right: 0;
@@ -812,5 +813,31 @@ input.file-input {
     font: 20px/24px "Cervo-Regular",sans-serif;
     color: #252525;
     text-align: center; }
+  .alert.by .wrapper {
+    background: #fffcf3;
+    font: 20px/24px "Cervo-Medium",sans-serif;
+    position: relative; }
+    .alert.by .wrapper img {
+      width: 47px;
+      height: 47px;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 20px; }
+    .alert.by .wrapper span {
+      color: #3d3d3d;
+      vertical-align: middle;
+      display: inline-block; }
+    .alert.by .wrapper a {
+      color: #3d3d3d;
+      background: #eaab12;
+      text-decoration: none;
+      position: absolute;
+      right: 50px;
+      line-height: 50px;
+      padding: 0 14px; }
+    .alert.by .wrapper .close-icon {
+      background: #221e1f; }
+      .alert.by .wrapper .close-icon:hover {
+        background: #6f6769; }
 
 /*# sourceMappingURL=ui.css.map */

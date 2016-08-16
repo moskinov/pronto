@@ -916,6 +916,7 @@ input.file-input {
 
 //alert
 .alert {
+  will-change: transform;
   position: fixed;
   left: 0;
   right: 0;
@@ -933,6 +934,40 @@ input.file-input {
       font: 20px/24px "Cervo-Regular",sans-serif;
       color: $tc;
       text-align: center;
+    }
+  }
+  &.by {
+    .wrapper {
+      background: #fffcf3;
+      font: 20px/24px "Cervo-Medium",sans-serif;
+      position: relative;
+      img {
+        width: 47px;
+        height: 47px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 20px;
+      }
+      span {
+        color: #3d3d3d;
+        vertical-align: middle;
+        display: inline-block;
+      }
+      a {
+        color: #3d3d3d;
+        background: #eaab12;
+        text-decoration: none;
+        position: absolute;
+        right: 50px;
+        line-height: 50px;
+        padding: 0 14px;
+      }
+      .close-icon {
+        background: #221e1f;
+        &:hover {
+          background: #6f6769;
+        }
+      }
     }
   }
 }

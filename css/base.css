@@ -6,7 +6,7 @@
 html, body {
   width: 100%;
   min-height: 100%;
-  min-width: 640px; }
+  min-width: 940px; }
 
 body {
   background: #fffcf3;
@@ -33,7 +33,7 @@ h2 {
 
 .wrapper {
   margin: 0 auto;
-  min-width: 640px;
+  min-width: 940px;
   max-width: 1200px;
   padding: 0 30px; }
   .wrapper.index {
@@ -231,7 +231,11 @@ ul.nav {
     display: table; }
   ul.nav li {
     display: inline-block;
-    line-height: 26px; }
+    line-height: 26px;
+    padding-left: 0;
+    font-size: 11px; }
+    ul.nav li:after {
+      display: none; }
     ul.nav li a {
       font: 11px/14px "CirceBold",sans-serif;
       text-decoration: none;
@@ -341,6 +345,7 @@ ul.nav {
     float: left; }
 
 .fixed {
+  will-change: transform;
   position: fixed;
   top: 0;
   left: 0;
@@ -390,7 +395,7 @@ ul.nav {
     left: 0;
     top: 0;
     width: 100%;
-    min-width: 640px;
+    min-width: 940px;
     height: 6px;
     background-position: left top;
     background-repeat: repeat-x;
@@ -594,6 +599,9 @@ h1, .product .intro {
   color: #df7e00; }
 .pizza-style .sort a:hover, .pizza-style .sort a.active {
   color: #df7e00; }
+
+.dessert-style .intro {
+  color: #b71918; }
 
 .sort a.active {
   cursor: default;
@@ -1305,6 +1313,119 @@ h1, .product .intro {
     right: 0;
     font-size: 20px;
     color: #df7e00; }
+.product.dessert-style .title {
+  min-height: 72px; }
+  .product.dessert-style .title:before, .product.dessert-style .title:after {
+    color: #b71918; }
+  .product.dessert-style .title.icon-krep:before, .product.dessert-style .title.icon-krep:after {
+    top: 25px;
+    content: "\e906";
+    font-size: 22px;
+    left: -60px; }
+  .product.dessert-style .title.icon-krep:after {
+    content: "\e905";
+    left: auto;
+    right: -60px; }
+  .product.dessert-style .title.icon-ven:before, .product.dessert-style .title.icon-ven:after {
+    top: 25px;
+    content: "\e930";
+    font-size: 22px;
+    left: -30px; }
+  .product.dessert-style .title.icon-ven:after {
+    left: auto;
+    right: -30px;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  .product.dessert-style .title.icon-chizk {
+    margin-top: 5px; }
+    .product.dessert-style .title.icon-chizk:after {
+      content: "\e918";
+      font-size: 52px;
+      top: -36px;
+      left: 0;
+      right: 0;
+      -webkit-transform: rotate(90deg);
+      -moz-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      transform: rotate(90deg); }
+  .product.dessert-style .title.icon-amore:before, .product.dessert-style .title.icon-amore:after {
+    content: '. . .';
+    font-size: 28px;
+    top: 24px;
+    line-height: 1px;
+    font-weight: bold;
+    left: -40px;
+    letter-spacing: -4px; }
+  .product.dessert-style .title.icon-amore:after {
+    left: auto;
+    right: -40px; }
+  .product.dessert-style .title.icon-profi:before, .product.dessert-style .title.icon-profi:after {
+    content: "\e92f";
+    font-size: 10px;
+    top: -10px;
+    left: 0;
+    right: 0; }
+  .product.dessert-style .title.icon-profi:after {
+    top: 35px; }
+  .product.dessert-style .title.icon-split:before, .product.dessert-style .title.icon-split:after {
+    top: 14px;
+    content: "\e91f";
+    font-size: 11px;
+    right: -50px;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg); }
+  .product.dessert-style .title.icon-split:after {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    right: auto;
+    left: -50px; }
+  .product.dessert-style .title.icon-tiram:before, .product.dessert-style .title.icon-tiram:after {
+    content: "\e90c";
+    top: 10px;
+    left: -60px;
+    font-size: 14px; }
+  .product.dessert-style .title.icon-tiram:after {
+    content: "\e90d";
+    right: -60px;
+    left: auto; }
+  .product.dessert-style .title.icon-assort:before, .product.dessert-style .title.icon-assort:after {
+    content: "\e92d";
+    top: 21px;
+    left: -40px;
+    font-size: 30px; }
+  .product.dessert-style .title.icon-assort:after {
+    right: -30px;
+    left: auto;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  .product.dessert-style .title.icon-dolche:before, .product.dessert-style .title.icon-dolche:after {
+    top: 36px;
+    content: "\e917";
+    font-size: 34px;
+    left: -2px;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg); }
+  .product.dessert-style .title.icon-dolche:after {
+    right: -2px;
+    left: auto; }
+  .product.dessert-style .title.icon-shar:before, .product.dessert-style .title.icon-shar:after {
+    top: 23px;
+    content: "\e92e";
+    font-size: 20px;
+    left: -36px; }
+  .product.dessert-style .title.icon-shar:after {
+    right: -36px;
+    left: auto; }
 .product .text-intro {
   color: #cbcbcb;
   font-size: 14px;

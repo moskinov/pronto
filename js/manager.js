@@ -215,4 +215,11 @@ function MainManager_f() {
     $('[data-activate-box="'+n+'"]').toggleClass('true');
   };
 
+  this.showAlertProduct = function () {
+    $('[data-alert-by]').addClass('show');
+  };
+  this.hideAlertProduct = function () {
+    $('[data-alert-by]').removeClass('show');
+  }
+
 }
