@@ -539,6 +539,64 @@ ul.nav {
 
     }
   }
+  .info {
+    text-align: center;
+    margin-bottom: 10px;
+    h2 {
+      font: 25px/30px "BronnRust-BoldFill",sans-serif;
+      color: $hc;
+      margin-bottom: 20px;
+    }
+    p {
+      font: 16px/18px "BronnRust-BoldFill",sans-serif;
+      margin: 0 0 26px;
+    }
+  }
+  .map {
+    height: 384px;
+    background-color: #d0e5c9;
+    margin-bottom: 40px;
+  }
+}
+.zone {
+  p {
+    font-size: 16px;
+  }
+  h1 {
+    font-size: 36px !important;
+    line-height: 40px;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+  .col {
+    &:nth-child(1) {
+      h1 {
+        color: $bgb;
+      }
+    }
+    &:nth-child(2) {
+      h1 {
+        color: $hc;
+      }
+    }
+    &:nth-child(3) {
+      h1 {
+        color: #e63131;
+      }
+    }
+  }
+}
+.zone-alert {
+  font-size: 16px;
+  margin: 10px auto 40px auto;
+  border: 1px solid $br;
+  width: 420px;
+  padding: 17px 10px;
+  text-align: center;
+}
+
+.fill-s {
+  font: 16px/20px "BronnRust-BoldFill",sans-serif;
 }
 
 .section {
