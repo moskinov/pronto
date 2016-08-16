@@ -169,7 +169,7 @@
 .number-group {
   .btn-number,
   .input-number {
-    border: 1px solid $br;
+    border: 1px solid $br !important;
     padding: 0;
     height: 28px;
     width: 28px;
@@ -189,8 +189,8 @@
       height: 8px;
     }
     &:hover {
-      border-color: #ffffff;
-      color: #ffffff;
+      border-color: #ffffff !important;
+      color: #ffffff !important;
       &:after,&:last-child:before {
         background: #ffffff;
       }

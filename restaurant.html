@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/ui.css">
 
+    <link rel="stylesheet" href="css/cabinet.css">
+
     <!--lib js-->
     <script src="lib/jquery/jquery.min.js"></script>
     <script src="lib/jquery/parallax.min.js"></script>
@@ -25,9 +27,6 @@
     <script src="lib/jquery/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="lib/jquery/owl.carousel.css">
     <link rel="stylesheet" href="lib/jquery/jquery.mCustomScrollbar.css">
-
-    <!--style page-->
-    <link rel="stylesheet" href="css/about.css">
 
     <!--js global-->
     <script src="js/manager.js"></script>
@@ -42,8 +41,7 @@
     <!--fixed row-->
     <div data-row-fixed class="fixed">
         <div class="btn-group">
-            <button class="btn border" onclick="MainManager.showModal('registration')">регистрация</button>
-            <button class="btn border" onclick="MainManager.showModal('authorization')">войти</button>
+            <a href="#" class="btn border link">андреев николай</a>
         </div>
         <div class="basket-box">
             <button class="btn border" onclick="MainManager.basket(0)">В корзину</button>
@@ -80,8 +78,7 @@
 
                 <div class="_txt-center row">
                     <div class="btn-group">
-                        <button class="btn border" onclick="MainManager.showModal('registration')">регистрация</button>
-                        <button class="btn border" onclick="MainManager.showModal('authorization')">войти</button>
+                        <a href="#" class="btn border link">андреев николай</a>
                     </div>
                     <div class="social">
                         <a href="#" class="soc-icon-s_1"></a>
@@ -112,138 +109,113 @@
 
     </div>
 
-    <div class="content">
+    <div class="content restaurant">
 
-        <div class="wrapper index about _txt-center">
 
-            <h1>пронто</h1>
+        <div class="wrapper">
 
-            <div class="sort m-b50">
-                <a href="about.html" class="active">о компании</a>
-                <a href="partners.html">партнерам</a>
-                <a href="discount.html">дисконтные карты</a>
-                <a href="reviews.html">отзывы</a>
-                <a href="vacancies.html">вакансии</a>
-                <a href="contacts.html">контакты</a>
+            <h2 class="big">Рестораны</h2>
+
+            <div class="sort sub m-b30">
+                <a href="#" class="active">Москва</a>
+                <a href="#">зеленоград</a>
+                <a href="#">московская область</a>
+                <a href="#">россия</a>
             </div>
-            <div class="_p8">
-                <p class="m-b40">
-                    Группа компаний «Пронто» была основана в 2000 году.
-                    За 16 лет существования компании были открыты предприятия в Москве,
-                    Московской области, а так же в регионах России: в Ярославле, Санкт-Петербурге,
-                    Туле,Казани,  Нижнекамске, Набережных Челнах и т.д.
-                </p>
-                <h3>В группу входят:</h3>
 
-                <div class="row group info">
-                    <div class="col col_4">
-                        сеть
-                        итальянских кафе
-                        «Пронто»
+            <div class="_txt-right m-b10">
+                <button class="btn border m-r4">детское меню</button>
+                <button class="btn border m-r4">24 часа</button>
+                <button class="btn border m-r4">летняя веранда</button>
+                <button class="btn border active">все</button>
+            </div>
+
+            <div class="row">
+                <div class="col col_3">
+                    <div class="restaurant-list">
+                        <a href="restaurant-1.html">
+                            м. Бутово <br>
+                            (Бульвар Дмитрия Донского)
+                            Старокачаловская, 1Б
+                            (Северное Бутово)
+                        </a>
+                        <div class="line _1"></div>
                     </div>
-                    <div class="col col_4">
-                        сеть ресторанов
-                        азиатской кухни
-                        «Тай Чай»
+                    <div class="restaurant-list">
+                        <a href="restaurant-1.html">
+                            м. Семеновская <br>
+                            Семеновская площадь, д. 2
+                        </a>
+                        <div class="line _1"></div>
                     </div>
-                    <div class="col col_4">
-                        эспрессо-бар
-                        «1808»
+                    <div class="restaurant-list">
+                        <a href="restaurant-1.html">
+                            м. Выхино <br>
+                            ул. Вешняковская, 22А
+                        </a>
+                        <div class="line _2"></div>
                     </div>
-                    <div class="col col_4">
-                        сеть
-                        пивных ресторанов
-                        Beerline
+                    <div class="restaurant-list">
+                        <a href="restaurant-1.html">
+                            м. Таганская<br>
+                            ул. Таганская, 3
+                        </a>
+                        <div class="line _2"></div>
+                        <div class="line _3"></div>
+                    </div>
+                    <div class="restaurant-list">
+                        <a href="restaurant-1.html">
+                            м. Отрадное<br>
+                            Алтуфьевское шоссе, 40Д
+                        </a>
+                        <div class="line _4"></div>
+                    </div>
+                    <div class="restaurant-list">
+                        <a href="restaurant-1.html">
+                            м. Чертаноская<br>
+                            ул. Чертановская, 1Г ТЦ «Свод»
+                        </a>
+                        <div class="line _4"></div>
+                    </div>
+                    <div class="restaurant-list">
+                        <a href="restaurant-1.html">
+                            м. Коломенская<br>
+                            ул. Новинки, 12Б
+                        </a>
+                        <div class="line _5"></div>
+                    </div>
+                    <div class="restaurant-list">
+                        <a href="restaurant-1.html">
+                            м. Водный стадион<br>
+                            Головинское шоссе, 1А
+                        </a>
+                        <div class="line _5"></div>
+                    </div>
+                    <div class="restaurant-list">
+                        <a href="restaurant-1.html">
+                            м. Свиблово<br>
+                            ул. Енисейская, 5/2
+                        </a>
+                        <div class="line _6"></div>
                     </div>
                 </div>
-
-                <h3>Наши награды:</h3>
-
-                <div class="row win group">
-                    <div class="col col_3">
-                        Лучшая доставка пиццы
-                        ноябрь 2010 г
-                        журнал «Timeout», Москва
-                    </div>
-                    <div class="col col_3">
-                        Лучший дизайн рекламы
-                        январь 2010 г
-                        журнал «Outdoor Media»
-                    </div>
-                    <div class="col col_3">
-                        Победитель премии
-                        «Золотая Сеть»
-                        2010 г
-                    </div>
+                <div class="col col_3c">
+                    <div class="map">карта</div>
                 </div>
             </div>
 
-            
-            <div class="stat">
-                <div>Итальянская<br>кухня</div>
-                <div>2000 год<br>основания</div>
-                <div>более 40<br>ресторанов</div>
-                <div>средняя<br>ценовая категория</div>
-            </div>
+            <div class="img-bg"></div>
 
-            <div class="_p8">
-                <p>
-                    Первое заведение этой популярной сети было открыто в 2000 году.
-                    С тех пор компания непрерывно развивается, и сегодня включает в себя
-                    более 40 ресторанов лучей итальянской кухни.
+            <div class="_txt-center">
+                <p>Первое заведение нашей популярной сети было открыто в 2000 году. С тех пор компания непрерывно развивается, и сегодня включает в себя более 40 ресторанов лучшей итальянской кухни.</p>
+                <p>Классическое меню предлагает большой выбор пиццы, свежих паст, салатов, а также традиционных итальянских блюд из рыбы и мяса.</p>
+                <p>В сети пиццерий «Пронто» есть большая винная карта, банкетное меню, стильная музыка, wi-fi и все,
+                    что нужно для полноценного отдыха. Детское меню для удобства посетителей вынесено
+                    в специальный раздел, цены приятно удивляют.</p>
+                <p>Мы позаботились и о комфортном отдыхе самых маленьких гостей,
+                    у нас есть детские стульчики и многие другие полезные мелочи для малышей (раскраски, карандаши, воздушные шарики). В некоторых кафе имеются детские игровые комнаты.
                 </p>
-                <p>
-                    Классическое меню предлагает большой выбор пиццы, свежих паст, ризотто, салатов,
-                    а так же традиционных итальянских блюд из рыбы и мяса.
-                </p>
-                <p>
-                    Почти для всех блюд в нашей сети пиццерий существует предложение по доставке:
-                    мы с удовольствием привезем их прямо к вашей двери.
-                </p>
-                <p>
-                    Вы придерживаетесь диеты?
-                    Обратите внимание на классический выбор суши и роллов в нашем Суше-баре.
-                </p>
-
-                <div class="img-bg"></div>
-
-                <h3>Миссия:</h3>
-
-                <p class="m-b50">
-                    помогаем получать удовольствие от жизни, создавая качественные, простые,
-                    вкусные блюда итальянской кухни по цене фаст-фуда, улучшаем уровень жизни,
-                    делая ресторан доступным для гостей разного достатка.
-                </p>
-
-                <h3>Ценности:</h3>
-
-                <div class="p-color">1. Стремление к развитию</div>
-                <p>Мы готовы меняться, учиться и развиваться мы хотим профессионально расти, нам всегда интересно узнавать что-то новое. Мы не хотим останавливаться на достигнутом.</p>
-
-                <div class="p-color">2. Ответственность</div>
-                <p>
-                    Мы готовы брать на себя ответственность и не боимся ошибок, мы на них просто учимся.
-                    Мы отвечаем за результат и держим свое слово.
-                </p>
-
-                <div class="p-color">3. Команда</div>
-                <p>
-                    Один за всех за одного если результат не достигнут, его не достигли все и каждый,
-                    если результат достигнут, его достигли все и каждый, мы помогаем друг другу.
-                    Только командой мы можем достичь самых высоких результатов.
-                </p>
-
-                <div class="p-color">4. Уважение</div>
-                <p>
-                    Мы ценим и уважаем любой труд, работу любого сотрудника компании вне зависимости
-                    от должности, каждый труд важен, каждый сотрудник нужен на своем месте. Мы уважаем гостей,
-                    даже конфликтная не сможет стать поводом для неуважительного общения.
-                </p>
-
-                <div class="p-color">5. Поддержка</div>
-                <p>
-                    Мы поддерживаем друг друга и создаем условия для роста и развития сотрудников.
-                    Для нас личное участие важнее формальных переписок.
+                <p>Сеть пиццерий «Пронто» предлагает организацию детских праздников и дней рождения. В перечне работ есть и услуги аниматоров. Они умеют занять детей разных возрастов, всегда готовы устроить конкурс, завести хоровод, сплясать с детьми.
                 </p>
             </div>
 

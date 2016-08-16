@@ -134,7 +134,7 @@
 
 .number-group .btn-number,
 .number-group .input-number {
-  border: 1px solid #a2a2a2;
+  border: 1px solid #a2a2a2 !important;
   padding: 0;
   height: 28px;
   width: 28px;
@@ -158,8 +158,8 @@
   width: 2px;
   height: 8px; }
 .number-group .btn-number:hover {
-  border-color: #ffffff;
-  color: #ffffff; }
+  border-color: #ffffff !important;
+  color: #ffffff !important; }
   .number-group .btn-number:hover:after, .number-group .btn-number:hover:last-child:before {
     background: #ffffff; }
 .number-group .input-number {
