@@ -1,0 +1,107 @@
+@import "vars";
+
+.parallax {
+  .layer {
+    .background {
+      &._1 {
+        top: 530px;
+      }
+      &._2 {
+        top: 1060px;
+      }
+    }
+  }
+}
+
+.tab-content>.tab-pane {
+  display: none;
+}
+.tab-content>.active {
+  display: block;
+}
+.nav-tabs {
+  padding: 0;
+  margin: 6px 0 54px;
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  list-style: none;
+  li {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    a {
+      font: 14px/14px "CirceBold",sans-serif;
+      color: $br;
+      text-decoration: none;
+      text-transform: uppercase;
+      border: solid $br;
+      display: block;
+      padding: 10px 20px 9px;
+      border-width: 1px 1px 1px 0;
+      @include transition(all 0.3s);
+      &:hover {
+        color: #ffffff;
+      }
+    }
+    &:first-child {
+      a {
+        @include border-radius(4px 0 0 4px);
+        border-width: 1px;
+      }
+
+    }
+    &:last-child {
+      a {
+        @include border-radius(0 4px 4px 0);
+      }
+    }
+    &.active {
+      a {
+        color: $tc;
+        background-color: #999999;
+        cursor: default;
+      }
+    }
+  }
+}
+
+.product.card {
+  .intro {
+    color: $hc;
+    margin: 0 0 70px;
+  }
+  .title {
+    margin-bottom: 50px;
+  }
+  .text-intro {
+    margin-bottom: 40px;
+  }
+  .set {
+    .rub {
+      margin: 50px 0 16px;
+    }
+    .btn-group {
+      display: block;
+    }
+  }
+  .constructor-img {
+    position: relative;
+    img {
+      position: relative;
+      z-index: 0;
+      width: 100%;
+      height: auto;
+      max-width: 471px;
+      display: block;
+      margin: 0 auto;
+      &.view-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: auto;
+      }
+    }
+  }
+}

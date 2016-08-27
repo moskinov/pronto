@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Pronto</title>
+    <meta name="viewport" content="width=device-width">
+
+    <!--reset-->
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <!--font-->
+    <link rel="stylesheet" href="font/include-font.css">
+    <link rel="stylesheet" href="icon/include-icon.css">
+
+    <!--style global-->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/ui.css">
+
+    <!--lib js-->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/jquery/parallax.min.js"></script>
+    <script src="lib/bootstrap/bootstrap.min.js"></script>
+    <script src="lib/bootstrap/bootstrap-select.min.js"></script>
+    <script src="lib/jquery/jquery.mCustomScrollbar.js"></script>
+    <script src="lib/jquery/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="lib/jquery/owl.carousel.css">
+    <link rel="stylesheet" href="lib/jquery/jquery.mCustomScrollbar.css">
+
+    <!--js global-->
+    <script src="js/manager.js"></script>
+    <script src="js/init.js"></script>
+
+    <script src="js/pages/constructor.js"></script>
+
+    <!--style page-->
+    <link rel="stylesheet" href="css/parallax.css">
+    <link rel="stylesheet" href="css/constructor.css">
+
+    <!--style adaptive include last-->
+    <link rel="stylesheet" href="css/media.css">
+
+</head>
+<body>
+
+    <!--fixed row-->
+    <div data-row-fixed class="fixed">
+        <div class="btn-group">
+            <button class="btn border" onclick="MainManager.showModal('registration')">регистрация</button>
+            <button class="btn border" onclick="MainManager.showModal('authorization')">войти</button>
+        </div>
+        <div class="basket-box">
+            <button class="btn border" onclick="MainManager.basket(0)">В корзину</button>
+            <span class="data">11 товаров — 10 570 руб.</span>
+        </div>
+    </div>
+
+
+    <div class="wrapper index">
+
+        <div class="header row">
+
+            <div class="left-col">
+                <a href="/" class="logo"></a>
+                <button class="btn orange-bg">заказать звонок</button>
+            </div>
+
+            <div class="right-col">
+                <div class="main-nav row">
+                    <div class="right-col">
+                        <div class="phone">+7 495/499 <span>505-57-57</span></div>
+                        <div class="counter">1000</div>
+                        <div class="hint">За сегодня мы приготовили уже 1000 пицц!</div>
+                    </div>
+                    <ul class="nav">
+                        <li><a href="menu.html">МЕНЮ</a></li> <li class="sep"></li>
+                        <li><a href="delivery.html">ДОСТАВКА</a></li> <li class="sep"></li>
+                        <li><a href="stock.html">АКЦИИ</a></li> <li class="sep"></li>
+                        <li><a href="banquet.html">БАНКЕТЫ</a></li> <li class="sep"></li>
+                        <li><a href="restaurant.html">РЕСТОРАНЫ</a></li> <li class="sep"></li>
+                        <li><a href="about.html">ПРОНТО</a></li>
+                    </ul>
+                </div>
+
+                <div class="_txt-center row">
+                    <div class="btn-group">
+                        <button class="btn border" onclick="MainManager.showModal('registration')">регистрация</button>
+                        <button class="btn border" onclick="MainManager.showModal('authorization')">войти</button>
+                    </div>
+                    <div class="social">
+                        <a href="#" class="soc-icon-s_1"></a>
+                        <a href="#" class="soc-icon-s_2"></a>
+                        <a href="#" class="soc-icon-s_3"></a>
+                        <a href="#" class="soc-icon-s_4"></a>
+                    </div>
+                    <div class="basket-box">
+                        <button class="btn border" onclick="MainManager.basket(0)">В корзину</button>
+                        <span class="data">11 товаров — 10 570 руб.</span>
+                    </div>
+                </div>
+            </div>
+
+            <ul class="menu nav">
+                <li><a class="active" href="/pizza.html">ПИЦЦА</a></li> <li class="sep"></li>
+                <li><a href="paste.html">ПАСТА</a></li> <li class="sep"></li>
+                <li><a href="sushi.html">СУШИ-БАР</a></li> <li class="sep"></li>
+                <li><a href="snacks.html">ЗАКУСКИ/САЛАТЫ</a></li> <li class="sep"></li>
+                <li><a href="hot.html">ГОРЯЧЕЕ</a></li> <li class="sep"></li>
+                <li><a href="drink.html">БАР/НАПИТКИ</a></li> <li class="sep"></li>
+                <li><a href="dessert.html">ДЕСЕРТЫ</a></li> <li class="sep"></li>
+                <li><a href="children.html">детское меню</a></li> <li class="sep"></li>
+                <li><a href="stock.html">АКЦИИ</a></li>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <div class="content">
+
+        <ul id="parallax" class="parallax">
+
+            <li class="layer" data-depth="0.06">
+                <div class="wrapper">
+                    <div class="background _1"></div>
+                    <div class="background _2"></div>
+                </div>
+            </li>
+
+            <li class="layer" data-depth="0.1">
+                <div class="wrapper">
+                    <div class="background _6"></div>
+                </div>
+            </li>
+        </ul>
+
+        <div class="wrapper index product pizza card">
+
+            <div class="intro">
+                конструктор пиццы
+            </div>
+
+            <div class="row">
+                <div class="col col_2 constructor-img" data-constructor-view>
+                    <img src="img/constructor/view/bg.png" alt="">
+                    <img class="view-img" src="img/constructor/view/1.png" data-constructor-id="1" alt="">
+                </div>
+                <div class="col col_2 _p5">
+                    <span class="title icon-arrow">собери пиццу</span>
+                    <div class="text-intro">
+                        Теперь вы сможете собрать
+                        пиццу самостоятельно!
+                    </div>
+                    <div class="text-intro">
+                        Просто выберите ингредиенты ниже,
+                        и создай особенный незабываемый
+                        рецепт пиццы ;)
+                    </div>
+                    <div class="text-intro">
+                        Не забудь поделиться созданным
+                        рецептом на своей странице
+                        в соц. сетях
+                    </div>
+                    <div class="set pizza">
+                        <div class="rub">297 руб.</div>
+                        <div class="btn-group row">
+                            <button class="btn border set-btn">
+                                собрать заново
+                            </button>
+                            <button class="btn pink set-btn">
+                                в корзину
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="title-slide">Добавьте ингредиенты:</div>
+
+            <ul class="nav-tabs" role="tablist">
+                <li class="active"><a href="#tab-1" role="tab" data-toggle="tab">тесто</a></li>
+                <li><a href="#tab-2" role="tab" data-toggle="tab">сыр</a></li>
+                <li><a href="#tab-3" role="tab" data-toggle="tab">мясные ингредиенты</a></li>
+                <li><a href="#tab-4" role="tab" data-toggle="tab">овощи</a></li>
+                <li><a href="#tab-5" role="tab" data-toggle="tab">грибы</a></li>
+                <li><a href="#tab-6" role="tab" data-toggle="tab">фрукты</a></li>
+                <li><a href="#tab-7" role="tab" data-toggle="tab">морепродукты</a></li>
+            </ul>
+
+            <div class="tab-content">
+                <div class="tab-pane fade in active" id="tab-1">
+                    <div class="product-slider" data-constructor-slider>
+
+                        <div class="item">
+                            <a href="#" class="item-link">
+                                <img src="img/constructor/product/1.png" alt="">
+                                <div class="name">Тонкое</div>
+                            </a>
+                            <div class="rub">36 смм.</div>
+                        </div>
+                        <div class="item">
+                            <a href="#" class="item-link">
+                                <img src="img/snacks/sn_4.png" alt="">
+                                <div class="name">Пышное</div>
+                            </a>
+                            <div class="rub">36 смм.</div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="tab-2">
+                    сыр
+                </div>
+                <div class="tab-pane fade" id="tab-3">
+                    мясные ингредиенты
+                </div>
+                <div class="tab-pane fade" id="tab-4">
+                    овощи
+                </div>
+                <div class="tab-pane fade" id="tab-5">
+                    грибы
+                </div>
+                <div class="tab-pane fade" id="tab-6">
+                    фрукты
+                </div>
+                <div class="tab-pane fade" id="tab-7">
+                    морепродукты
+                </div>
+            </div>
+
+            <div style="height: 3900px"></div>
+
+
+        </div>
+
+    </div>
+
+
+    <div class="footer">
+        <div class="wrapper">
+
+
+            <div class="row-col row">
+                <div class="col col_4">
+                    <a href="/" class="logo"></a>
+                </div>
+                <div class="col col_2">
+                    <div class="money">
+                        <a href="https://money.yandex.ru/" target="_blank" class="mon-icon-s_1"></a>
+                        <a href="https://www.webmoney.ru/" target="_blank" class="mon-icon-s_2"></a>
+                        <a href="http://www.visa.com.ru/" target="_blank" class="mon-icon-s_3"></a>
+                        <a href="https://www.mastercard.ru/" target="_blank" class="mon-icon-s_4"></a>
+                        <a href="https://qiwi.com/" target="_blank" class="mon-icon-s_5"></a>
+                    </div>
+                    <div class="social">
+                        <a href="#" class="soc-icon-s_5"></a>
+                        <a href="#" class="soc-icon-s_6"></a>
+                        <a href="#" class="soc-icon-s_7"></a>
+                        <a href="#" class="soc-icon-s_8"></a>
+                    </div>
+                </div>
+                <div class="col col_4">
+                    <div class="phone">+7 495/499 <span>505-57-57</span></div>
+                    <button class="btn black">заказать звонок</button>
+                </div>
+            </div>
+
+
+            <ul class="menu nav">
+                <li><a href="pizza.html">ПИЦЦА</a></li> <li class="sep"></li>
+                <li><a href="paste.html">ПАСТА</a></li> <li class="sep"></li>
+                <li><a href="sushi.html">СУШИ-БАР</a></li> <li class="sep"></li>
+                <li><a href="snacks.html">ЗАКУСКИ/САЛАТЫ</a></li> <li class="sep"></li>
+                <li><a href="hot.html">ГОРЯЧЕЕ</a></li> <li class="sep"></li>
+                <li><a href="drink.html">БАР/НАПИТКИ</a></li> <li class="sep"></li>
+                <li><a href="dessert.html">ДЕСЕРТЫ</a></li> <li class="sep"></li>
+                <li><a href="children.html">детское меню</a></li> <li class="sep"></li>
+                <li><a href="stock.html">АКЦИИ</a></li>
+            </ul>
+
+            <div class="copy row">
+                <span>
+                    <a href="#" class="active">десктопная версия</a> | <a href="#">мобильная версия</a>
+                </span>
+                <span>
+                    © 1999–2016 ООО «Бистро Пронто»
+                </span>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Modal global-->
+    <div class="modal fade" id="modal" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <button class="close-icon" data-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-content"></div>
+        </div>
+    </div>
+
+    <!-- Modal basket -->
+    <div class="modal fade" id="basket">
+        <div class="modal-dialog basket-dialog small">
+            <div class="modal-content">
+                <button class="close-icon" data-dismiss="modal" aria-label="Close"></button>
+                <h1>Ваша корзина пуста</h1>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
