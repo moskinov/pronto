@@ -142,7 +142,7 @@
             <div class="row">
                 <div class="col col_2 constructor-img" data-constructor-view>
                     <img src="img/constructor/view/bg.png" alt="">
-                    <img class="view-img" src="img/constructor/view/1.png" data-constructor-id="1" alt="">
+                    <img class="view-img" src="img/constructor/view/1.png" data-constructor-img="1" alt="">
                 </div>
                 <div class="col col_2 _p5">
                     <span class="title icon-arrow">собери пиццу</span>
@@ -163,7 +163,7 @@
                     <div class="set pizza">
                         <div class="rub">297 руб.</div>
                         <div class="btn-group row">
-                            <button class="btn border set-btn">
+                            <button class="btn border set-btn" data-constructor-refreshed>
                                 собрать заново
                             </button>
                             <button class="btn pink set-btn">
@@ -177,58 +177,374 @@
             <div class="title-slide">Добавьте ингредиенты:</div>
 
             <ul class="nav-tabs" role="tablist">
-                <li class="active"><a href="#tab-1" role="tab" data-toggle="tab">тесто</a></li>
-                <li><a href="#tab-2" role="tab" data-toggle="tab">сыр</a></li>
-                <li><a href="#tab-3" role="tab" data-toggle="tab">мясные ингредиенты</a></li>
-                <li><a href="#tab-4" role="tab" data-toggle="tab">овощи</a></li>
-                <li><a href="#tab-5" role="tab" data-toggle="tab">грибы</a></li>
-                <li><a href="#tab-6" role="tab" data-toggle="tab">фрукты</a></li>
-                <li><a href="#tab-7" role="tab" data-toggle="tab">морепродукты</a></li>
+                <li class="active"><a href="#tab-1" data-toggle="tab">тесто</a></li>
+                <li><a href="#tab-2" data-toggle="tab">сыр</a></li>
+                <li><a href="#tab-3" data-toggle="tab">мясные ингредиенты</a></li>
+                <li><a href="#tab-4" data-toggle="tab">овощи</a></li>
+                <li><a href="#tab-5" data-toggle="tab">грибы</a></li>
+                <li><a href="#tab-6" data-toggle="tab">фрукты</a></li>
+                <li><a href="#tab-7" data-toggle="tab">морепродукты</a></li>
             </ul>
 
             <div class="tab-content">
-                <div class="tab-pane fade in active" id="tab-1">
+                <div class="tab-pane in active" id="tab-1">
                     <div class="product-slider" data-constructor-slider>
 
                         <div class="item">
-                            <a href="#" class="item-link">
+                            <a href="#" class="item-link active" data-constructor-change="1" data-text="Тонкое 36 см" data-rub="297">
                                 <img src="img/constructor/product/1.png" alt="">
                                 <div class="name">Тонкое</div>
                             </a>
-                            <div class="rub">36 смм.</div>
+                            <div class="rub">36 см</div>
                         </div>
                         <div class="item">
-                            <a href="#" class="item-link">
-                                <img src="img/snacks/sn_4.png" alt="">
+                            <a href="#" class="item-link" data-constructor-change="2" data-text="Пышное 36 см" data-rub="397">
+                                <img src="img/constructor/product/2.png" alt="">
                                 <div class="name">Пышное</div>
                             </a>
-                            <div class="rub">36 смм.</div>
+                            <div class="rub">36 см</div>
                         </div>
 
                     </div>
                 </div>
-                <div class="tab-pane fade" id="tab-2">
-                    сыр
+                <div class="tab-pane" id="tab-2">
+                    <div class="product-slider" data-constructor-slider>
+
+                        <div class="item">
+                            <a href="#" class="item-link" data-constructor-change="3" data-text="Сыр «Моцарелла»" data-rub="60">
+                                <img src="img/constructor/product/3.png" alt="">
+                                <div class="name">Сыр «Моцарелла»</div>
+                            </a>
+                            <div class="btn-group number-group">
+                                <button data-btn-constructor="3" type="button" class="btn border btn-number" data-type="minus"></button>
+                                <input data-input-constructor="3" type="text" name="" class="btn border input-number" value="1" min="1" readonly="">
+                                <button data-btn-constructor="3" type="button" class="btn border btn-number" data-type="plus"></button>
+                            </div>
+                            <div class="rub">60 руб.</div>
+                        </div>
+                        <div class="item">
+                            <a href="#" class="item-link" data-constructor-change="4" data-text="Сыр «Рокфорти»" data-rub="70">
+                                <img src="img/constructor/product/4.png" alt="">
+                                <div class="name">Сыр «Рокфорти»</div>
+                            </a>
+                            <div class="btn-group number-group">
+                                <button data-btn-constructor="4" type="button" class="btn border btn-number" data-type="minus"></button>
+                                <input data-input-constructor="4" type="text" name="" class="btn border input-number" value="1" min="1" readonly="">
+                                <button data-btn-constructor="4" type="button" class="btn border btn-number" data-type="plus"></button>
+                            </div>
+                            <div class="rub">70 руб.</div>
+                        </div>
+
+                    </div>
                 </div>
-                <div class="tab-pane fade" id="tab-3">
-                    мясные ингредиенты
+                <div class="tab-pane " id="tab-3">
+                    <div class="product-slider" data-constructor-slider>
+
+                        <div class="item">
+                            <a href="#" class="item-link" data-constructor-change="5" data-text="Говядина в/к" data-rub="30">
+                                <img src="img/constructor/product/5.png" alt="">
+                                <div class="name">Говядина в/к</div>
+                            </a>
+                            <div class="btn-group number-group">
+                                <button data-btn-constructor="5" type="button" class="btn border btn-number" data-type="minus"></button>
+                                <input data-input-constructor="5" type="text" name="" class="btn border input-number" value="1" min="1" readonly="">
+                                <button data-btn-constructor="5" type="button" class="btn border btn-number" data-type="plus"></button>
+                            </div>
+                            <div class="rub">30 руб.</div>
+                        </div>
+                        <div class="item">
+                            <a href="#" class="item-link" data-constructor-change="6" data-text="Ветчина" data-rub="40">
+                                <img src="img/constructor/product/6.png" alt="">
+                                <div class="name">Ветчина</div>
+                            </a>
+                            <div class="btn-group number-group">
+                                <button data-btn-constructor="6" type="button" class="btn border btn-number" data-type="minus"></button>
+                                <input data-input-constructor="6" type="text" name="" class="btn border input-number" value="1" min="1" readonly="">
+                                <button data-btn-constructor="6" type="button" class="btn border btn-number" data-type="plus"></button>
+                            </div>
+                            <div class="rub">40 руб.</div>
+                        </div>
+                        <div class="item">
+                            <a href="#" class="item-link" data-constructor-change="7" data-text="Колбаски куриные" data-rub="50">
+                                <img src="img/constructor/product/7.png" alt="">
+                                <div class="name">Колбаски куриные</div>
+                            </a>
+                            <div class="btn-group number-group">
+                                <button data-btn-constructor="7" type="button" class="btn border btn-number" data-type="minus"></button>
+                                <input data-input-constructor="7" type="text" name="" class="btn border input-number" value="1" min="1" readonly="">
+                                <button data-btn-constructor="7" type="button" class="btn border btn-number" data-type="plus"></button>
+                            </div>
+                            <div class="rub">50 руб.</div>
+                        </div>
+                        <div class="item">
+                            <a href="#" class="item-link" data-constructor-change="8" data-text="Колбаса «Салями»" data-rub="20">
+                                <img src="img/constructor/product/8.png" alt="">
+                                <div class="name">Колбаса «Салями»</div>
+                            </a>
+                            <div class="btn-group number-group">
+                                <button data-btn-constructor="8" type="button" class="btn border btn-number" data-type="minus"></button>
+                                <input data-input-constructor="8" type="text" name="" class="btn border input-number" value="1" min="1" readonly="">
+                                <button data-btn-constructor="8" type="button" class="btn border btn-number" data-type="plus"></button>
+                            </div>
+                            <div class="rub">20 руб.</div>
+                        </div>
+                        <div class="item">
+                            <a href="#" class="item-link" data-constructor-change="9" data-text="Колбаса «Пепперони»" data-rub="70">
+                                <img src="img/constructor/product/9.png" alt="">
+                                <div class="name">Колбаса «Пепперони»</div>
+                            </a>
+                            <div class="btn-group number-group">
+                                <button data-btn-constructor="9" type="button" class="btn border btn-number" data-type="minus"></button>
+                                <input data-input-constructor="9" type="text" name="" class="btn border input-number" value="1" min="1" readonly="">
+                                <button data-btn-constructor="9" type="button" class="btn border btn-number" data-type="plus"></button>
+                            </div>
+                            <div class="rub">70 руб.</div>
+                        </div>
+                        <div class="item">
+                            <a href="#" class="item-link" data-constructor-change="10" data-text="Обжаренное куриное филе" data-rub="70">
+                                <img src="img/constructor/product/10.png" alt="">
+                                <div class="name">Обжаренное куриное филе</div>
+                            </a>
+                            <div class="btn-group number-group">
+                                <button data-btn-constructor="10" type="button" class="btn border btn-number" data-type="minus"></button>
+                                <input data-input-constructor="10" type="text" name="" class="btn border input-number" value="1" min="1" readonly="">
+                                <button data-btn-constructor="10" type="button" class="btn border btn-number" data-type="plus"></button>
+                            </div>
+                            <div class="rub">70 руб.</div>
+                        </div>
+                        <div class="item">
+                            <a href="#" class="item-link" data-constructor-change="11" data-text="Бекон" data-rub="70">
+                                <img src="img/constructor/product/11.png" alt="">
+                                <div class="name">Бекон</div>
+                            </a>
+                            <div class="btn-group number-group">
+                                <button  data-btn-constructor="11" type="button" class="btn border btn-number" data-type="minus"></button>
+                                <input data-input-constructor="11" type="text" name="" class="btn border input-number" value="1" min="1" readonly="">
+                                <button  data-btn-constructor="11" type="button" class="btn border btn-number" data-type="plus"></button>
+                            </div>
+                            <div class="rub">70 руб.</div>
+                        </div>
+
+                    </div>
                 </div>
-                <div class="tab-pane fade" id="tab-4">
-                    овощи
+                <div class="tab-pane " id="tab-4">
+                    <div class="product-slider" data-constructor-slider>
+
+                        <div class="item">
+                            <a href="#" class="item-link" data-constructor-change="12" data-text="Перчик «Чили»" data-rub="30">
+                                <img src="img/constructor/product/12.png" alt="">
+                                <div class="name">Перчик «Чили»</div>
+                            </a>
+                            <div class="btn-group number-group">
+                                <button data-btn-constructor="12" type="button" class="btn border btn-number" data-type="minus"></button>
+                                <input data-input-constructor="12" type="text" name="" class="btn border input-number" value="1" min="1" readonly="">
+                                <button data-btn-constructor="12" type="button" class="btn border btn-number" data-type="plus"></button>
+                            </div>
+                            <div class="rub">30 руб.</div>
+                        </div>
+                        <div class="item">
+                            <a href="#" class="item-link" data-constructor-change="13" data-text="Салат «Романо»" data-rub="40">
+                                <img src="img/constructor/product/13.png" alt="">
+                                <div class="name">Салат «Романо»</div>
+                            </a>
+                            <div class="btn-group number-group">
+                                <button data-btn-constructor="13" type="button" class="btn border btn-number" data-type="minus"></button>
+                                <input data-input-constructor="13" type="text" name="" class="btn border input-number" value="1" min="1" readonly="">
+                                <button data-btn-constructor="13" type="button" class="btn border btn-number" data-type="plus"></button>
+                            </div>
+                            <div class="rub">40 руб.</div>
+                        </div>
+                        <div class="item">
+                            <a href="#" class="item-link" data-constructor-change="14" data-text="Лук «Порей»" data-rub="50">
+                                <img src="img/constructor/product/14.png" alt="">
+                                <div class="name">Лук «Порей»</div>
+                            </a>
+                            <div class="btn-group number-group">
+                                <button data-btn-constructor="14" type="button" class="btn border btn-number" data-type="minus"></button>
+                                <input data-input-constructor="14" type="text" name="" class="btn border input-number" value="1" min="1" readonly="">
+                                <button data-btn-constructor="14" type="button" class="btn border btn-number" data-type="plus"></button>
+                            </div>
+                            <div class="rub">50 руб.</div>
+                        </div>
+                        <div class="item">
+                            <a href="#" class="item-link" data-constructor-change="15" data-text="Болгарский перец" data-rub="20">
+                                <img src="img/constructor/product/15.png" alt="">
+                                <div class="name">Болгарский перец</div>
+                            </a>
+                            <div class="btn-group number-group">
+                                <button data-btn-constructor="15" type="button" class="btn border btn-number" data-type="minus"></button>
+                                <input data-input-constructor="15" type="text" name="" class="btn border input-number" value="1" min="1" readonly="">
+                                <button data-btn-constructor="15" type="button" class="btn border btn-number" data-type="plus"></button>
+                            </div>
+                            <div class="rub">20 руб.</div>
+                        </div>
+                        <div class="item">
+                            <a href="#" class="item-link" data-constructor-change="16" data-text="Салат «Руккола»" data-rub="70">
+                                <img src="img/constructor/product/16.png" alt="">
+                                <div class="name">Салат «Руккола»</div>
+                            </a>
+                            <div class="btn-group number-group">
+                                <button data-btn-constructor="16" type="button" class="btn border btn-number" data-type="minus"></button>
+                                <input data-input-constructor="16" type="text" name="" class="btn border input-number" value="1" min="1" readonly="">
+                                <button data-btn-constructor="16" type="button" class="btn border btn-number" data-type="plus"></button>
+                            </div>
+                            <div class="rub">70 руб.</div>
+                        </div>
+                        <div class="item">
+                            <a href="#" class="item-link" data-constructor-change="17" data-text="Помидоры «Черри»" data-rub="70">
+                                <img src="img/constructor/product/17.png" alt="">
+                                <div class="name">Помидоры «Черри»</div>
+                            </a>
+                            <div class="btn-group number-group">
+                                <button data-btn-constructor="17" type="button" class="btn border btn-number" data-type="minus"></button>
+                                <input data-input-constructor="17" type="text" name="" class="btn border input-number" value="1" min="1" readonly="">
+                                <button data-btn-constructor="17" type="button" class="btn border btn-number" data-type="plus"></button>
+                            </div>
+                            <div class="rub">70 руб.</div>
+                        </div>
+                        <div class="item">
+                            <a href="#" class="item-link" data-constructor-change="18" data-text="Помидоры свежие" data-rub="70">
+                                <img src="img/constructor/product/18.png" alt="">
+                                <div class="name">Помидоры свежие</div>
+                            </a>
+                            <div class="btn-group number-group">
+                                <button  data-btn-constructor="18" type="button" class="btn border btn-number" data-type="minus"></button>
+                                <input data-input-constructor="18" type="text" name="" class="btn border input-number" value="1" min="1" readonly="">
+                                <button  data-btn-constructor="18" type="button" class="btn border btn-number" data-type="plus"></button>
+                            </div>
+                            <div class="rub">70 руб.</div>
+                        </div>
+                        <div class="item">
+                            <a href="#" class="item-link" data-constructor-change="19" data-text="Консер. маслины" data-rub="70">
+                                <img src="img/constructor/product/19.png" alt="">
+                                <div class="name">Консер. маслины</div>
+                            </a>
+                            <div class="btn-group number-group">
+                                <button  data-btn-constructor="19" type="button" class="btn border btn-number" data-type="minus"></button>
+                                <input data-input-constructor="19" type="text" name="" class="btn border input-number" value="1" min="1" readonly="">
+                                <button  data-btn-constructor="19" type="button" class="btn border btn-number" data-type="plus"></button>
+                            </div>
+                            <div class="rub">70 руб.</div>
+                        </div>
+                        <div class="item">
+                            <a href="#" class="item-link" data-constructor-change="20" data-text="Оливки конс. " data-rub="70">
+                                <img src="img/constructor/product/20.png" alt="">
+                                <div class="name">Оливки конс.</div>
+                            </a>
+                            <div class="btn-group number-group">
+                                <button  data-btn-constructor="20" type="button" class="btn border btn-number" data-type="minus"></button>
+                                <input data-input-constructor="20" type="text" name="" class="btn border input-number" value="1" min="1" readonly="">
+                                <button  data-btn-constructor="20" type="button" class="btn border btn-number" data-type="plus"></button>
+                            </div>
+                            <div class="rub">70 руб.</div>
+                        </div>
+
+                    </div>
                 </div>
-                <div class="tab-pane fade" id="tab-5">
-                    грибы
+                <div class="tab-pane " id="tab-5">
+                    <div class="product-slider" data-constructor-slider>
+                        <div class="item">
+                            <a href="#" class="item-link" data-constructor-change="21" data-text="Шампиньоны конс." data-rub="70">
+                                <img src="img/constructor/product/21.png" alt="">
+                                <div class="name">Шампиньоны конс.</div>
+                            </a>
+                            <div class="btn-group number-group">
+                                <button  data-btn-constructor="21" type="button" class="btn border btn-number" data-type="minus"></button>
+                                <input data-input-constructor="21" type="text" name="" class="btn border input-number" value="1" min="1" readonly="">
+                                <button  data-btn-constructor="21" type="button" class="btn border btn-number" data-type="plus"></button>
+                            </div>
+                            <div class="rub">70 руб.</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="tab-pane fade" id="tab-6">
-                    фрукты
+                <div class="tab-pane " id="tab-6">
+                    <div class="product-slider" data-constructor-slider>
+                        <div class="item">
+                            <a href="#" class="item-link" data-constructor-change="22" data-text="Ананас консер." data-rub="70">
+                                <img src="img/constructor/product/22.png" alt="">
+                                <div class="name">Ананас консер.</div>
+                            </a>
+                            <div class="btn-group number-group">
+                                <button  data-btn-constructor="22" type="button" class="btn border btn-number" data-type="minus"></button>
+                                <input data-input-constructor="22" type="text" name="" class="btn border input-number" value="1" min="1" readonly="">
+                                <button  data-btn-constructor="22" type="button" class="btn border btn-number" data-type="plus"></button>
+                            </div>
+                            <div class="rub">70 руб.</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="tab-pane fade" id="tab-7">
-                    морепродукты
+                <div class="tab-pane " id="tab-7">
+                    <div class="product-slider" data-constructor-slider>
+                        <div class="item">
+                            <a href="#" class="item-link" data-constructor-change="23" data-text="Семга слабосоленая" data-rub="70">
+                                <img src="img/constructor/product/23.png" alt="">
+                                <div class="name">Семга слабосоленая</div>
+                            </a>
+                            <div class="btn-group number-group">
+                                <button  data-btn-constructor="23" type="button" class="btn border btn-number" data-type="minus"></button>
+                                <input data-input-constructor="23" type="text" name="" class="btn border input-number" value="1" min="1" readonly="">
+                                <button  data-btn-constructor="23" type="button" class="btn border btn-number" data-type="plus"></button>
+                            </div>
+                            <div class="rub">70 руб.</div>
+                        </div>
+                        <div class="item">
+                            <a href="#" class="item-link" data-constructor-change="24" data-text="Креветки тигровые" data-rub="70">
+                                <img src="img/constructor/product/24.png" alt="">
+                                <div class="name">Креветки тигровые</div>
+                            </a>
+                            <div class="btn-group number-group">
+                                <button  data-btn-constructor="24" type="button" class="btn border btn-number" data-type="minus"></button>
+                                <input data-input-constructor="24" type="text" name="" class="btn border input-number" value="1" min="1" readonly="">
+                                <button  data-btn-constructor="24" type="button" class="btn border btn-number" data-type="plus"></button>
+                            </div>
+                            <div class="rub">70 руб.</div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div style="height: 3900px"></div>
+            <div class="constructor-list">
+                <div class="section">
+                    <a class="collapse-icon" data-toggle="collapse" href="#list"></a>
+                    <h1>Моя пицца</h1>
+                </div>
+                <div class="collapse in" id="list">
+                    <div class="section br first" data-constructor-base>
+                        <div class="icon-first _ic"></div>
+                        <p>Основа</p>
+                        <div class="row" data-constructor-row="1">
+                            <div class="col col_2">
+                                <div class="name">Тонкое 36 см</div>
+                            </div>
+                            <div class="col col_2 _r">
+                                <div class="rub">297 руб.</div>
+                                <div class="close">
+                                    <button class="close-icon"></button>
+                                </div>
+                                <div class="btn-group number-group">
+                                    <button data-btn-constructor="1" type="button" class="btn border btn-number" data-type="minus"></button>
+                                    <input data-input-constructor="1" type="text" name="" class="btn border input-number" value="1" min="1" readonly="">
+                                    <button data-btn-constructor="1" type="button" class="btn border btn-number" data-type="plus"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section last" data-constructor-list>
+                        <div class="icon-last _ic"></div>
+                        <p>Ингредиенты</p>
+                    </div>
+                </div>
+            </div>
 
+            <div class="total">1710 руб.</div>
+
+            <div class="apply">
+                <div class="text">
+                    <b>Бесплатная доставка от 650 руб.</b>
+                    вам осталось заказать на сумму 200 руб.
+                </div>
+                <button class="btn pink big" disabled="">оформить заказ</button>
+            </div>
 
         </div>
 
