@@ -54,6 +54,20 @@
       border-color: #e4b100; }
     .btn.border.link {
       border-color: transparent !important; }
+    .btn.border.cat-menu {
+      display: none;
+      font-size: 34px;
+      width: 100%;
+      border-width: 1px 0 1px 0;
+      padding: 22px 14px 18px; }
+    .btn.border.main-menu {
+      display: none;
+      position: absolute;
+      right: 24px;
+      top: 40px;
+      width: 74px;
+      height: 74px;
+      padding: 0; }
   .btn.orange-bg, .btn.green, .btn.black {
     font: 17px/18px "Cervo-Regular",sans-serif;
     letter-spacing: 2px;
@@ -248,7 +262,7 @@ select.selectpicker {
   position: absolute;
   top: 100%;
   left: 0;
-  z-index: 1000;
+  z-index: 9;
   display: none;
   padding: 5px 0;
   margin: 2px 0 0;

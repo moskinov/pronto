@@ -222,4 +222,21 @@ function MainManager_f() {
     $('[data-alert-by]').removeClass('show');
   }
 
+  this.showMenu = function (m) {
+
+    var b = $('[data-back]');
+
+    b.addClass('anim show');
+    $('['+m+']').addClass('anim show');
+
+    $('['+m+'] li a, [data-back] ').on('click',function(){
+
+      $('['+m+']').removeClass('anim show');
+      b.removeClass('anim show');
+
+    });
+
+
+  }
+
 }
