@@ -811,6 +811,8 @@ h1, .product .intro {
       margin-bottom: 20px;
       width: 274px;
       height: 274px;
+      margin-left: auto;
+      margin-right: auto;
     }
     &:hover {
       .title {
@@ -1840,6 +1842,11 @@ h1, .product .intro {
       margin-bottom: 26px;
       font-size: 18px;
       line-height: 18px;
+    }
+    .set {
+      .set-col {
+        margin-bottom: 10px;
+      }
     }
   }
   .controls {

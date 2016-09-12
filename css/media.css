@@ -90,6 +90,16 @@
     background: #ffffff;
     position: relative; }
 
+  .header .right-col .counter,
+  .header .left-col .btn,
+  .main-style .intro,
+  .parallax,
+  .content:before,
+  .content:after,
+  .header .right-col .btn-group,
+  .header .right-col .social, .intro, .breadcrumb {
+    display: none; }
+
   .back {
     position: fixed;
     top: 0;
@@ -113,42 +123,6 @@
     padding: 11px 14px 9px;
     font-size: 24px; }
 
-  .product .row-col {
-    margin-bottom: 0;
-    padding: 0 20px; }
-  .product .text-intro {
-    font-size: 28px;
-    line-height: 28px;
-    margin-bottom: 60px; }
-  .product .product-link {
-    display: block;
-    margin-left: 60px;
-    margin-right: 60px; }
-    .product .product-link img {
-      width: 100%;
-      height: auto;
-      margin-bottom: 46px; }
-    .product .product-link:hover .title {
-      color: #e4b100 !important; }
-  .product .rub {
-    font-size: 32px;
-    line-height: 56px; }
-  .product .title {
-    font-size: 60px !important;
-    line-height: 60px !important; }
-    .product .title:before, .product .title:after {
-      display: none !important; }
-
-  .header .right-col .counter,
-  .header .left-col .btn,
-  .main-style .intro,
-  .parallax,
-  .content:before,
-  .content:after,
-  .header .right-col .btn-group,
-  .header .right-col .social {
-    display: none; }
-
   .header .right-col .phone, .header .right-col .phone span {
     font-size: 32px; }
 
@@ -159,25 +133,6 @@
     color: #ffffff !important;
     background: none !important;
     width: auto; }
-
-  .product .controls {
-    margin-bottom: 36px; }
-
-  .product .set .set-btn.border {
-    height: 70px;
-    font-size: 20px;
-    line-height: 26px; }
-
-  .product .set .set-btn.pink {
-    height: 70px;
-    font-size: 24px;
-    line-height: 52px;
-    background-size: 120%; }
-
-  .product .row-col .col {
-    margin-bottom: 94px; }
-    .product .row-col .col:last-child {
-      margin-bottom: 60px; }
 
   .number-group .btn-number:after {
     width: 18px;
@@ -216,44 +171,11 @@
     .bootstrap-select .dropdown-toggle .bs-caret {
       width: 56px;
       height: 56px; }
-
   .bootstrap-select .dropdown-menu {
     right: 55px; }
-
-  .bootstrap-select .dropdown-menu.inner li a {
-    line-height: 44px;
-    font-size: 32px; }
-
-  .product .controls .number-group {
-    width: 33%; }
-
-  .product .controls .number-group .input-number {
-    width: -webkit-calc(100% - 112px);
-    width: -moz-calc(100% - 112px);
-    width: calc(100% - 112px); }
-
-  .number-group .input-number {
-    font-size: 32px;
-    line-height: 56px;
-    height: 56px; }
-
-  .number-group .btn-number {
-    height: 56px;
-    width: 56px; }
-
-  .product .set .set-list .set-title,
-  .product .set .set-list .number-group .input-number {
-    font-size: 22px;
-    line-height: 34px; }
-
-  .product .set .set-list .number-group .btn-number {
-    width: 34px; }
-
-  .product .set .set-list .number-group .btn {
-    height: 34px; }
-
-  .product .set .set-list .number-group .input-number {
-    width: 60px; }
+    .bootstrap-select .dropdown-menu.inner li a {
+      line-height: 44px;
+      font-size: 32px; }
 
   .header.row {
     position: relative;
@@ -473,7 +395,8 @@
     z-index: inherit; }
 
   .content {
-    margin-top: 0; }
+    margin-top: 0;
+    padding-top: 0; }
 
   .main-slider-wr {
     margin: 0 -30px 0 -30px; }
@@ -595,6 +518,228 @@
         border-color: #ffffff; }
   .modal:not(#basket) .modal-backdrop.in {
     background-image: url("../img/back.png");
-    opacity: 1; } }
+    opacity: 1; }
+
+  .sort {
+    font: 18px/30px "CirceBold",sans-serif;
+    padding-top: 30px; }
+
+  .btn.pink.small {
+    padding: 17px 10px 13px;
+    font: 26px/26px "CirceBold",sans-serif; }
+
+  .btn.pink.big {
+    padding: 20px 30px 16px;
+    font: 34px/34px "Cervo-Medium",sans-serif; }
+
+  .product .number-group .input-number {
+    font-size: 32px;
+    line-height: 56px;
+    height: 56px; }
+  .product .number-group .btn-number {
+    height: 56px;
+    width: 56px; }
+  .product .controls {
+    margin-bottom: 36px; }
+    .product .controls .number-group {
+      width: 33%; }
+      .product .controls .number-group .input-number {
+        width: -webkit-calc(100% - 112px);
+        width: -moz-calc(100% - 112px);
+        width: calc(100% - 112px); }
+  .product .row-col {
+    margin-bottom: 0;
+    padding: 0;
+    margin: 0 -30px; }
+    .product .row-col .col {
+      margin-bottom: 74px; }
+      .product .row-col .col:last-child {
+        margin-bottom: 60px; }
+  .product .text-intro {
+    font-size: 28px !important;
+    line-height: 28px !important;
+    margin-bottom: 30px;
+    margin-left: 30px;
+    margin-right: 30px; }
+  .product .rub {
+    font-size: 32px;
+    line-height: 56px; }
+  .product .title {
+    color: #ffffff;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: 60px !important;
+    line-height: 60px !important; }
+    .product .title:before, .product .title:after {
+      display: none !important; }
+    .product .title span {
+      color: #ffffff !important; }
+  .product .product-link {
+    display: block;
+    margin-left: 0;
+    margin-right: 0; }
+    .product .product-link img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 46px; }
+    .product .product-link:hover .title {
+      color: #e4b100 !important; }
+      .product .product-link:hover .title span {
+        color: #e4b100 !important; }
+  .product .set {
+    margin-left: 30px;
+    margin-right: 30px; }
+    .product .set .set-list .set-title, .product .set .set-list .number-group .input-number {
+      font-size: 22px;
+      line-height: 34px; }
+    .product .set .set-list .number-group .btn-number {
+      width: 34px; }
+    .product .set .set-list .number-group .btn {
+      height: 34px; }
+    .product .set .set-list .number-group .input-number {
+      width: 60px; }
+    .product .set .set-col {
+      width: 220px; }
+      .product .set .set-col .gr {
+        font-size: 37px;
+        line-height: 56px; }
+    .product .set .number-group .input-number {
+      width: -webkit-calc(100% - 112px);
+      width: -moz-calc(100% - 112px);
+      width: calc(100% - 112px); }
+    .product .set .set-btn.border {
+      height: 70px;
+      font-size: 20px;
+      line-height: 26px; }
+    .product .set .set-btn.pink {
+      height: 70px;
+      font-size: 24px;
+      line-height: 52px;
+      background-size: 120%; }
+    .product .set .title-set {
+      font: 24px/24px "CirceBold",sans-serif;
+      margin-bottom: 36px;
+      margin-top: 42px; }
+    .product .set.pizza .check-size .checkbox-label {
+      margin: 18px 15px; }
+      .product .set.pizza .check-size .checkbox-label .checkbox-label-text {
+        line-height: 100px;
+        padding-right: 118px;
+        font-size: 32px;
+        padding-left: 40px; }
+        .product .set.pizza .check-size .checkbox-label .checkbox-label-text:before {
+          width: 22px;
+          height: 22px;
+          top: 36px; }
+        .product .set.pizza .check-size .checkbox-label .checkbox-label-text:after {
+          top: 43px;
+          left: 7px;
+          width: 10px;
+          height: 10px; }
+        .product .set.pizza .check-size .checkbox-label .checkbox-label-text .ic {
+          line-height: 100px; }
+          .product .set.pizza .check-size .checkbox-label .checkbox-label-text .ic.icon-svg-2s {
+            font-size: 80px; }
+          .product .set.pizza .check-size .checkbox-label .checkbox-label-text .ic.icon-svg-2s2 {
+            font-size: 100px; }
+    .product .set.pizza .rub {
+      font-size: 32px;
+      margin: 26px 0 16px; }
+  .product.main-style {
+    padding-top: 50px; }
+    .product.main-style .row-col {
+      padding: 0 20px;
+      margin: 0; }
+    .product.main-style .product-link {
+      margin-left: 60px;
+      margin-right: 60px; }
+      .product.main-style .product-link .title {
+        margin-left: 0;
+        margin-right: 0; }
+    .product.main-style .text-intro {
+      margin-left: 0;
+      margin-right: 0; }
+    .product.main-style .set {
+      margin-left: 0;
+      margin-right: 0; }
+  .product.card .row:not(.set) {
+    margin: 0 -30px; }
+    .product.card .row:not(.set) .col {
+      width: 100%;
+      float: none;
+      margin-left: 0; }
+      .product.card .row:not(.set) .col._p5 {
+        padding-left: 0;
+        padding-right: 0; }
+    .product.card .row:not(.set) .product-img {
+      margin-bottom: 50px; }
+  .product.basket h2.big {
+    padding-top: 50px; }
+
+  .title-slide {
+    margin-top: 0;
+    border-top: 0;
+    font: 35px/40px "dirty_headline_cyrillicRg",sans-serif;
+    padding: 80px 0 40px; }
+
+  .product-slider .item .rub {
+    margin: 20px 0; }
+  .product-slider .item .item-link img {
+    margin-bottom: 20px; }
+  .product-slider .item .item-link .name {
+    font-size: 38px;
+    line-height: 32px;
+    margin-bottom: 40px; }
+  .product-slider .item .btn-group .input-number {
+    width: -webkit-calc(100% - 112px);
+    width: -moz-calc(100% - 112px);
+    width: calc(100% - 112px); }
+
+  .basket-list .basket-row .cell {
+    padding-bottom: 48px;
+    padding-top: 48px !important; }
+    .basket-list .basket-row .cell .btn-group {
+      margin-left: 10px; }
+    .basket-list .basket-row .cell .rub {
+      display: none; }
+    .basket-list .basket-row .cell a img {
+      display: none; }
+    .basket-list .basket-row .cell a .name {
+      margin: 0;
+      font-size: 32px;
+      line-height: 32px; }
+    .basket-list .basket-row .cell a .param {
+      margin: 10px 0 0 0;
+      font-size: 24px;
+      line-height: 24px; }
+    .basket-list .basket-row .cell .number-group .input-number {
+      width: 80px; }
+    .basket-list .basket-row .cell .close-icon {
+      width: 42px;
+      height: 56px; }
+
+  .promo input {
+    height: 40px;
+    padding: 8px 10px 9px;
+    font-size: 20px !important;
+    width: 160px;
+    text-align: center; }
+  .promo .btn.ok {
+    width: 40px;
+    height: 40px; }
+    .promo .btn.ok:after {
+      top: 13px;
+      left: 12px;
+      width: 14px;
+      height: 7px; }
+
+  .basket-sum .total-info span {
+    font-size: 24px; }
+
+  .apply .text {
+    font-size: 24px;
+    margin-bottom: 35px; }
+    .apply .text b {
+      font: 24px/24px "CirceBold",sans-serif; } }
 
 /*# sourceMappingURL=media.css.map */

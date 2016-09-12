@@ -50,7 +50,7 @@ function MainManager_f() {
           items:2
         },
         640:{
-          items:3
+          items:2
         },
         700:{
           items:4

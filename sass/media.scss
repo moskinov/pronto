@@ -120,6 +120,17 @@
     position: relative;
   }
 
+  .header .right-col .counter,
+  .header .left-col .btn,
+  .main-style .intro,
+  .parallax,
+  .content:before,
+  .content:after,
+  .header .right-col .btn-group,
+  .header .right-col .social,.intro,.breadcrumb {
+    display: none;
+  }
+
   .back {
     position: fixed;
     top: 0;
@@ -146,55 +157,6 @@
     }
   }
 
-  .product {
-    .row-col {
-      margin-bottom: 0;
-      padding: 0 20px;
-    }
-    .text-intro {
-      font-size: 28px;
-      line-height: 28px;
-      margin-bottom: 60px;
-    }
-    .product-link {
-      display: block;
-      margin-left: 60px;
-      margin-right: 60px;
-      img {
-        width: 100%;
-        height: auto;
-        margin-bottom: 46px;
-      }
-      &:hover {
-        .title {
-          color: #e4b100 !important;
-        }
-      }
-    }
-    .rub {
-      font-size: 32px;
-      line-height: 56px;
-    }
-    .title {
-      font-size: 60px !important;
-      line-height: 60px !important;
-      &:before,&:after {
-        display: none !important;
-      }
-    }
-  }
-
-  .header .right-col .counter,
-  .header .left-col .btn,
-  .main-style .intro,
-  .parallax,
-  .content:before,
-  .content:after,
-  .header .right-col .btn-group,
-  .header .right-col .social {
-    display: none;
-  }
-
   .header .right-col .phone,.header .right-col .phone span {
     font-size: 32px;
   }
@@ -206,27 +168,6 @@
     color: #ffffff !important;
     background: none !important;
     width: auto;
-  }
-
-  .product .controls {
-    margin-bottom: 36px;
-  }
-  .product .set .set-btn.border {
-    height: 70px;
-    font-size: 20px;
-    line-height: 26px;
-  }
-  .product .set .set-btn.pink {
-    height: 70px;
-    font-size: 24px;
-    line-height: 52px;
-    background-size: 120%;
-  }
-  .product .row-col .col {
-    margin-bottom: 94px;
-    &:last-child {
-      margin-bottom: 60px;
-    }
   }
   .number-group .btn-number:after {
     width: 18px;
@@ -255,60 +196,33 @@
     }
   }
 
-
   .product .controls .bootstrap-select {
     width: 33%;
   }
-  .bootstrap-select .dropdown-toggle {
-    padding: 0 56px 0 0;
-    .filter-option {
-      height: 56px;
-      max-height: 56px;
-      font-size: 32px;
-      line-height: 56px;
+
+  .bootstrap-select {
+    .dropdown-toggle {
+      padding: 0 56px 0 0;
+      .filter-option {
+        height: 56px;
+        max-height: 56px;
+        font-size: 32px;
+        line-height: 56px;
+      }
+      .bs-caret {
+        width: 56px;
+        height: 56px;
+      }
     }
-    .bs-caret {
-      width: 56px;
-      height: 56px;
+    .dropdown-menu {
+      right: 55px;
+      &.inner {
+        li a {
+          line-height: 44px;
+          font-size: 32px;
+        }
+      }
     }
-  }
-  .bootstrap-select .dropdown-menu {
-    right: 55px;
-  }
-  .bootstrap-select .dropdown-menu.inner li a {
-    line-height: 44px;
-    font-size: 32px;
-  }
-  .product .controls .number-group {
-    width: 33%;
-  }
-  .product .controls .number-group .input-number {
-    width: -webkit-calc(100% - 112px);
-    width: -moz-calc(100% - 112px);
-    width: calc(100% - 112px);
-  }
-  .number-group .input-number {
-    font-size: 32px;
-    line-height: 56px;
-    height: 56px;
-  }
-  .number-group .btn-number {
-    height: 56px;
-    width: 56px;
-  }
-  .product .set .set-list .set-title,
-  .product .set .set-list .number-group .input-number {
-    font-size: 22px;
-    line-height: 34px;
-  }
-  .product .set .set-list .number-group .btn-number {
-    width: 34px;
-  }
-  .product .set .set-list .number-group .btn {
-    height: 34px;
-  }
-  .product .set .set-list .number-group .input-number {
-    width: 60px;
   }
 
   .header.row {
@@ -540,6 +454,7 @@
   }
   .content {
     margin-top: 0;
+    padding-top: 0;
   }
   .main-slider-wr {
     margin: 0 -30px 0 -30px;
@@ -719,6 +634,338 @@
       background-image: url("../img/back.png");
       opacity: 1;
 
+    }
+  }
+
+  .sort {
+    font: 18px/30px "CirceBold",sans-serif;
+    padding-top: 30px;
+  }
+
+  .btn.pink.small {
+    padding: 17px 10px 13px;
+    font: 26px/26px "CirceBold",sans-serif;
+  }
+
+  .btn.pink.big {
+    padding: 20px 30px 16px;
+    font: 34px/34px "Cervo-Medium",sans-serif;
+  }
+
+
+  .product {
+    .number-group {
+      .input-number {
+        font-size: 32px;
+        line-height: 56px;
+        height: 56px;
+      }
+      .btn-number {
+        height: 56px;
+        width: 56px;
+      }
+    }
+    .controls {
+      margin-bottom: 36px;
+      .number-group {
+        width: 33%;
+        .input-number {
+          width: -webkit-calc(100% - 112px);
+          width: -moz-calc(100% - 112px);
+          width: calc(100% - 112px);
+        }
+      }
+
+    }
+    .row-col {
+      margin-bottom: 0;
+      padding: 0;
+      margin: 0 -30px;
+      .col {
+        margin-bottom: 74px;
+        &:last-child {
+          margin-bottom: 60px;
+        }
+      }
+    }
+    .text-intro {
+      font-size: 28px !important;
+      line-height: 28px !important;
+      margin-bottom: 30px;
+      margin-left: 30px;
+      margin-right: 30px;
+    }
+    .rub {
+      font-size: 32px;
+      line-height: 56px;
+    }
+    .title {
+      color: #ffffff;
+      margin-left: 30px;
+      margin-right: 30px;
+      font-size: 60px !important;
+      line-height: 60px !important;
+      &:before,&:after {
+        display: none !important;
+      }
+      span {
+        color: #ffffff !important;
+      }
+    }
+    .product-link {
+      display: block;
+      margin-left: 0;
+      margin-right: 0;
+      img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 46px;
+      }
+      &:hover {
+        .title {
+          color: #e4b100 !important;
+          span {
+            color: #e4b100 !important;
+          }
+        }
+      }
+    }
+    .set {
+      margin-left: 30px;
+      margin-right: 30px;
+      .set-list {
+        .set-title,.number-group .input-number {
+          font-size: 22px;
+          line-height: 34px;
+        }
+        .number-group {
+          .btn-number {
+            width: 34px;
+          }
+          .btn {
+            height: 34px;
+          }
+          .input-number {
+            width: 60px;
+          }
+        }
+      }
+      .set-col {
+        width: 220px;
+        .gr {
+          font-size: 37px;
+          line-height: 56px;
+        }
+      }
+      .number-group {
+        .input-number {
+          width: -webkit-calc(100% - 112px);
+          width: -moz-calc(100% - 112px);
+          width: calc(100% - 112px);
+        }
+      }
+      .set-btn.border {
+        height: 70px;
+        font-size: 20px;
+        line-height: 26px;
+      }
+      .set-btn.pink {
+        height: 70px;
+        font-size: 24px;
+        line-height: 52px;
+        background-size: 120%;
+      }
+      .title-set {
+        font: 24px/24px "CirceBold",sans-serif;
+        margin-bottom: 36px;
+        margin-top: 42px;
+      }
+      &.pizza {
+        .check-size {
+          .checkbox-label {
+            margin: 18px 15px;
+            .checkbox-label-text {
+              line-height: 100px;
+              padding-right: 118px;
+              font-size: 32px;
+              padding-left: 40px;
+              &:before {
+                width: 22px;
+                height: 22px;
+                top: 36px;
+              }
+              &:after {
+                top: 43px;
+                left: 7px;
+                width: 10px;
+                height: 10px;
+              }
+              .ic {
+                line-height: 100px;
+                &.icon-svg-2s {
+                  font-size: 80px;
+                }
+                &.icon-svg-2s2 {
+                  font-size: 100px;
+                }
+              }
+            }
+          }
+        }
+        .rub {
+          font-size: 32px;
+          margin: 26px 0 16px;
+        }
+      }
+    }
+    &.main-style {
+      padding-top: 50px;
+      .row-col {
+        padding: 0 20px;
+        margin: 0;
+      }
+      .product-link {
+        margin-left: 60px;
+        margin-right: 60px;
+        .title {
+          margin-left: 0;
+          margin-right: 0;
+        }
+      }
+      .text-intro {
+        margin-left: 0;
+        margin-right: 0;
+      }
+      .set {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+    &.card {
+     .row:not(.set) {
+       margin: 0 -30px;
+       .col {
+         width: 100%;
+         float: none;
+         margin-left: 0;
+         &._p5 {
+           padding-left: 0;
+           padding-right: 0;
+         }
+       }
+       .product-img {
+         margin-bottom: 50px;
+       }
+     }
+    }
+    &.basket {
+      h2.big {
+        padding-top: 50px;
+      }
+    }
+  }
+
+  .title-slide {
+    margin-top: 0;
+    border-top: 0;
+    font: 35px/40px "dirty_headline_cyrillicRg",sans-serif;
+    padding: 80px 0 40px;
+  }
+  .product-slider {
+    .item {
+      .rub {
+        margin: 20px 0;
+      }
+      .item-link {
+        img {
+          margin-bottom: 20px;
+        }
+        .name {
+          font-size: 38px;
+          line-height: 32px;
+          margin-bottom: 40px;
+        }
+      }
+      .btn-group {
+        .input-number {
+          width: -webkit-calc(100% - 112px);
+          width: -moz-calc(100% - 112px);
+          width: calc(100% - 112px);
+        }
+      }
+    }
+  }
+
+  .basket-list {
+    .basket-row {
+      .cell {
+        padding-bottom: 48px;
+        padding-top: 48px !important;
+        .btn-group {
+          margin-left: 10px;
+        }
+        .rub {
+          display: none;
+        }
+        a {
+          img {
+            display: none;
+          }
+          .name {
+            margin:0;
+            font-size: 32px;
+            line-height: 32px;
+          }
+          .param {
+            margin: 10px 0 0 0;
+            font-size: 24px;
+            line-height: 24px;
+          }
+        }
+        .number-group  {
+          .input-number {
+            width: 80px;
+          }
+        }
+        .close-icon {
+          width: 42px;
+          height: 56px;
+        }
+      }
+    }
+  }
+
+  .promo {
+    input {
+      height: 40px;
+      padding: 8px 10px 9px;
+      font-size: 20px !important;
+      width: 160px;
+      text-align: center;
+    }
+    .btn.ok {
+      width: 40px;
+      height: 40px;
+      &:after {
+        top: 13px;
+        left: 12px;
+        width: 14px;
+        height: 7px;
+      }
+    }
+  }
+
+  .basket-sum .total-info span {
+    font-size: 24px;
+  }
+
+  .apply {
+    .text {
+      font-size: 24px;
+      margin-bottom: 35px;
+      b {
+        font: 24px/24px "CirceBold",sans-serif;
+      }
     }
   }
 

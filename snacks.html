@@ -39,6 +39,8 @@
 </head>
 <body>
 
+<div class="back" data-back></div>
+
     <!--fixed row-->
     <div data-row-fixed class="fixed">
         <div class="btn-group">
@@ -47,7 +49,7 @@
         </div>
         <div class="basket-box">
             <button class="btn border" onclick="MainManager.basket(0)">В корзину</button>
-            <span class="data">11 товаров — 10 570 руб.</span>
+            <span class="data"><span class="for-mobile">Корзина: </span>11 товаров — 10 570 руб.</span>
         </div>
     </div>
 
@@ -68,13 +70,35 @@
                         <div class="counter">1000</div>
                         <div class="hint">За сегодня мы приготовили уже 1000 пицц!</div>
                     </div>
-                    <ul class="nav">
+                    <ul class="nav" data-main-menu>
+
+                        <!--if auth-->
+
+                        <!--li class="for-mobile"><a href="#" onclick="return false;">Константин Константинопольский</a></li-->
+
+                        <!--else-->
+
+                        <li class="for-mobile"><a href="#" onclick="MainManager.showModal('authorization'); return false;">войти</a></li>
+                        <li class="for-mobile"><a href="#" onclick="MainManager.showModal('registration'); return false;">регистрация</a></li>
+
+                        <!--and-->
+
                         <li><a href="menu.html">МЕНЮ</a></li> <li class="sep"></li>
                         <li><a href="delivery.html">ДОСТАВКА</a></li> <li class="sep"></li>
                         <li><a href="stock.html">АКЦИИ</a></li> <li class="sep"></li>
-                        <li><a href="banquet.html">БАНКЕТЫ</a></li> <li class="sep"></li>
+                        <li><a href="#">БАНКЕТЫ</a></li> <li class="sep"></li>
                         <li><a href="restaurant.html">РЕСТОРАНЫ</a></li> <li class="sep"></li>
                         <li><a href="about.html">ПРОНТО</a></li>
+
+                        <li class="for-mobile _s">
+                            <div class="social">
+                                <div><a href="#" class="soc-icon-s_1"></a></div>
+                                <div><a href="#" class="soc-icon-s_2"></a></div>
+                                <div><a href="#" class="soc-icon-s_3"></a></div>
+                                <div><a href="#" class="soc-icon-s_4"></a></div>
+                            </div>
+                        </li>
+
                     </ul>
                 </div>
 
@@ -96,17 +120,20 @@
                 </div>
             </div>
 
-            <ul class="menu nav">
-                <li><a class="active" href="/pizza.html">ПИЦЦА</a></li> <li class="sep"></li>
+            <ul class="menu nav" data-cat-menu>
+                <li><a href="/pizza.html">ПИЦЦА</a></li> <li class="sep"></li>
                 <li><a href="paste.html">ПАСТА</a></li> <li class="sep"></li>
-                <li><a href="sushi.html">СУШИ-БАР</a></li> <li class="sep"></li>
-                <li><a href="snacks.html">ЗАКУСКИ/САЛАТЫ</a></li> <li class="sep"></li>
+                <li><a href="#">СУШИ-БАР</a></li> <li class="sep"></li>
+                <li><a class="active" href="snacks.html">ЗАКУСКИ/САЛАТЫ</a></li> <li class="sep"></li>
                 <li><a href="hot.html">ГОРЯЧЕЕ</a></li> <li class="sep"></li>
                 <li><a href="drink.html">БАР/НАПИТКИ</a></li> <li class="sep"></li>
                 <li><a href="dessert.html">ДЕСЕРТЫ</a></li> <li class="sep"></li>
                 <li><a href="children.html">детское меню</a></li> <li class="sep"></li>
                 <li><a href="stock.html">АКЦИИ</a></li>
             </ul>
+
+            <button class="btn border cat-menu" onclick="MainManager.showMenu('data-cat-menu');">ЗАКУСКИ/САЛАТЫ</button>
+            <button class="btn border main-menu" onclick="MainManager.showMenu('data-main-menu');"><span></span></button>
 
         </div>
 

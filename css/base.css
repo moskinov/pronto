@@ -684,7 +684,9 @@ h1, .product .intro {
     display: block;
     margin-bottom: 20px;
     width: 274px;
-    height: 274px; }
+    height: 274px;
+    margin-left: auto;
+    margin-right: auto; }
   .product .product-link:hover .title {
     color: #e4b100 !important; }
     .product .product-link:hover .title:before, .product .product-link:hover .title:after {
@@ -1441,6 +1443,8 @@ h1, .product .intro {
   margin-bottom: 26px;
   font-size: 18px;
   line-height: 18px; }
+.product.card .set .set-col {
+  margin-bottom: 10px; }
 .product .controls {
   margin-bottom: 16px; }
   .product .controls .bootstrap-select {

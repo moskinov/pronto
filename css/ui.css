@@ -733,18 +733,19 @@ input.file-input {
     bottom: -16px;
     line-height: 10px;
     color: #7e7e7e; }
-  .input-data.phone span {
-    margin-right: 5px; }
-  .input-data.phone input {
-    display: inline-block;
-    width: 60px;
-    margin-left: 6px;
-    padding: 13px 8px 11px;
-    text-align: center; }
-    .input-data.phone input:nth-child(4), .input-data.phone input:nth-child(5) {
-      width: 50px; }
-  .input-data.phone .hint {
-    left: 60px; }
+  .input-data.phone {
+    padding-left: 40px; }
+    .input-data.phone span {
+      position: absolute;
+      left: 0;
+      top: 0;
+      line-height: 46px;
+      width: 24px; }
+    .input-data.phone input {
+      display: inline-block;
+      width: 100%; }
+    .input-data.phone .hint {
+      left: 40px; }
 
 /*
 .col_2 {
