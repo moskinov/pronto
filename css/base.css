@@ -1786,4 +1786,7 @@ h1, .product .intro {
   background-color: #d0e5c9;
   margin-bottom: 20px; }
 
+.delivery-wr .for-mobile, .about .for-mobile {
+  display: none; }
+
 /*# sourceMappingURL=base.css.map */

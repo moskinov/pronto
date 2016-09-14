@@ -216,11 +216,11 @@
           opacity: 1;
         }
         &.owl-prev {
-          left: -30px;
+          left: 0;
           @include transform(rotate(180deg));
         }
         &.owl-next {
-          right: -30px;
+          right: 0;
         }
         &.disabled {
           cursor: default !important;
@@ -236,7 +236,6 @@
           height: auto;
           position: relative;
           display: block;
-          margin: 0 0 0 70px;
           z-index: 1;
         }
         .grid {
@@ -328,7 +327,6 @@
   &.children-style {
     .title {
       min-height: 72px;
-      margin-bottom: 10px;
       &:before,&:after {
         color: #ffe7af;
       }

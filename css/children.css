@@ -162,13 +162,13 @@
   .product .children-slider .owl-nav div:hover {
     opacity: 1; }
   .product .children-slider .owl-nav div.owl-prev {
-    left: -30px;
+    left: 0;
     -webkit-transform: rotate(180deg);
     -moz-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg); }
   .product .children-slider .owl-nav div.owl-next {
-    right: -30px; }
+    right: 0; }
   .product .children-slider .owl-nav div.disabled {
     cursor: default !important;
     pointer-events: none;
@@ -178,7 +178,6 @@
   height: auto;
   position: relative;
   display: block;
-  margin: 0 0 0 70px;
   z-index: 1; }
 .product .children-slider.single .item .grid {
   display: inline-block;
@@ -252,8 +251,7 @@
   margin-top: 8px;
   color: #ffe7af; }
 .product.children-style .title {
-  min-height: 72px;
-  margin-bottom: 10px; }
+  min-height: 72px; }
   .product.children-style .title:before, .product.children-style .title:after {
     color: #ffe7af; }
   .product.children-style .title.icon-1:before, .product.children-style .title.icon-1:after {

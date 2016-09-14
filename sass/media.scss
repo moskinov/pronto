@@ -152,8 +152,9 @@
 
   .btn {
     &.border {
-      padding: 11px 14px 9px;
-      font-size: 24px;
+      padding: 14px 14px 12px;
+      font-size: 28px;
+      line-height: 28px;
     }
   }
 
@@ -187,14 +188,24 @@
     line-height: 28px;
     padding: 22px 23px 18px;
   }
-
-  .stock a {
-    margin: 0 0 30px 0;
+  .stock {
+    a {
+      margin: 0 0 30px 0;
+      img {
+        width: 400px;
+        height: auto;
+      }
+    }
     img {
       width: 400px;
       height: auto;
     }
+    p {
+      font-size: 26px;
+      line-height: 32px;
+    }
   }
+
 
   .product .controls .bootstrap-select {
     width: 33%;
@@ -243,6 +254,9 @@
       }
       .btn {
         width: 144px;
+        padding: 11px 14px 8px;
+        font-size: 24px;
+        line-height: 20px;
       }
     }
     ul.nav.menu, .main-nav ul {
@@ -455,7 +469,100 @@
   .content {
     margin-top: 0;
     padding-top: 0;
+    h2.big {
+      padding-top: 50px;
+      font-size: 55px;
+      line-height: 42px;
+      margin-bottom: 46px;
+    }
   }
+
+  h2 {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  input, textarea {
+    font: 26px/30px "Circe", "Helvetica", Arial, sans-serif;
+    line-height: 66px;
+    height: 66px;
+    padding: 13px 16px 11px;
+  }
+  textarea {
+    height: 150px;
+    line-height: 32px;
+  }
+
+  .input-data.phone span {
+    font-size: 26px;
+    line-height: 66px;
+  }
+
+  .form-grid .form-row .form-cell:first-child, .form-grid .form-row .form-cell:nth-child(3) {
+    font-size: 20px !important;
+    line-height: 24px !important;
+    width: 150px;
+  }
+
+  .form-grid.two .form-row .form-cell input {
+    width: 90px;
+  }
+  .form-grid .form-row .form-cell {
+    padding-bottom: 30px;
+  }
+
+  .content-form {
+    .row {
+      .col_2 {
+        width: 100%;
+        margin-left: 0;
+        float: none;
+      }
+    }
+    .checkbox-label.radio  {
+      margin-bottom: 30px;
+      .checkbox-label-text {
+        font-size: 26px;
+      }
+    }
+  }
+
+  .checkbox-label .checkbox + .checkbox-label-text:before {
+    width: 24px;
+    height: 24px;
+  }
+  .checkbox-label .checkbox + .checkbox-label-text:after {
+    width: 12px;
+    height: 4px;
+    top: 8px;
+    left: 6px;
+    border: 3px solid #000000;
+  }
+
+  .checkbox-label {
+    .checkbox-label-text {
+      font-size: 26px;
+      line-height: 27px;
+      padding-left: 40px;
+    }
+    &.radio {
+      .checkbox + .checkbox-label-text:before {
+        width: 18px;
+        height: 18px;
+      }
+      .checkbox + .checkbox-label-text:after {
+        width: 8px;
+        height: 8px;
+        left: 6px;
+        top: 7px;
+      }
+    }
+  }
+
+  .sum {
+    font-size: 26px;
+  }
+
   .main-slider-wr {
     margin: 0 -30px 0 -30px;
     .main-slider {
@@ -610,6 +717,10 @@
 
       }
     }
+    .form-label {
+      font-size: 20px !important;
+      line-height: 24px !important;
+    }
     .modal-dialog {
       margin: 0;
       display: table;
@@ -621,12 +732,47 @@
         vertical-align: middle;
         height: 100%;
         color: #ffffff;
+        padding: 30px 20px 40px;
         input, textarea {
-          background: transparent;
-          color: #ffffff;
+          background: #ffffff;
         }
-        input:focus, textarea:focus {
-          border-color: #ffffff;
+        .textarea-box + .m-b25 {
+          display: none;
+        }
+        .textarea-box {
+          margin-bottom: 30px;
+        }
+        h2 {
+          font-size: 55px;
+          line-height: 55px;
+          margin-bottom: 40px;
+          &.small-text {
+            font-size: 30px;
+            line-height: 30px;
+          }
+        }
+        a {
+          color: #ffffff;
+          &:hover {
+            color: #e4b100;
+          }
+        }
+        .btn {
+          margin-top: 34px;
+        }
+        .form-bottom {
+          padding-top: 34px;
+          margin-top: 40px;
+          p {
+            font-size: 20px;
+            line-height: 20px;
+          }
+          [class^="soc-icon-"] {
+            font-size: 70px;
+            line-height: 70px;
+            color: #ffffff;
+            margin: 0 10px;
+          }
         }
       }
     }
@@ -638,8 +784,8 @@
   }
 
   .sort {
-    font: 18px/30px "CirceBold",sans-serif;
-    padding-top: 30px;
+    font: 15px/34px "CirceBold",sans-serif;
+    padding-top: 20px;
   }
 
   .btn.pink.small {
@@ -858,12 +1004,8 @@
        }
      }
     }
-    &.basket {
-      h2.big {
-        padding-top: 50px;
-      }
-    }
   }
+
 
   .title-slide {
     margin-top: 0;
@@ -967,6 +1109,402 @@
         font: 24px/24px "CirceBold",sans-serif;
       }
     }
+  }
+
+  .addr-list {
+    margin-bottom: 20px;
+    h2 {
+      display: block;
+      margin: 0 0 20px 0 !important;
+    }
+  }
+
+  .content.basket-end {
+    background-image: url("../img/back.png") ;
+    background-repeat: repeat;
+    padding-bottom: 70px;
+    padding-top: 50px;
+    p {
+      font: 38px/45px "Cervo-Regular",sans-serif;
+      margin: 0 0 40px;
+    }
+    h1 {
+      margin: 40px 0 0;
+    }
+  }
+
+  .btn.orange-bg, .btn.green, .btn.black {
+    font-size: 24px;
+    padding: 14px 20px 12px;
+    line-height: 24px;
+  }
+  a.sl {
+    font-size: 20px;
+  }
+
+  .set-pills {
+    text-align: center !important;
+    margin-bottom: 44px !important;
+    .btn.border {
+      padding: 11px 14px 10px;
+      font-size: 17px;
+      line-height: 17px;
+    }
+  }
+  .content p {
+    font-size: 26px;
+    line-height: 32px;
+    margin: 0 0 30px;
+  }
+  .restaurant {
+    &.all {
+      .row {
+        .col {
+          width: 100%;
+          float: none;
+          margin-left: 0;
+        }
+      }
+      .map,.img-bg {
+        display: none;
+      }
+      p {
+        text-align: left !important;
+
+      }
+    }
+    &.one {
+      .row {
+        .col {
+          width: 100%;
+          float: none;
+          margin-left: 0;
+        }
+      }
+      .res-sep {
+        margin-left: 34px;
+      }
+      ._img {
+        margin-left: -34px;
+        overflow: hidden;
+        p {
+          float: left;
+          width: 29.333333%;
+          margin-left: 6%;
+          margin-bottom: 0;
+          &:first-child {
+            margin-left: 0;
+          }
+          img {
+
+          }
+        }
+      }
+      .map {
+        margin-bottom: 40px;
+      }
+    }
+    .restaurant-list {
+      margin-bottom: 20px;
+      padding-bottom: 24px;
+      a {
+        font-size: 26px;
+        line-height: 32px;
+        margin-left: 34px;
+      }
+      .line {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+
+  .delivery-wr {
+    .title {
+      display: none;
+    }
+    .for-mobile {
+      display: block;
+    }
+    .info {
+      .fill {
+        margin-bottom: 50px;
+      }
+    }
+    .map {
+      margin-left: -30px;
+      margin-right: -30px;
+      margin-bottom: 60px;
+    }
+    .row.zone  {
+       .col {
+         width: 100%;
+         float: none;
+         margin-left: 0;
+         p {
+           margin: 0 0 40px;
+         }
+      }
+      h1 {
+        font-size: 40px !important;
+        line-height: 40px;
+      }
+    }
+    .zone-alert {
+      font-size: 26px;
+      line-height: 32px;
+      border: 0;
+      text-align: left;
+      margin: 0 0 40px;
+      max-width: inherit;
+      width: 100%;
+      padding: 20px 0;
+    }
+    .fill-s {
+      text-align: left !important;
+      font: 26px/32px 'Circe','Helvetica',Arial,sans-serif;
+    }
+  }
+  .about {
+    text-align: left !important;
+    p {
+      text-align: left !important;
+    }
+    ._p8 {
+      padding: 0;
+    }
+    .title {
+      display: none;
+    }
+    .for-mobile {
+      display: block;
+    }
+    h3 {
+      color: #e4b100;
+      margin: 0;
+    }
+    .group {
+      .col {
+        width: 100%;
+        float: none;
+        margin-left: 0;
+        padding-top: 0 !important;
+        background: none !important;
+        font-size: 26px;
+        line-height: 32px;
+      }
+    }
+    .stat,.img-bg,.p-color:not(.big) {
+      display: none;
+    }
+    .p-color.big {
+      font: 25px/25px "CirceBold",sans-serif;
+    }
+    ul {
+      margin: 0 0 40px 0;
+      li {
+        font-size: 26px;
+        line-height: 32px;
+        padding-left: 0;
+        &:after {
+          display: none;
+        }
+      }
+    }
+    .info-text {
+      border: 0;
+      font-size: 26px;
+      line-height: 32px;
+      padding: 0;
+      text-align: left;
+      margin: 40px 0 40px;
+      &:before,&:after {
+        display: none;
+      }
+    }
+    h4 {
+      font: 25px/25px "CirceBold",sans-serif;
+      text-align: left;
+    }
+    .row.company {
+      margin-bottom: 40px;
+      .col {
+        width: 100%;
+        float: none;
+        margin-left: 0;
+        padding-top: 0 !important;
+        background: none !important;
+        font-size: 26px;
+        line-height: 32px;
+        text-align: left;
+      }
+    }
+    .base:not(.small) {
+      display: block;
+      tr {
+        display: block;
+        td {
+          display: block;
+          border: 0;
+          text-align: left;
+          padding: 0 0 40px 0 !important;
+          a {
+            font-size: 26px;
+            line-height: 32px;
+          }
+          p,.grid {
+            margin: 0 !important;
+          }
+          .grid {
+            display: block;
+            p {
+              display: inline-block;
+            }
+          }
+        }
+        &:last-child {
+          td {
+            &:last-child {
+              padding: 0 !important;
+            }
+          }
+        }
+      }
+
+    }
+    .base.small {
+      font-size: 26px;
+      line-height: 32px;
+      tr {
+        td {
+          &:first-child {
+            padding-left: 0;
+          }
+        }
+      }
+    }
+    ol {
+      li {
+        font-size: 26px;
+        line-height: 32px;
+        margin-bottom: 30px;
+      }
+    }
+    .list-reviews {
+      font-size: 26px;
+      line-height: 32px;
+    }
+    .sub-h {
+      margin-bottom: 0 !important;
+    }
+    .vacancies-form {
+      display: none;
+    }
+    .main-data {
+      .col {
+        width: 100%;
+        float: none;
+        margin-left: 0;
+      }
+      div {
+        font-size: 26px;
+        line-height: 32px;
+        div.p-color {
+          display: block;
+        }
+      }
+    }
+
+    .main-phone {
+      border: 0;
+      padding: 0;
+    }
+  }
+  .content.about-wr {
+    background-image: url("../img/back.png") ;
+    background-repeat: repeat;
+    padding-bottom: 70px;
+  }
+  .paginate:not(.small) {
+    a {
+      font: 50px/50px "Cervo-Regular",sans-serif;
+      padding: 0 16px;
+    }
+  }
+
+  [data-height] {
+    min-height: inherit !important;
+  }
+
+  .product .children-slider {
+    .item {
+      img {
+        width: 430px;
+        height: auto;
+      }
+
+    }
+
+  }
+  .content.children {
+    .section {
+      padding-top: 50px;
+      .wrapper {
+        &:before,&:after {
+          display: none;
+        }
+      }
+    }
+  }
+  .product .children-slider .owl-nav div {
+    top: 230px;
+  }
+  .product .children-slider.single .item .grid.icon {
+    margin: 0 50px;
+    width: auto;
+    &:before,&:after {
+      display: none;
+    }
+  }
+  .section.white {
+    ._txt-center {
+      text-align: left !important;
+    }
+    .p-color.big {
+      font-size: 26px;
+      line-height: 32px;
+    }
+    .grid-box {
+      border: 0;
+      padding: 0;
+      margin: 0;
+      .col {
+        width: 100%;
+        float: none;
+        margin-left: 0;
+      }
+    }
+    .small {
+      font-size: 26px;
+      line-height: 32px;
+      .col {
+        width: 100%;
+        float: none;
+        margin-left: 0;
+      }
+    }
+    ol {
+      margin-bottom: 30px;
+    }
+  }
+  .section.orange .res-list div {
+    display: block;
+    margin: 0 0 30px 0;
+    padding: 0 0 30px 0;
+    background: none !important;
+    font-size: 26px;
+    line-height: 32px;
+    border-bottom: 1px solid #ffffff;
   }
 
 }

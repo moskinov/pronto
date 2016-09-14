@@ -172,7 +172,7 @@
   border-top: 1px dotted #908c88;
   padding: 20px 0 16px; }
 
-.addr-list .btn.border.active {
+.content-white .btn.border.active {
   color: #ffffff;
   background-color: #3d3d3d !important;
   border-color: #3d3d3d;
@@ -234,7 +234,8 @@
   right: 0;
   top: 0; }
 .activate input {
-  padding-right: 136px; }
+  padding-right: 136px;
+  text-overflow: ellipsis; }
 
 .activate-box {
   display: none; }

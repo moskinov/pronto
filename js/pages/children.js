@@ -3,7 +3,6 @@ $(document).ready(function(){
   $('[data-children-slider]').each(function(){
     var length = $(this).find('.item').length;
     var col;
-    var nav;
 
     if(length > 2) {
 
@@ -14,23 +13,29 @@ $(document).ready(function(){
       col = length;
     }
 
-    if(length > 3){
-
-      nav = true;
-
-    } else {
-
-      nav = false;
-    }
     $(this).on('initialized.owl.carousel', function(event) {
       MainManager.initHeight();
     });
     $(this).owlCarousel({
       items: col,
-      nav: nav,
+      nav: true,
       navRewind: false,
       pullDrag: false,
-      navText: ['','']
+      navText: ['',''],
+      responsive:{
+        0:{
+          items:1
+        },
+        640:{
+          items:1
+        },
+        930:{
+          items:2
+        },
+        990:{
+          items:3
+        }
+      }
     });
   });
 
