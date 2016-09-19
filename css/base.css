@@ -356,7 +356,7 @@ ul.nav {
   right: 0;
   background: #fffcf3;
   padding: 8px 10px;
-  z-index: 10;
+  z-index: 100;
   border-bottom: 1px solid #696969;
   -webkit-transform: translateY(-100%);
   -moz-transform: translateY(-100%);

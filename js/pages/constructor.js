@@ -25,7 +25,7 @@ $(document).ready(function(){
           items:2
         },
         640:{
-          items:3
+          items:2
         },
         700:{
           items:4

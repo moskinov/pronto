@@ -369,7 +369,7 @@ ul.nav {
   right: 0;
   background: $bg;
   padding: 8px 10px;
-  z-index: 10;
+  z-index: 100;
   border-bottom: 1px solid #696969;
   @include transform(translateY(-100%));
   @include transition( all 0.3s );

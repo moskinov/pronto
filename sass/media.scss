@@ -13,6 +13,12 @@
 }
 
 @media screen and (max-width: 939px) {
+
+  .nav-tabs li a {
+    font: 12px/14px "CirceBold",sans-serif;
+    padding: 10px 5px 9px;
+  }
+
   .header .main-nav ul {
     clear: both;
     padding-top: 10px;
@@ -57,6 +63,9 @@
   }
 }
 @media screen and (max-width: 890px) {
+  .constructor-list .section .rub {
+    min-width: 100px;
+  }
   .product {
     .row-col {
       margin-bottom: 0;
@@ -1505,6 +1514,142 @@
     font-size: 26px;
     line-height: 32px;
     border-bottom: 1px solid #ffffff;
+  }
+
+  .product.card {
+    .constructor-img {
+      margin-bottom: 50px;
+      img {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  .tab-content > .tab-pane {
+    opacity: 1 !important;
+    visibility: visible !important;
+    height: auto !important;
+    .title-set {
+      display: block;
+    }
+  }
+  .nav-tabs {
+    display: none;
+  }
+
+  [data-constructor-slider].owl-carousel {
+     .owl-controls .owl-nav div {
+       top: 100px;
+
+    }
+  }
+  .constructor-list {
+    margin-top: 0;
+    .section {
+      padding: 0;
+      .btn-group {
+        float: left;
+        position: relative;
+        margin-left: 10px;
+        &:before {
+          content: 'x';
+          position: absolute;
+          line-height: 56px;
+          font-size: 32px;
+          font-weight: bold;
+          left: 0;
+          top: 0;
+        }
+        .btn-number {
+          display: none;
+        }
+        .input-number {
+          width: 60px;
+          float: left;
+          border-color: transparent !important;
+          font-weight: bold;
+        }
+      }
+      .row {
+        margin: 0 !important;
+        .col.col_2 {
+          margin-left: 6%;
+          float: left;
+          width: 47%;
+          &:first-child {
+            margin-left: 0;
+          }
+        }
+      }
+      p {
+        font: 24px/24px "CirceBold",sans-serif;
+        text-transform: uppercase;
+      }
+      .collapse-icon,._ic {
+        display: none;
+      }
+      h1 {
+        text-transform: uppercase;
+        text-align: center;
+        font: 35px/40px "dirty_headline_cyrillicRg",sans-serif;
+      }
+      .rub {
+        font-size: 32px;
+        line-height: 56px;
+        float: left;
+      }
+      .close,.close-icon {
+        width: 56px;
+        height: 56px;
+      }
+      .close-icon:before {
+        /*background-size: 20px;*/
+      }
+      .name {
+        font-size: 26px;
+        padding-top: 14px;
+      }
+      &.first {
+        .btn-group {
+          &:before {
+            display: none;
+
+          }
+        }
+
+        .input-number {
+          display: none;
+        }
+      }
+    }
+  }
+  .constructor-wr {
+    .total {
+      font: 36px/36px "CirceBold",sans-serif;
+      text-align: center;
+      padding-top: 50px;
+    }
+    .btn-group.row {
+      margin: 0!important;
+    }
+    .set.for-mobile {
+      display: block;
+    }
+    .apply {
+      .btn.big {
+        display: none;
+      }
+    }
+    .col._p5 {
+      .set.pizza {
+        display: none;
+      }
+    }
+    .title-slide {
+      padding: 0 0 40px;
+    }
   }
 
 }
