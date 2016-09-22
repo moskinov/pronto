@@ -212,6 +212,9 @@
 .cabinet-row {
   border-top: 1px dotted #908c88;
   padding: 20px 0 16px;
+  &.scroll {
+    overflow-x: auto;
+  }
 }
 
 .content-white {

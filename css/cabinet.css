@@ -171,6 +171,8 @@
 .cabinet-row {
   border-top: 1px dotted #908c88;
   padding: 20px 0 16px; }
+  .cabinet-row.scroll {
+    overflow-x: auto; }
 
 .content-white .btn.border.active {
   color: #ffffff;
