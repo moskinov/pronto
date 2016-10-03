@@ -2250,6 +2250,37 @@ h1, .product .intro {
 .delivery-wr .for-mobile,.about .for-mobile{
   display: none;
 }
+.fix-link {
+  position: fixed;
+  right: 0;
+  height: 180px;
+  width: 32px;
+  background-color: #e00873;
+  text-decoration: none !important;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 500;
+  span {
+    font: 17px/17px "Cervo-Medium",sans-serif;
+    color: #ffffff;
+    text-transform: uppercase;
+    white-space: nowrap;
+    display: block;
+    letter-spacing: 1.6px;
+    @include transform(rotate(-90deg) translateX(-120px));
+  }
+  .icon-svg-2s {
+    color: #ffffff !important;
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 18px;
+    font-size: 18px;
+  }
+}
 
 
 
