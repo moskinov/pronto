@@ -404,6 +404,14 @@ select.selectpicker {
     }
   }
 }
+.agreement-content {
+  max-height: 240px;
+  p {
+    font-size: 14px;
+    line-height: 17px;
+    margin: 0 0 16px;
+  }
+}
 .modal-open {
   overflow: hidden;
 }

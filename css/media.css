@@ -1250,6 +1250,15 @@
     font-size: 24px;
     padding: 22px 5px 20px;
     line-height: 24px;
-    width: 156px; } }
+    width: 156px; }
+
+  .modal.phone .modal-dialog .green {
+    width: 124px; }
+
+  .agreement-content {
+    max-height: 400px; }
+    .agreement-content p {
+      font-size: 26px;
+      line-height: 32px; } }
 
 /*# sourceMappingURL=media.css.map */

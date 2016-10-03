@@ -138,7 +138,6 @@ function MainManager_f() {
 
     modal.addClass(template);
     modal.modal('show');
-
   };
 
   this.basket = function (col) {

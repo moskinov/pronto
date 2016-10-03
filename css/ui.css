@@ -351,6 +351,13 @@ select.selectpicker {
     .modal.phone .modal-dialog .close-icon {
       display: none; }
 
+.agreement-content {
+  max-height: 240px; }
+  .agreement-content p {
+    font-size: 14px;
+    line-height: 17px;
+    margin: 0 0 16px; }
+
 .modal-open {
   overflow: hidden; }
 
