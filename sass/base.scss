@@ -242,8 +242,9 @@ ul.nav {
       text-decoration: none;
       text-transform: uppercase;
       @include transition( color .3s );
-      &:hover {
+      &:hover,&.active {
         color: $bo;
+
       }
     }
   }

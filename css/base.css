@@ -248,7 +248,7 @@ ul.nav {
       -moz-transition: color 0.3s;
       -ms-transition: color 0.3s;
       transition: color 0.3s; }
-      ul.nav li a:hover {
+      ul.nav li a:hover, ul.nav li a.active {
         color: #df7e00; }
   ul.nav.menu {
     clear: both;
