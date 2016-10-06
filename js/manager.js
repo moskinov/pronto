@@ -75,6 +75,21 @@ function MainManager_f() {
       }
     });
 
+
+    $('[data-restaurant-ul],[data-set-scroll]').mCustomScrollbar({
+      theme:'light',
+      autoHideScrollbar: false,
+      scrollInertia: 400,
+      advanced: {
+        updateOnContentResize:true
+      },
+      callbacks:{
+        onInit: function(){
+
+        }
+      }
+    });
+
   };
 
   this.initCounter = function(){

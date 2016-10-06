@@ -1821,4 +1821,10 @@ h1, .product .intro {
     width: 18px;
     font-size: 18px; }
 
+.restaurant-ul {
+  max-height: 600px; }
+
+.set-scroll-product {
+  max-height: 250px; }
+
 /*# sourceMappingURL=base.css.map */
