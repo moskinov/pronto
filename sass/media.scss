@@ -133,6 +133,10 @@
     position: relative;
   }
 
+  ul.nav {
+    display: block;
+  }
+
   .header .right-col .counter,
   .header .left-col .btn,
   .main-style .intro,
