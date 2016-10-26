@@ -35,6 +35,10 @@
     <!--style adaptive include last-->
     <link rel="stylesheet" href="css/media.css">
 
+    <!--suggestions-->
+    <link href="https://cdn.jsdelivr.net/jquery.suggestions/16.8/css/suggestions.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.suggestions/16.8/js/jquery.suggestions.min.js"></script>
+
 </head>
 <body>
 
@@ -182,7 +186,7 @@
                 </div>
 
                 <div class="addr-input error">
-                    <input type="text">
+                    <input type="text" data-address>
                 </div>
 
                 <div class="m-b30 input-data">
@@ -314,6 +318,19 @@
             </div>
         </div>
     </div>
+
+    <script type="text/javascript">
+        $("[data-address]").suggestions({
+            serviceUrl: "https://suggestions.dadata.ru/suggestions/api/4_1/rs",
+            token: "e2219e112e11d218edf01a3f502313c229af9d83",
+            type: "ADDRESS",
+            count: 5,
+            /* Вызывается, когда пользователь выбирает одну из подсказок */
+            onSelect: function(suggestion) {
+                console.log(suggestion);
+            }
+        });
+    </script>
 
 </body>
 </html>

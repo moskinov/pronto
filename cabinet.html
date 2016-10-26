@@ -35,6 +35,10 @@
     <!--style adaptive include last-->
     <link rel="stylesheet" href="css/media.css">
 
+    <!--suggestions-->
+    <link href="https://cdn.jsdelivr.net/jquery.suggestions/16.8/css/suggestions.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.suggestions/16.8/js/jquery.suggestions.min.js"></script>
+
 </head>
 <body>
 
@@ -218,99 +222,48 @@
 
             <div class="cabinet-row">
 
-                <div class="row">
-                    <div class="col col_2">
-                        <div class="addr-list" data-addr-list>
-                            <h2 class="m-b20 small">
-                                Адрес доставки
-                            </h2>
-                        </div>
-                    </div>
-                    <div class="col col_2"></div>
+                <div class="addr-list" data-addr-list>
+                    <h2 class="m-b20 small">
+                        Адрес доставки
+                    </h2>
                 </div>
 
-                <div class="row" data-addr-input>
-                    <div class="col col_2">
-                        <div class="form-grid">
-                            <div class="form-row">
-                                <div class="form-cell">город*</div>
-                                <div class="form-cell">
-                                    <div class="input-data">
-                                        <input type="text" value="Москва">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-cell">ст. метро</div>
-                                <div class="form-cell">
-                                    <div class="input-data">
-                                        <input type="text" value="Бауманская">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-cell">улица*</div>
-                                <div class="form-cell">
-                                    <div class="input-data">
-                                        <input type="text" value="Комсомольская" data-addr-street>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="addr-input error">
+                    <input type="text" data-address>
+                </div>
 
-                    </div>
-                    <div class="col col_2">
-                        <div class="form-grid two">
-                            <div class="form-row">
-                                <div class="form-cell">дом*</div>
-                                <div class="form-cell">
-                                    <div class="input-data">
-                                        <input type="text" value="5" data-addr-house>
-                                    </div>
-                                </div>
-                                <div class="form-cell">корпус</div>
-                                <div class="form-cell">
-                                    <div class="input-data">
-                                        <input type="text" value="3">
-                                    </div>
+                <div class="m-b20 input-data">
+
+                    <div class="form-grid _3">
+                        <div class="form-row">
+                            <div class="form-cell">подъезд</div>
+                            <div class="form-cell">
+                                <div class="input-data">
+                                    <input type="text">
                                 </div>
                             </div>
-                            <div class="form-row">
-                                <div class="form-cell">строение</div>
-                                <div class="form-cell">
-                                    <div class="input-data">
-                                        <input type="text" value="2">
-                                    </div>
-                                </div>
-                                <div class="form-cell">подъезд*</div>
-                                <div class="form-cell">
-                                    <div class="input-data">
-                                        <input type="text" value="7">
-                                    </div>
+                            <div class="form-cell">этаж</div>
+                            <div class="form-cell">
+                                <div class="input-data">
+                                    <input type="text">
                                 </div>
                             </div>
-                            <div class="form-row">
-                                <div class="form-cell">этаж</div>
-                                <div class="form-cell">
-                                    <div class="input-data">
-                                        <input type="text" value="18">
-                                    </div>
-                                </div>
-                                <div class="form-cell">квартира*</div>
-                                <div class="form-cell">
-                                    <div class="input-data">
-                                        <input type="text" value="112">
-                                    </div>
+                            <div class="form-cell">квартира или номер офиса</div>
+                            <div class="form-cell">
+                                <div class="input-data">
+                                    <input type="text">
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="hint _error">Необходимо указать точный и корректный адрес доставки</div>
+                </div>
 
+                <div class="row">
                     <div class="fl-r">
                         <button class="btn border m-r4" onclick="MainManager.addrAdd()">+ добавить адрес</button>
                         <button class="btn green" onclick="MainManager.showAlert('addr')">Сохранить</button>
                     </div>
-
                 </div>
 
             </div>
@@ -587,6 +540,19 @@
             <a href="#">Смотреть</a>
         </div>
     </div>
+
+    <script type="text/javascript">
+        $("[data-address]").suggestions({
+            serviceUrl: "https://suggestions.dadata.ru/suggestions/api/4_1/rs",
+            token: "e2219e112e11d218edf01a3f502313c229af9d83",
+            type: "ADDRESS",
+            count: 5,
+            /* Вызывается, когда пользователь выбирает одну из подсказок */
+            onSelect: function(suggestion) {
+                console.log(suggestion);
+            }
+        });
+    </script>
 
 </body>
 </html>

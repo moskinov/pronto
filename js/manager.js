@@ -216,12 +216,7 @@ function MainManager_f() {
   };
 
   this.addrAdd = function () {
-    var s = $('[data-addr-street]').val();
-    var h = $('[data-addr-house]').val();
-
-    if(s != '' && h != '') {
-      $('[data-addr-list]').append('<button class="btn border">'+s+','+h+'</button>')
-    }
+    $('[data-addr-list]').append('<button class="btn border">Новый адрес</button>')
   };
 
   this.staticActivate = function (n) {

@@ -1879,7 +1879,7 @@ h1, .product .intro {
 
 .input-data .hint._error {
   font-size: 14px;
-  color: #ca1c1c; }
+  color: #ff0000; }
 
 .basket-map {
   width: 100%;
@@ -1888,5 +1888,14 @@ h1, .product .intro {
 
 .comment-area textarea {
   height: 100px; }
+
+.suggestions-suggestions {
+  color: #252525; }
+
+.suggestions-suggestion {
+  padding: 5px 15px !important; }
+
+.suggestions-hint, .suggestions-addon[data-addon-type="spinner"] {
+  display: none !important; }
 
 /*# sourceMappingURL=base.css.map */
