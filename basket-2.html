@@ -147,100 +147,61 @@
                     </div>
                     <div class="col col_2">
                         <h2 class="m-b20 orange">Cпособ оплаты</h2>
+
+
+                        <div class="checkbox-right">
+                            <label class="checkbox-label radio">
+                                <input class="checkbox" type="radio" name="radio" id="radio-1" checked>
+                                <span class="checkbox-label-text">Наличными курьеру</span>
+                            </label>
+                            <div class="right-input">
+                                <span>сдача с</span>
+                                <input type="еуче">
+                            </div>
+                        </div>
+
                         <label class="checkbox-label radio">
-                            <input class="checkbox" type="radio" name="radio" id="radio-1" checked>
-                            <span class="checkbox-label-text">Наличными курьеру</span>
+                            <input class="checkbox" type="radio" name="radio" id="radio-2">
+                            <span class="checkbox-label-text">Банковская карта</span>
                         </label>
                         <br>
                         <label class="checkbox-label radio">
-                            <input class="checkbox" type="radio" name="radio" id="radio-2">
-                            <span class="checkbox-label-text">Банковская карта/Электронные деньги</span>
+                            <input class="checkbox" type="radio" name="radio" id="radio-3">
+                            <span class="checkbox-label-text">Электронные деньги</span>
                         </label>
                     </div>
                 </div>
 
 
-                <div class="row">
-                    <div class="col col_2">
-                        <div class="addr-list">
-                            <h2 class="m-b20 orange">
-                                Адрес доставки
-                            </h2>
-                            <button class="btn border active">бауманская,15</button>
-                            <button class="btn border">ленина,7</button>
-                        </div>
-                    </div>
-                    <div class="col col_2"></div>
+                <div class="addr-list">
+                    <h2 class="m-b20 orange">
+                        Адрес доставки
+                    </h2>
+                    <button class="btn border active">бауманская,15</button>
+                    <button class="btn border">ленина,7</button>
                 </div>
 
-                <div class="row m-b25">
-                    <div class="col col_2">
-                        <div class="form-grid">
-                            <div class="form-row">
-                                <div class="form-cell">город</div>
-                                <div class="form-cell">
-                                    <div class="input-data">
-                                        <input type="text">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-cell">ст. метро</div>
-                                <div class="form-cell">
-                                    <div class="input-data">
-                                        <input type="text">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-cell">улица</div>
-                                <div class="form-cell">
-                                    <div class="input-data">
-                                        <input type="text">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="addr-input error">
+                    <input type="text">
+                </div>
 
-                    </div>
-                    <div class="col col_2">
-                        <div class="form-grid two">
+                <div class="m-b30 input-data">
+
+                        <div class="form-grid _3">
                             <div class="form-row">
-                                <div class="form-cell">дом</div>
-                                <div class="form-cell">
-                                    <div class="input-data">
-                                        <input type="text">
-                                    </div>
-                                </div>
-                                <div class="form-cell">корпус</div>
-                                <div class="form-cell">
-                                    <div class="input-data">
-                                        <input type="text">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-cell">строение</div>
-                                <div class="form-cell">
-                                    <div class="input-data">
-                                        <input type="text">
-                                    </div>
-                                </div>
                                 <div class="form-cell">подъезд</div>
                                 <div class="form-cell">
                                     <div class="input-data">
                                         <input type="text">
                                     </div>
                                 </div>
-                            </div>
-                            <div class="form-row">
                                 <div class="form-cell">этаж</div>
                                 <div class="form-cell">
                                     <div class="input-data">
                                         <input type="text">
                                     </div>
                                 </div>
-                                <div class="form-cell">квартира</div>
+                                <div class="form-cell">квартира или номер офиса</div>
                                 <div class="form-cell">
                                     <div class="input-data">
                                         <input type="text">
@@ -248,7 +209,17 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    <div class="hint _error">Необходимо указать точный и корректный адрес доставки</div>
+                </div>
+
+                <div class="m-b30 basket-map">
+                    map
+                </div>
+
+                <h2 class="m-b20 orange">Комментарий к заказу</h2>
+
+                <div class="m-b30 comment-area">
+                    <textarea></textarea>
                 </div>
 
                 <h2 class="m-b20 orange">
@@ -257,9 +228,14 @@
 
                 <div class="sum">1710 руб.</div>
 
-                <div class="_txt-center m-t10">
-                    <button class="btn pink big">Отправить</button>
+                <div class="apply">
+                    <div class="text">
+                        К сожалению, ваш адрес не входит в зону доставки наших ресторанов, <br>
+                        но вы можете сами забрать заказ в удобном для вас ресторане
+                    </div>
+                    <button class="btn pink big" disabled="">Отправить</button>
                 </div>
+
             </div>
 
         </div>

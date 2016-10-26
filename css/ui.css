@@ -673,7 +673,7 @@ input.file-input {
     font-size: 14px;
     line-height: 18px; }
   .checkbox-label.radio .checkbox-label-text {
-    color: #b3b3b3; }
+    /*color: $bri;*/ }
   .checkbox-label.radio .checkbox + .checkbox-label-text:before {
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;

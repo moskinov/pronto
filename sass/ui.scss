@@ -765,7 +765,7 @@ input.file-input {
   }
   &.radio {
     .checkbox-label-text {
-      color: $bri;
+      /*color: $bri;*/
     }
     .checkbox {
       &+ .checkbox-label-text:before {

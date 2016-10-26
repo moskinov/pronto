@@ -1836,4 +1836,57 @@ h1, .product .intro {
 .set-scroll-product {
   max-height: 250px; }
 
+.checkbox-right {
+  margin-bottom: 8px;
+  white-space: nowrap; }
+  .checkbox-right .checkbox-label {
+    vertical-align: middle;
+    margin-bottom: 0 !important;
+    margin-right: 40px; }
+  .checkbox-right .right-input {
+    display: inline-block;
+    vertical-align: middle; }
+    .checkbox-right .right-input * {
+      display: inline-block;
+      vertical-align: middle; }
+    .checkbox-right .right-input span {
+      font-size: 18px;
+      line-height: 18px;
+      margin-right: 15px; }
+    .checkbox-right .right-input input {
+      width: 80px;
+      text-align: center; }
+  .checkbox-right:after {
+    clear: both;
+    display: table; }
+
+.form-grid._3 {
+  width: auto; }
+  .form-grid._3 .form-row .form-cell {
+    padding-bottom: 7px; }
+    .form-grid._3 .form-row .form-cell:nth-child(1), .form-grid._3 .form-row .form-cell:nth-child(3), .form-grid._3 .form-row .form-cell:nth-child(5) {
+      font: 14px/16px "Circe", "Helvetica", Arial, sans-serif;
+      text-transform: uppercase;
+      width: auto;
+      padding-right: 20px; }
+    .form-grid._3 .form-row .form-cell input {
+      width: 60px;
+      text-align: center;
+      margin-right: 60px; }
+
+.addr-input {
+  padding-bottom: 20px; }
+
+.input-data .hint._error {
+  font-size: 14px;
+  color: #ca1c1c; }
+
+.basket-map {
+  width: 100%;
+  height: 320px;
+  background-color: #d0e5c9; }
+
+.comment-area textarea {
+  height: 100px; }
+
 /*# sourceMappingURL=base.css.map */
