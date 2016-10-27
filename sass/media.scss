@@ -126,13 +126,22 @@
       }
     }
   }
+  .checkbox-right .right-input {
+    display: block;
+    margin-top: 10px;
+  }
 }
 @media screen and (max-width: 660px) {
   body {
     background: #ffffff;
     position: relative;
   }
-
+/*
+  .content-form input,.content-form textarea {
+    background: #fffcf3;
+    color: $tc;
+  }
+*/
   ul.nav {
     display: block;
   }
@@ -1700,6 +1709,65 @@
       font-size: 26px;
       line-height: 32px;
     }
+  }
+
+  .checkbox-right .right-input {
+    display: inline-block;
+    margin-top: 0;
+  }
+  .checkbox-right .right-input span {
+    font-size: 26px;
+  }
+  .checkbox-right .right-input input {
+    width: 100px;
+  }
+  .form-grid._3 {
+    display: block;
+    .form-row {
+      display: block;
+      .form-cell {
+        display: inline-block;
+        vertical-align: middle;
+        padding-bottom: 20px;
+        min-width: 135px;
+      }
+    }
+  }
+  .form-grid._3 .form-row .form-cell input {
+    width: 100px;
+    margin-right: 40px;
+  }
+  .form-grid._3 .form-row .form-cell:nth-child(5) {
+    font-size: 20px !important;
+    line-height: 24px !important;
+  }
+  .input-data .hint._error {
+    font-size: 18px;
+  }
+  .basket-map {
+    margin-left: -30px;
+    margin-right: -30px;
+    width: auto;
+  }
+  .comment-area textarea {
+    height: 130px;
+  }
+  .input-data .hint {
+    font-size: 18px;
+  }
+  .order-list thead tr td {
+    font: 14px/16px "CirceBold",sans-serif;
+  }
+  .order-list tbody tr td {
+    font-size: 20px;
+    line-height: 26px;
+    border-bottom: 1px solid #c7c5c1;
+  }
+  .paginate.small a {
+    font: 22px/22px 'Circe','Helvetica',Arial,sans-serif;
+  }
+  .cabinet-row .m-b20.input-data {
+    margin-bottom: 40px !important;
   }
 }
 

@@ -2372,6 +2372,12 @@ h1, .product .intro {
 .suggestions-hint,.suggestions-addon[data-addon-type="spinner"] {
   display: none !important;
 }
+.suggestions-suggestions strong {
+  color: #df7e00 !important;
+}
+.suggestions-subtext_inline {
+  min-width: inherit !important;
+}
 
 
 
