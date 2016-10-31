@@ -1285,7 +1285,8 @@
     width: 100px; }
 
   .form-grid._3 {
-    display: block; }
+    display: block;
+    float: none; }
     .form-grid._3 .form-row {
       display: block; }
       .form-grid._3 .form-row .form-cell {

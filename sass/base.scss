@@ -932,6 +932,7 @@ h1, .product .intro {
     &.main-style {
       .title {
         font: 30px/34px "BERNIERDistressed-Regular",sans-serif;
+        min-height: 68px;
       }
     }
   }
@@ -2329,6 +2330,7 @@ h1, .product .intro {
 }
 .form-grid._3 {
   width: auto;
+  float: right;
   .form-row .form-cell {
     padding-bottom: 7px;
     &:nth-child(1),&:nth-child(3),&:nth-child(5) {
@@ -2341,6 +2343,11 @@ h1, .product .intro {
       width: 60px;
       text-align: center;
       margin-right: 60px;
+    }
+    &:last-child {
+      input {
+        margin-right: 0;
+      }
     }
   }
 }
