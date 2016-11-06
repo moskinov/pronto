@@ -10,6 +10,9 @@
   .header .main-nav .right-col {
     margin-left: 10px;
   }
+  .basket-list .basket-row .error-text {
+    white-space: normal;
+  }
 }
 
 @media screen and (max-width: 939px) {
@@ -1076,7 +1079,7 @@
           display: none;
         }
         a {
-          img {
+          .wr-img {
             display: none;
           }
           .name {
@@ -1099,6 +1102,32 @@
           width: 42px;
           height: 56px;
         }
+      }
+      .change-set-wr {
+        margin-left: 0;
+        width: auto;
+        .set {
+          margin: 10px 0 0 0 !important;
+          .btn-group {
+            margin-left: 0;
+            .change-set {
+              font-size: 32px;
+              line-height: 32px;
+            }
+            .dropdown-menu {
+              width: 570px;
+            }
+          }
+        }
+      }
+      .error-text {
+        font-size: 24px;
+        line-height: 24px;
+        width: 540px;
+        margin-top: 62px;
+      }
+      .cell {
+        vertical-align: top;
       }
     }
   }

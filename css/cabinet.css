@@ -19,12 +19,24 @@
       .basket-list .basket-row .cell a {
         display: inline-block;
         text-decoration: none; }
-        .basket-list .basket-row .cell a img {
+        .basket-list .basket-row .cell a .wr-img {
           width: 80px;
           height: 80px;
           float: left;
           display: block;
-          margin-right: 20px; }
+          margin-right: 20px;
+          position: relative; }
+          .basket-list .basket-row .cell a .wr-img:after {
+            content: '';
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0; }
+        .basket-list .basket-row .cell a img {
+          width: 100%;
+          height: 100%; }
         .basket-list .basket-row .cell a .name {
           font-size: 20px;
           display: block;
@@ -79,6 +91,36 @@
         vertical-align: top;
         text-overflow: ellipsis;
         text-align: right; }
+    .basket-list .basket-row .product .set .dropup .dropdown-menu {
+      top: 100%;
+      bottom: auto;
+      width: 334px;
+      margin-top: -2px; }
+    .basket-list .basket-row .change-set-wr {
+      margin-left: 100px;
+      width: 90px;
+      margin-top: -6px; }
+      .basket-list .basket-row .change-set-wr .change-set {
+        border-bottom: 1px solid;
+        line-height: 17px;
+        display: inline-block;
+        cursor: pointer; }
+        .basket-list .basket-row .change-set-wr .change-set:hover {
+          color: #e4b100; }
+    .basket-list .basket-row .open .change-set {
+      color: #e4b100; }
+    .basket-list .basket-row.error .wr-img:after {
+      -webkit-box-shadow: 0 0 0 6px #cd1919 inset;
+      -moz-box-shadow: 0 0 0 6px #cd1919 inset;
+      -ms-box-shadow: 0 0 0 6px #cd1919 inset;
+      box-shadow: 0 0 0 6px #cd1919 inset; }
+    .basket-list .basket-row .error-text {
+      color: #cd1919;
+      white-space: nowrap;
+      margin-top: 12px; }
+      .basket-list .basket-row .error-text a {
+        color: #cd1919;
+        text-decoration: underline; }
 
 .basket-sum {
   overflow: hidden;

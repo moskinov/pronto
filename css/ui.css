@@ -350,6 +350,16 @@ select.selectpicker {
       margin-top: 14px; }
     .modal.phone .modal-dialog .close-icon {
       display: none; }
+  .modal.prod .modal-dialog {
+    width: 360px; }
+    .modal.prod .modal-dialog .close-icon {
+      display: none; }
+    .modal.prod .modal-dialog .modal-content {
+      padding: 30px 20px; }
+      .modal.prod .modal-dialog .modal-content .small-text {
+        margin-bottom: 10px; }
+  .modal.prod .btn.green {
+    width: 100px; }
 
 .agreement-content {
   max-height: 240px; }

@@ -6,7 +6,10 @@
     margin: 27px 30px 0 0; }
 
   .header .main-nav .right-col {
-    margin-left: 10px; } }
+    margin-left: 10px; }
+
+  .basket-list .basket-row .error-text {
+    white-space: normal; } }
 @media screen and (max-width: 939px) {
   .nav-tabs li a {
     font: 12px/14px "CirceBold",sans-serif;
@@ -833,7 +836,7 @@
       margin-left: 10px; }
     .basket-list .basket-row .cell .rub {
       display: none; }
-    .basket-list .basket-row .cell a img {
+    .basket-list .basket-row .cell a .wr-img {
       display: none; }
     .basket-list .basket-row .cell a .name {
       margin: 0;
@@ -848,6 +851,25 @@
     .basket-list .basket-row .cell .close-icon {
       width: 42px;
       height: 56px; }
+  .basket-list .basket-row .change-set-wr {
+    margin-left: 0;
+    width: auto; }
+    .basket-list .basket-row .change-set-wr .set {
+      margin: 10px 0 0 0 !important; }
+      .basket-list .basket-row .change-set-wr .set .btn-group {
+        margin-left: 0; }
+        .basket-list .basket-row .change-set-wr .set .btn-group .change-set {
+          font-size: 32px;
+          line-height: 32px; }
+        .basket-list .basket-row .change-set-wr .set .btn-group .dropdown-menu {
+          width: 570px; }
+  .basket-list .basket-row .error-text {
+    font-size: 24px;
+    line-height: 24px;
+    width: 540px;
+    margin-top: 62px; }
+  .basket-list .basket-row .cell {
+    vertical-align: top; }
 
   .promo input {
     height: 40px;

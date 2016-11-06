@@ -403,6 +403,23 @@ select.selectpicker {
       }
     }
   }
+  &.prod {
+    .modal-dialog {
+      width: 360px;
+      .close-icon {
+        display: none;
+      }
+      .modal-content {
+        padding: 30px 20px;
+        .small-text {
+          margin-bottom: 10px;
+        }
+      }
+    }
+    .btn.green {
+      width: 100px;
+    }
+  }
 }
 .agreement-content {
   max-height: 240px;
