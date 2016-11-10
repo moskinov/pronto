@@ -2387,6 +2387,40 @@ h1, .product .intro {
   min-width: inherit !important;
 }
 
+.demo {
+  width: 100%;
+  height: 84px;
+  background: #ffffff;
+  text-align: center;
+  position: relative;
+  z-index: 4;
+  &:after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 24px;
+    left: 0;
+    top: 0;
+    background-color: #8ea14e;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAABGCAMAAAAgqu7hAAAAMFBMVEX//v7//v7//v7//v7//v7//v7//v7//v7//v7//v7//v7//v7//v7//v7//v7//v6z0hDsAAAAD3RSTlMAESIzRFVmd4iZqrvM3e5GKvWZAAAA+ElEQVR4Aa2T4W7EIAyDUwi4NIDf/20HbVqJ3bbTtH0/fLIEJjmronjIIuCDTScuEzCpGlkLoshWSXbAGk0GQVUmW5RPrJlh72Tb/b1BNvYS5coY5EpWbC/39GEe1nLejsf8CWyXqzx32OSi2ogn9CT1IiJGp42UJ9WfzwBULkLnZL93CEMLb6eDMjW+mXMhHUOONATwP5YYYuaZLEOqvckMGTlEAMHndNK1e+Qx6/lNpvNU/dYp5Cu02MndyuX+1Mo657qDRBydbCU/OyiMbFjdcvLHxv6po28xUhQ3reH1i3PsdN2sIIXTZTPrHPRu4sSEw62zm30AugwVtZPi5V4AAAAASUVORK5CYII=);
+
+  }
+  .link {
+    font: 17px/84px "Cervo-Regular",sans-serif;
+    color: $bo;
+    a {
+      font: 17px/84px "Cervo-Regular",sans-serif;
+      text-decoration: underline;
+      color: $bo;
+      &:hover {
+        color: $boh;
+      }
+    }
+  }
+}
+
 
 
 
