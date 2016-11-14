@@ -232,3 +232,52 @@ table.base {
     }
   }
 }
+.product.restaurant-menu {
+  .product-link {
+    .img {
+      display: block;
+      margin-bottom: 20px;
+      width: 226px;
+      height: 298px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      img {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+        background: #000;
+        opacity: 0;
+        @include transition(all 0.2s);
+      }
+    }
+    .title {
+      font: 30px/30px "Cervo-Regular",sans-serif;
+      text-transform: none;
+      margin-bottom: 14px;
+    }
+    &:hover {
+      .img {
+        &:after {
+          opacity: .2;
+        }
+      }
+    }
+  }
+  .text-intro {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 226px;
+    font-size: 16px;
+    line-height: 17px;
+  }
+}

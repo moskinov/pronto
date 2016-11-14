@@ -1331,6 +1331,9 @@
     .title {
       display: none;
     }
+    .product .title {
+      display: block;
+    }
     .for-mobile {
       display: block;
     }
@@ -1473,6 +1476,22 @@
     .main-phone {
       border: 0;
       padding: 0;
+    }
+  }
+  .product.restaurant-menu {
+    .product-link  {
+      .img {
+        width: 100%;
+        height: auto;
+        max-width: 380px;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+    .text-intro {
+      max-width: 380px;
     }
   }
   .content.about-wr {

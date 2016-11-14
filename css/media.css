@@ -1010,6 +1010,8 @@
       padding: 0; }
     .about .title {
       display: none; }
+    .about .product .title {
+      display: block; }
     .about .for-mobile {
       display: block; }
     .about h3 {
@@ -1106,6 +1108,16 @@
     .about .main-phone {
       border: 0;
       padding: 0; }
+
+  .product.restaurant-menu .product-link .img {
+    width: 100%;
+    height: auto;
+    max-width: 380px; }
+    .product.restaurant-menu .product-link .img img {
+      width: 100%;
+      height: auto; }
+  .product.restaurant-menu .text-intro {
+    max-width: 380px; }
 
   .content.about-wr {
     background-image: url("../img/back.png");
