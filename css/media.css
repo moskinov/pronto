@@ -1363,6 +1363,15 @@
     font: 22px/22px 'Circe','Helvetica',Arial,sans-serif; }
 
   .cabinet-row .m-b20.input-data {
-    margin-bottom: 40px !important; } }
+    margin-bottom: 40px !important; }
+
+  .present .present-list .item {
+    display: block;
+    width: 216px;
+    margin: 0 auto 55px auto; }
+
+  .present .present-list .item a img {
+    width: 100%;
+    height: auto; } }
 
 /*# sourceMappingURL=media.css.map */

@@ -90,6 +90,14 @@ function MainManager_f() {
       }
     });
 
+    var present = $('[data-check-present]');
+
+    present.on('click', function(){
+      present.removeClass('select');
+      $(this).addClass('select');
+      return false;
+    })
+
   };
 
   this.initCounter = function(){
